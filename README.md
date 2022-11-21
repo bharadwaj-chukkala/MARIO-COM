@@ -12,13 +12,13 @@
 <---------- Problem Statement goes here----------->
 
 ### Goal
-<------ What are the software developement goals----->
-<------ Product Scalabaility to further acheive ambitious goals------>
-<------ Product Software Fucntionlaity oursourcing --------> 
+- <------ What are the software developement goals----->
+- <------ Product Scalabaility to further acheive ambitious goals------>
+- <------ Product Software Fucntionlaity oursourcing --------> 
 
 ### Aim of the Product
-<-------- What is  the product supposed to do------>
-<-------- How is it going to betteer the lives of customers-------->
+- <-------- What is  the product supposed to do------>
+- <-------- How is it going to betteer the lives of customers-------->
 
 ### Product Description
 <------- Aspects of the product ------->
