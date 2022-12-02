@@ -18,7 +18,7 @@
 
 #include "std_msgs/msg/string.hpp"
 
-#include "../include/garbage_collector/Navigation.hpp"
+#include "../include/mario_com/Navigation.hpp"
 
 class TaskNavigation : public testing::Test {
  protected:

@@ -18,7 +18,7 @@
 
 #include "std_msgs/msg/string.hpp"
 
-#include "../include/garbage_collector/Manipulation.hpp"
+#include "../include/mario_com/Manipulation.hpp"
 
 class TaskManipulation : public testing::Test {
  protected:

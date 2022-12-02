@@ -10,7 +10,7 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#include "../include/garbage_collector/RobotSim.hpp"
+#include "../include/mario_com/RobotSim.hpp"
 
 int main() {
     // Code stub

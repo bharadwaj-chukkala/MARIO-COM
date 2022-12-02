@@ -1,5 +1,5 @@
 /**
- * @file Manipulation.cpp
+ * @file Navigation.cpp
  * @author Bharadwaj Chukkala (bchukkal@umd.edu) [Driver]
  * @author Adarsh Malapaka (amalapak@umd.edu) [Navigator]
  * @author Kumara Ritvik Oruganti (okritvik@umd.edu) [Design Keeper]
@@ -10,25 +10,23 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#include "../include/garbage_collector/Manipulation.hpp"
+#include "../include/mario_com/Navigation.hpp"
 
-Manipulation::Manipulation() {
-    m_pick_pose = nullptr;
-    m_place_pose = nullptr;
+Navigation::Navigation() {
+    m_curr_pose = nullptr;
+    m_next_pose = nullptr;
 }
 
-void Manipulation::gripper_open() {
+void Navigation::search_bins(auto map) {
     // Code Stub
 }
 
-void Manipulation::gripper_close() {
-    // Code Stub
-}
-bool Manipulation::pick_bin() {
+bool Navigation::move_to_disposal_zone() {
     // Code Stub
     return true;
 }
-bool Manipulation::place_bin() {
+
+bool Navigation::resume_search(geometry_msgs::msg::Pose prev_bin_pose) {
     // Code Stub
     return true;
 }

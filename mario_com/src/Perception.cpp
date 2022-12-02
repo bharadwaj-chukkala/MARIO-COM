@@ -10,7 +10,7 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#include "../include/garbage_collector/Perception.hpp"
+#include "../include/mario_com/Perception.hpp"
 
 Perception::Perception() {
     m_img_feed = nullptr;
