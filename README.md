@@ -75,7 +75,7 @@ https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/
 ### Quad Chart
 
 <p align="center">
-<img width="60%" alt="quad_chart" src="https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project/blob/phase1/quadchart/quad_chart_v1.png">
+<img width="60%" alt="quad_chart" src="https://github.com/bharadwaj-chukkala/MARIO-COM/blob/master/quadchart/quad_chart_v1.png">
 </p>
 
 
@@ -93,7 +93,7 @@ https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/
 
 Clone the following repo in any directory and place the ```mario_com``` folder in your ROS2 workspace 
 ```
-git clone https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project.git
+git clone https://github.com/bharadwaj-chukkala/MARIO-COM.git
 ```
 
 ### Build
