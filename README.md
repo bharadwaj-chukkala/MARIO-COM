@@ -119,42 +119,42 @@ cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_orde
 The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
 ## File Tree
-├── docs
-│   ├── html
-│   └── latex
-├── LICENSE
-├── mario_com
-│   ├── CMakeLists.txt
-│   ├── include
-│   │   └── mario_com
-│   │       ├── Manipulation.hpp
-│   │       ├── Navigation.hpp
-│   │       ├── Perception.hpp
-│   │       └── RobotSim.hpp
-│   ├── package.xml
-│   ├── src
-│   │   ├── main.cpp
-│   │   ├── Manipulation.cpp
-│   │   ├── Navigation.cpp
-│   │   ├── Perception.cpp
-│   │   └── RobotSim.cpp
-│   └── test
-│       ├── main.cpp
-│       ├── manipulation_test.cpp
-│       ├── navigation_test.cpp
-│       └── perception_test.cpp
-├── proposal
-│   └── ENPM808X___FinalProject___Proposal.pdf
-├── quadchart
-│   └── quad_chart_v1.png
-├── README.md
-├── results
-│   ├── cppcheck.txt
-│   └── cpplint.txt
-└── UML
-    └── initial
-        ├── activity_diagram_v1.pdf
-        └── class_diagram_v1.pdf
+  ├── docs
+  │   ├── html
+  │   └── latex
+  ├── LICENSE
+  ├── mario_com
+  │   ├── CMakeLists.txt
+  │   ├── include
+  │   │   └── mario_com
+  │   │       ├── Manipulation.hpp
+  │   │       ├── Navigation.hpp
+  │   │       ├── Perception.hpp
+  │   │       └── RobotSim.hpp
+  │   ├── package.xml
+  │   ├── src
+  │   │   ├── main.cpp
+  │   │   ├── Manipulation.cpp
+  │   │   ├── Navigation.cpp
+  │   │   ├── Perception.cpp
+  │   │   └── RobotSim.cpp
+  │   └── test
+  │       ├── main.cpp
+  │       ├── manipulation_test.cpp
+  │       ├── navigation_test.cpp
+  │       └── perception_test.cpp
+  ├── proposal
+  │   └── ENPM808X___FinalProject___Proposal.pdf
+  ├── quadchart
+  │   └── quad_chart_v1.png
+  ├── README.md
+  ├── results
+  │   ├── cppcheck.txt
+  │   └── cpplint.txt
+  └── UML
+      └── initial
+          ├── activity_diagram_v1.pdf
+          └── class_diagram_v1.pdf
 
 
 ## License
