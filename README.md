@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+<!-- [![Build Status](https://github.com/okritvik/Acme-Manipulator-IK-Solver/actions/workflows/build_and_coveralls.yml/badge.svg)](https://github.com/okritvik/Acme-Manipulator-IK-Solver/actions/workflows/build_and_coveralls.yml)
+[![Coverage Status](https://coveralls.io/repos/github/okritvik/Acme-Manipulator-IK-Solver/badge.svg?branch=master)](https://coveralls.io/github/okritvik/Acme-Manipulator-IK-Solver?branch=master) -->
 # Acme Robotics: Mobile Autonomous Robot for Indoor and Outdoor . Collection Of Medical Waste (MARIO-COM)
 
 ## Overview
@@ -60,9 +63,9 @@ https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/
 
 ### Quad Chart
 
-![quad_chart](INSERT)
-
-![](https://user-images.githubusercontent.com/106445479/202936527-bbe36f9c-a4b2-44f4-b74f-a6e1f2ca8372.png)
+<p align="center">
+<img width="60%" alt="quad_chart" src="https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project/blob/phase1/quadchart/quad_chart_v1.png">
+</p>
 
 
 ## Developer Documentation
@@ -72,7 +75,7 @@ https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/
 1. [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html): ROS2 Foxy installed on an Ubuntu 20.04 machine is used for this project. The steps to install ROS2 Foxy are mentioned in the above link. 
 2. [OpenCV](https://www.opencv-srf.com/p/introduction.html): OpenCV is used to detect the medical waste bins using classical image processing algorithms and can be installed from this [link.](https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/)
 3. [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/): The Turtlebot3 ROS2 simulation packages are used to simulate the medical waste disposal robot. Upon installing and configuring the ROS2 workspace, the steps to install these packages are mentioned in the above link. 
-4. [OpenMANIPULATOR-X](https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/#turtlebot3-with-openmanipulator): The ROBOTIS OpenMANIPULATOR-X gripper mounted on the TurtleBot3 robot is used to pick and place the disposal bins. The steps to install and visulaize the robot with this gripper are given in the link above.
+4. [OpenMANIPULATOR-X](https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/#turtlebot3-with-openmanipulator): The ROBOTIS OpenMANIPULATOR-X gripper mounted on the TurtleBot3 robot is used to pick and place the disposal bins. The steps to install and visualize the robot with this gripper are given in the link above.
 5. [NumCpp](https://dpilger26.github.io/NumCpp/doxygen/html/index.html): NumCpp shall be used to make use of NumPy functionalities in the definition of matrices and their associated operations in C++. This can be installed from the above link.
 
 ### Environment Setup
@@ -82,101 +85,39 @@ Clone the following repo in any directory and place the ```mario_com``` folder i
 git clone https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project.git
 ```
 
+### Doxygen Docs
+[Doxygen](https://www.doxygen.nl/index.html) is used to generate HTML and LaTEX documentation for the project's API. To install and run Doxygen:
 
-### Installation via Command Line
+```sudo apt update
+sudo apt install doxywizard
+sudo apt install doxygen-gui
+sudo apt install graphviz
 
+// To run the GUI and generate documentation
+dozywizard
 ```
-# Code Coverage
-sudo apt-get install -y -qq lcov
+To display the documentation in a Web Browser (like firefox):
 ```
-
-```
-# OpenCV install
-sudo apt-get install -y build-essential
-sudo apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
-# Download v4.6.0
-curl -sL https://github.com/Itseez/opencv/archive/4.6.0.zip > opencv.zip
-unzip opencv.zip
-cd opencv-4.6.0
-mkdir build
-cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
-make -j4
-sudo make install
-sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
-sudo ldconfig
-cd ../../
+firefox ./docs/html/index.html
 ```
 
-```
-# Static Code Analysis
-sudo apt install cpplint
-sudo apt install cppcheck
-```
+The documentation is saved in the ```/docs``` directory. 
 
-```
-# Valgrind
-sudo apt install valgrind
-sudo apt-get install -y kcachegrind
-```
 
+### cppcheck
+Change to the root directory of the cloned project, and run:
 ```
-# Doxygen
-sudo apt-get install doxygen
-sudo apt-get install doxygen-gui
+cppcheck --enable=all --std=c++17 mario_com/src/*.cpp mario_com/include/mario_com/*.hpp mario_com/test/*.cpp --suppress=missingIncludeSystem --suppress=missingInclude --suppress=unmatchedSuppression --suppress=unusedFunction --suppress=unreadVariable --suppress=useInitializationList > ./results/cppcheck.txt
 ```
+The results of running ```cppcheck``` can be found in ```/results/cppcheck.txt```.
 
-***
+### cpplint
+Change to the root directory of the project, and run:
+```
+cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order ./mario_com/src/*.cpp ./mario_com/include/mario_com/*.hpp ./mario_com/test/*.cpp &> ./results/cpplint.txt
+```
+The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
-### Build, Run and Code Coverage
-
-```
-# Clone
-git clone https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project.git
-cd <path to repository>
-mkdir build
-cd build
-cmake ..
-make
-# Run
-Run tests: ./test/cpp-test
-Run the perception module: ./app/shell-app
-```
-
-```
-# Static Code Analysis
-1. cppcheck
-bash run_cppcheck.sh
-2. cpplint
-bash run_cpplint.sh
-```
-
-Note: Static Code Analysis Results are stored in `./results`
-
-```
-# Valgrind
-valgrind --leak-check=full <path of the executable>
-valgrind --tool=callgrind  ./app/shell-app
-kcachegrind
-```
-
-```
-# Code Coverage
-cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
-make
-make code_coverage
-cd coverage
-firefox index.html
-```
-
-### Doxygen Documentation
-
-```
-cd ..
-doxygen doxygen.config
-doxywizard
-```
 
 ## License
 
