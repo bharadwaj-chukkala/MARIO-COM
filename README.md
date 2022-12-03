@@ -4,7 +4,7 @@
 # Acme Robotics: Mobile Autonomous Robot for Indoor and Outdoor . Collection Of Medical Waste (MARIO-COM)
 
 <p align="center">
-<img width="60%" alt="TB3" src="https://user-images.githubusercontent.com/40200916/205414289-5e2d0b42-9229-4a33-aab7-5330347e1d70.png">
+<img width="30%" alt="TB3" src="https://user-images.githubusercontent.com/40200916/205414289-5e2d0b42-9229-4a33-aab7-5330347e1d70.png">
 </p>
 
 <p align = "center">
