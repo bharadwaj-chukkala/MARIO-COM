@@ -3,6 +3,14 @@
 [![Coverage Status](https://coveralls.io/repos/github/okritvik/Acme-Manipulator-IK-Solver/badge.svg?branch=master)](https://coveralls.io/github/okritvik/Acme-Manipulator-IK-Solver?branch=master) -->
 # Acme Robotics: Mobile Autonomous Robot for Indoor and Outdoor . Collection Of Medical Waste (MARIO-COM)
 
+<p align="center">
+<img width="60%" alt="TB3" src="https://user-images.githubusercontent.com/40200916/205414289-5e2d0b42-9229-4a33-aab7-5330347e1d70.png">
+</p>
+
+<p align = "center">
+Image for representative purposes only. </br>Source: https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/#manipulation
+</p>
+
 ## Overview
 
 With the successful design and deployment of a robotic manipulator-based software solution for the automation of assembly line production of automobiles, Acme Robotics, Inc. has been able to maximize the efficiency of the automobile plant. As a part of its 5-year roadmap to further expand its expertise areas and leverage robotic solutions to touch human lives, a mobile robot-based medical waste collection and disposal solution is proposed to efficiently and safely transport medical waste trash bins from different locations inside a hospital to the disposal zone.
