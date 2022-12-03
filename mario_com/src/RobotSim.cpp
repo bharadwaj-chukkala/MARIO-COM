@@ -10,7 +10,7 @@
  * @copyright Copyright (c) 2022
  * 
  */
- 
+
 #include "../include/mario_com/RobotSim.hpp"
 
 RobotSim::RobotSim() {
