@@ -1,0 +1,180 @@
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Overview}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md1}
+With the successful design and deployment of a robotic manipulator-\/based software solution for the automation of assembly line production of automobiles, Acme Robotics, Inc. has been able to maximize the efficiency of the automobile plant. As a part of its 5-\/year roadmap to further expand its expertise areas and leverage robotic solutions to touch human lives, a mobile robot-\/based medical waste collection and disposal solution is proposed to efficiently and safely transport medical waste trash bins from different locations inside a hospital to the disposal zone.
+
+Hospital waste transport and handling is a time-\/consuming, hazardous and infectious process as the staff is exposed to be in contact with medical and bio-\/hazardous substances. The biomedical waste collected from hospital should not be stored in bins for more than 24 hours and has to be disposed immediately. In order to avoid this we need to ensure regular and safe disposal of waste to help the hospital maintain a clean environment for the patients, staff and visitors. There needs to exist a practical solution, if not one stop, that can take out the risk in the disposal and also be a safe and sustainable way to use technology for the betterment of human lives
+
+The software design and development process shall involve adhering to an amalgamation of Agile Iterative Processes and pair-\/programming techniques over a course of three weeks. The efficacy of the implementation shall be verified using the test-\/driven development approach. The driver and navigator roles are exchanged during each phase of the project to effectively develop and complete the backlogs.\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Purpose \& Methodology}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md2}
+The Robot will identify the bins in the surrounding environment and dispose them at a designated site. The robot will be deployed from an initial position from which it will traverse through the environment while scanning its nearby surroundings to check if a bin is present in the locality. If the robot recognizes a medical waste bin, it will move towards it, pick it up and dispose the trash in it at the site. After doing that it will rendezvous to the bin position to place the empty bin it it\textquotesingle{}s place and start moving around to find other bins.
+
+This Product will eliminate the usage of manual labour to dispose hazardous waste, thus restricting risks to human lives. Automating the process of disposal also saves the havoc of missing or delaying the disposal. Besides reducing human interaction in the process, it is also way more efficient than a typical human being, thus being an advancement for the better.
+
+The product is a R\+O\+B\+O\+T\+IS turtlebot with Open Manipulator X Gripper attached to it. As the turtlebot moves around in the environment, the Manipulator attached to it will pick the bins and dispose the trash. The Product uses perception principles to identify a bin, pick it from it\textquotesingle{}s initial position and place it back. The robot will have a visual sensor to perform the perception aspect of the product. The robot runs on a software with a built in search algorithm to traverse through the environment.
+
+Assumptions\+:
+\begin{DoxyItemize}
+\item The Trigger for the robot to start it\textquotesingle{}s search will be a set time in the night, because hospitals have lesser traffic in the night times.
+\item The Robot will move towards the closest bin in it\textquotesingle{}s reach, if it encounters multiple bins in its visual frame
+\item All the trash cans in the hospital scene will be mostly full at the end of the day, so we assume full bins when the robot starts its search
+\item Once the trash cans are disposed, the robot will place the bin back at its initial position and tag it as empty so that it wont pick it up again until next disposal iteration.
+\end{DoxyItemize}\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Personnel\+:}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Bharadwaj Chukkala}}~\newline
+ U\+ID\+: 118341705~\newline
+ Bharadwaj Chukkala is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Machine Learning, \mbox{\hyperlink{class_perception}{Perception}} and Path Planning.~\newline
+ Contact\+: \href{mailto:bchukkal@umd.edu}{\texttt{ bchukkal@umd.\+edu}}~\newline
+ Linked\+In\+: \href{https://www.linkedin.com/in/bharadwaj-chukkala/}{\texttt{ https\+://www.\+linkedin.\+com/in/bharadwaj-\/chukkala/}}
+\item {\bfseries{Adarsh Malapaka}}~\newline
+ U\+ID\+: 118119625~\newline
+ Adarsh Malapaka is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Control Systems, Robot Kinematics, Path Planning, and A\+D\+AS.~\newline
+ Contact\+: \href{mailto:amalapak@terpmail.umd.edu}{\texttt{ amalapak@terpmail.\+umd.\+edu}}~\newline
+ Linked\+In\+: \href{https://www.linkedin.com/in/adarsh-malapaka/}{\texttt{ https\+://www.\+linkedin.\+com/in/adarsh-\/malapaka/}}
+\item {\bfseries{Kumara Ritvik Oruganti}}~\newline
+ U\+ID\+: 117368963~\newline
+ Kumara Ritvik Oruganti is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include developing sustainable, efficient and intelligent robots and embedded systems for real-\/world problems.~\newline
+ Contact\+: \href{mailto:okritvik@terpmail.umd.edu}{\texttt{ okritvik@terpmail.\+umd.\+edu}}~\newline
+ Website\+: \href{https://www.okritvik.com/}{\texttt{ https\+://www.\+okritvik.\+com/}}
+\end{DoxyItemize}\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Agile-\/\+Iterative Process (\+A\+I\+P) Resources}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Pair Programming}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Phase} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Adarsh Malapaka} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Bharadwaj Chukkala} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Kumara Ritvik Oruganti}  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Phase} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Adarsh Malapaka} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Bharadwaj Chukkala} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Kumara Ritvik Oruganti}  }\\\cline{1-4}
+\endhead
+1 &Navigator &Driver &Design Keeper  \\\cline{1-4}
+2 &Driver &Design Keeper &Navigator  \\\cline{1-4}
+3 &Design Keeper &Navigator &Driver  \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{Product Backlog\+:}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md6}
+\href{https://docs.google.com/spreadsheets/d/1XZ4UL9ePxGej_Jj6zL2NBFaGKRe57Hb5tn70BDvRW7s/edit\#gid=0}{\texttt{ https\+://docs.\+google.\+com/spreadsheets/d/1\+X\+Z4\+U\+L9e\+Px\+Gej\+\_\+\+Jj6z\+L2\+N\+B\+Fa\+G\+K\+Re57\+Hb5tn70\+B\+Dv\+R\+W7s/edit\#gid=0}}\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{Sprint Planning Notes}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md7}
+\href{https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/edit}{\texttt{ https\+://docs.\+google.\+com/document/d/1\+Jsw\+T\+Ikv\+G\+N\+D\+T8kqs0\+M8pb\+F\+I\+W\+Wat\+No\+Kk5q\+Qq9jqd\+Afd\+C\+M/edit}}\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{Quad Chart}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md8}
+
+
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Developer Documentation}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md9}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{Dependencies}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item \href{https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html}{\texttt{ R\+O\+S2 Foxy}}\+: R\+O\+S2 Foxy installed on an Ubuntu 20.\+04 machine is used for this project. The steps to install R\+O\+S2 Foxy are mentioned in the above link.
+\item \href{https://www.opencv-srf.com/p/introduction.html}{\texttt{ Open\+CV}}\+: Open\+CV is used to detect the medical waste bins using classical image processing algorithms and can be installed from this \href{https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/}{\texttt{ link.}}
+\item \href{https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/}{\texttt{ Turtle\+Bot3}}\+: The Turtlebot3 R\+O\+S2 simulation packages are used to simulate the medical waste disposal robot. Upon installing and configuring the R\+O\+S2 workspace, the steps to install these packages are mentioned in the above link.
+\item \href{https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/\#turtlebot3-with-openmanipulator}{\texttt{ Open\+M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R-\/X}}\+: The R\+O\+B\+O\+T\+IS Open\+M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R-\/X gripper mounted on the Turtle\+Bot3 robot is used to pick and place the disposal bins. The steps to install and visulaize the robot with this gripper are given in the link above.
+\item \href{https://dpilger26.github.io/NumCpp/doxygen/html/index.html}{\texttt{ Num\+Cpp}}\+: Num\+Cpp shall be used to make use of Num\+Py functionalities in the definition of matrices and their associated operations in C++. This can be installed from the above link.
+\end{DoxyEnumerate}\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{Environment Setup}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md11}
+Clone the following repo in any directory and place the {\ttfamily mario\+\_\+com} folder in your R\+O\+S2 workspace 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/bharadwaj-\/chukkala/ENPM808X-\/Final-\/Project.git}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{Installation via Command Line}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Code Coverage}
+\DoxyCodeLine{sudo apt-\/get install -\/y -\/qq lcov}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# OpenCV install}
+\DoxyCodeLine{sudo apt-\/get install -\/y build-\/essential}
+\DoxyCodeLine{sudo apt-\/get install -\/y cmake git libgtk2.0-\/dev pkg-\/config libavcodec-\/dev libavformat-\/dev libswscale-\/dev}
+\DoxyCodeLine{sudo apt-\/get install -\/y python-\/dev python-\/numpy libtbb2 libtbb-\/dev libjpeg-\/dev libpng-\/dev libtiff-\/dev libjasper-\/dev libdc1394-\/22-\/dev}
+\DoxyCodeLine{\# Download v4.6.0}
+\DoxyCodeLine{curl -\/sL https://github.com/Itseez/opencv/archive/4.6.0.zip > opencv.zip}
+\DoxyCodeLine{unzip opencv.zip}
+\DoxyCodeLine{cd opencv-\/4.6.0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/D CMAKE\_BUILD\_TYPE=RELEASE -\/D CMAKE\_INSTALL\_PREFIX=/usr/local -\/D WITH\_TBB=ON -\/D BUILD\_NEW\_PYTHON\_SUPPORT=ON -\/D WITH\_V4L=ON -\/D INSTALL\_C\_EXAMPLES=ON -\/D INSTALL\_PYTHON\_EXAMPLES=ON -\/D BUILD\_EXAMPLES=ON -\/D WITH\_QT=ON -\/D WITH\_OPENGL=ON ..}
+\DoxyCodeLine{make -\/j4}
+\DoxyCodeLine{sudo make install}
+\DoxyCodeLine{sudo sh -\/c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'}
+\DoxyCodeLine{sudo ldconfig}
+\DoxyCodeLine{cd ../../}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Static Code Analysis}
+\DoxyCodeLine{sudo apt install cpplint}
+\DoxyCodeLine{sudo apt install cppcheck}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Valgrind}
+\DoxyCodeLine{sudo apt install valgrind}
+\DoxyCodeLine{sudo apt-\/get install -\/y kcachegrind}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Doxygen}
+\DoxyCodeLine{sudo apt-\/get install doxygen}
+\DoxyCodeLine{sudo apt-\/get install doxygen-\/gui}
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{Build, Run and Code Coverage}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Clone}
+\DoxyCodeLine{git clone https://github.com/bharadwaj-\/chukkala/ENPM808X-\/Final-\/Project.git}
+\DoxyCodeLine{cd <path to repository>}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+\DoxyCodeLine{\# Run}
+\DoxyCodeLine{Run tests: ./test/cpp-\/test}
+\DoxyCodeLine{Run the perception module: ./app/shell-\/app}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Static Code Analysis}
+\DoxyCodeLine{1. cppcheck}
+\DoxyCodeLine{bash run\_cppcheck.sh}
+\DoxyCodeLine{2. cpplint}
+\DoxyCodeLine{bash run\_cpplint.sh}
+\end{DoxyCode}
+
+
+Note\+: Static Code Analysis Results are stored in {\ttfamily ./results}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Valgrind}
+\DoxyCodeLine{valgrind -\/-\/leak-\/check=full <path of the executable>}
+\DoxyCodeLine{valgrind -\/-\/tool=callgrind  ./app/shell-\/app}
+\DoxyCodeLine{kcachegrind}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Code Coverage}
+\DoxyCodeLine{cmake -\/D COVERAGE=ON -\/D CMAKE\_BUILD\_TYPE=Debug ../}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make code\_coverage}
+\DoxyCodeLine{cd coverage}
+\DoxyCodeLine{firefox index.html}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md14}{}\doxysubsection{Doxygen Documentation}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ..}
+\DoxyCodeLine{doxygen doxygen.config}
+\DoxyCodeLine{doxywizard}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md15}{}\doxysection{License}\label{md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e_autotoc_md15}
+This project is licensed under the \href{https://www.apache.org/licenses/LICENSE-2.0}{\texttt{ Apache 2.\+0 License}} and can be found in the {\ttfamily L\+I\+C\+E\+N\+SE} file. 

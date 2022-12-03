@@ -1,0 +1,102 @@
+\hypertarget{class_perception}{}\doxysection{Perception Class Reference}
+\label{class_perception}\index{Perception@{Perception}}
+
+
+\mbox{\hyperlink{class_perception}{Perception}} class to detect the bins using image processing.  
+
+
+
+
+{\ttfamily \#include $<$Perception.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_perception_a8bcf74df62599f91509d3fd2df14c5f7}{Perception}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_perception}{Perception}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perception_a915ef7af41f2881f500e8fae833e8443}{detect\+\_\+bin}} ()
+\begin{DoxyCompactList}\small\item\em Member function to detect the disposal bin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perception_aa20bb611efaed97197e4743f9e58f088}{select\+\_\+bin}} (geometry\+\_\+msgs\+::msg\+::\+Pose pose)
+\begin{DoxyCompactList}\small\item\em Member function to select a bin and orient the bot to make the bin appear in the center of the image frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}{move\+\_\+to\+\_\+bin}} ()
+\begin{DoxyCompactList}\small\item\em Member function to move the robot towards the bin using camera and Li\+D\+AR data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_perception}{Perception}} class to detect the bins using image processing. 
+
+
+
+Definition at line 23 of file Perception.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_perception_a8bcf74df62599f91509d3fd2df14c5f7}\label{class_perception_a8bcf74df62599f91509d3fd2df14c5f7}} 
+\index{Perception@{Perception}!Perception@{Perception}}
+\index{Perception@{Perception}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{Perception()}{Perception()}}
+{\footnotesize\ttfamily Perception\+::\+Perception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_perception}{Perception}} object. 
+
+
+
+Definition at line 16 of file Perception.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_perception_a915ef7af41f2881f500e8fae833e8443}\label{class_perception_a915ef7af41f2881f500e8fae833e8443}} 
+\index{Perception@{Perception}!detect\_bin@{detect\_bin}}
+\index{detect\_bin@{detect\_bin}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{detect\_bin()}{detect\_bin()}}
+{\footnotesize\ttfamily bool Perception\+::detect\+\_\+bin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Member function to detect the disposal bin. 
+
+\begin{DoxyReturn}{Returns}
+true If the bin is detected. 
+
+false If the bin is not detected. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}\label{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}} 
+\index{Perception@{Perception}!move\_to\_bin@{move\_to\_bin}}
+\index{move\_to\_bin@{move\_to\_bin}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{move\_to\_bin()}{move\_to\_bin()}}
+{\footnotesize\ttfamily bool Perception\+::move\+\_\+to\+\_\+bin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Member function to move the robot towards the bin using camera and Li\+D\+AR data. 
+
+\begin{DoxyReturn}{Returns}
+true If robot reaches the bin. 
+
+false If robot doesn\textquotesingle{}t reach the bin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_perception_aa20bb611efaed97197e4743f9e58f088}\label{class_perception_aa20bb611efaed97197e4743f9e58f088}} 
+\index{Perception@{Perception}!select\_bin@{select\_bin}}
+\index{select\_bin@{select\_bin}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{select\_bin()}{select\_bin()}}
+{\footnotesize\ttfamily void Perception\+::select\+\_\+bin (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::msg\+::\+Pose}]{pose }\end{DoxyParamCaption})}
+
+
+
+Member function to select a bin and orient the bot to make the bin appear in the center of the image frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & Pose of the robot. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_perception_8hpp}{Perception.\+hpp}}\item 
+/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/src/\mbox{\hyperlink{_perception_8cpp}{Perception.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\hypertarget{class_navigation}{}\doxysection{Navigation Class Reference}
+\label{class_navigation}\index{Navigation@{Navigation}}
+
+
+\mbox{\hyperlink{class_navigation}{Navigation}} class to generate the search path of the robot and move it. The \mbox{\hyperlink{class_perception}{Perception}} class is a friend class of this.  
+
+
+
+
+{\ttfamily \#include $<$Navigation.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_navigation_a81fdffdefe46340da5fa6c570066b42b}{Navigation}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_navigation}{Navigation}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}{search\+\_\+bins}} (auto map)
+\begin{DoxyCompactList}\small\item\em Member function to execute the search algorithm in the map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_navigation_a18fe18719feb0c120d8e943e61d8501f}{move\+\_\+to\+\_\+disposal\+\_\+zone}} ()
+\begin{DoxyCompactList}\small\item\em Member function to move the robot \& bin to the disposal zone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_navigation_a1a5272cfe619ad19eb99951537daf382}{resume\+\_\+search}} (geometry\+\_\+msgs\+::msg\+::\+Pose prev\+\_\+bin\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em Member function to resume search algorithm after disposal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_navigation_ab16f66da292ba8a4bf8ccebd6fe4d37a}\label{class_navigation_ab16f66da292ba8a4bf8ccebd6fe4d37a}} 
+class {\bfseries Perception}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_navigation}{Navigation}} class to generate the search path of the robot and move it. The \mbox{\hyperlink{class_perception}{Perception}} class is a friend class of this. 
+
+
+
+Definition at line 22 of file Navigation.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_navigation_a81fdffdefe46340da5fa6c570066b42b}\label{class_navigation_a81fdffdefe46340da5fa6c570066b42b}} 
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\index{Navigation@{Navigation}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{Navigation()}{Navigation()}}
+{\footnotesize\ttfamily Navigation\+::\+Navigation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_navigation}{Navigation}} object. 
+
+
+
+Definition at line 16 of file Navigation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_navigation_a18fe18719feb0c120d8e943e61d8501f}\label{class_navigation_a18fe18719feb0c120d8e943e61d8501f}} 
+\index{Navigation@{Navigation}!move\_to\_disposal\_zone@{move\_to\_disposal\_zone}}
+\index{move\_to\_disposal\_zone@{move\_to\_disposal\_zone}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{move\_to\_disposal\_zone()}{move\_to\_disposal\_zone()}}
+{\footnotesize\ttfamily bool Navigation\+::move\+\_\+to\+\_\+disposal\+\_\+zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Member function to move the robot \& bin to the disposal zone. 
+
+\begin{DoxyReturn}{Returns}
+true If the robot successfully reaches the disposal zone 
+
+false If the robot cannot reach the disposal zone 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Navigation.\+cpp.
+
+\mbox{\Hypertarget{class_navigation_a1a5272cfe619ad19eb99951537daf382}\label{class_navigation_a1a5272cfe619ad19eb99951537daf382}} 
+\index{Navigation@{Navigation}!resume\_search@{resume\_search}}
+\index{resume\_search@{resume\_search}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{resume\_search()}{resume\_search()}}
+{\footnotesize\ttfamily bool Navigation\+::resume\+\_\+search (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::msg\+::\+Pose}]{prev\+\_\+bin\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+Member function to resume search algorithm after disposal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+bin\+\_\+pose} & Pose of the bin previously disposed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the search can be resumed 
+
+false If the search cannot be resumed 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Navigation.\+cpp.
+
+\mbox{\Hypertarget{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}\label{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}} 
+\index{Navigation@{Navigation}!search\_bins@{search\_bins}}
+\index{search\_bins@{search\_bins}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{search\_bins()}{search\_bins()}}
+{\footnotesize\ttfamily void Navigation\+::search\+\_\+bins (\begin{DoxyParamCaption}\item[{auto}]{map }\end{DoxyParamCaption})}
+
+
+
+Member function to execute the search algorithm in the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Map of the robot\textquotesingle{}s environment. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Navigation.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_navigation_8hpp}{Navigation.\+hpp}}\item 
+/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/src/\mbox{\hyperlink{_navigation_8cpp}{Navigation.\+cpp}}\end{DoxyCompactItemize}

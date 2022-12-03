@@ -11,7 +11,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+/**
+ * @file manipulation_test.cpp
+ * @author Bharadwaj Chukkala (bchukkal@umd.edu) [Driver]
+ * @author Adarsh Malapaka (amalapak@umd.edu) [Navigator]
+ * @author Kumara Ritvik Oruganti (okritvik@umd.edu) [Design Keeper]
+ * @brief Level 2 Google Test for Perception interface. 
+ * @version 0.1
+ * @date 2022-12-02 
+ */
+ 
 #include <gtest/gtest.h>
 #include <stdlib.h>
 #include <rclcpp/rclcpp.hpp>
