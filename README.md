@@ -119,7 +119,6 @@ cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_orde
 The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
 ## File Tree
-
 ├── docs
 │   ├── html
 │   └── latex
