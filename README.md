@@ -33,6 +33,9 @@ Assumptions:
 * All the trash cans in the hospital scene will be mostly full at the end of the day, so we assume full bins when the robot starts its search
 * Once the trash cans are disposed, the robot will place the bin back at its initial position and tag it as empty so that it wont pick it up again until next disposal iteration.
 
+Risks and Mitigation:<br>
+The possible risk includes the trade-off between the processing rate of the images captured by the robot to detect the obstacles while moving from the initial pose to the goal pose. Since the environment is unknown to the robot and the search algorithm implements a grid-based search, there is a possibility that the robot may not find the hazardous trash or reach the goal pose generated from the grid search accurately due to dynamic obstacles. Mitigations include the restriction on target object size and its position in the randomized world space. The initial assumption is that the robot should reach the target location and simulate its pickup and reach the disposal zone.
+
 ## Personnel:
 
 * **Bharadwaj Chukkala**<br>
@@ -93,6 +96,14 @@ Clone the following repo in any directory and place the ```mario_com``` folder i
 git clone https://github.com/bharadwaj-chukkala/ENPM808X-Final-Project.git
 ```
 
+### Build
+In the ROS2 Foxy workspace, run the following:
+```
+colcon build --symlink-install
+colcon build --packages-select mario_com
+```
+Note: Make sure that the TurtleBot3 and OpenMANIPULATOR-X should be there in the ROS2 Foxy workspace created earlier
+
 ### Doxygen Docs
 [Doxygen](https://www.doxygen.nl/index.html) is used to generate HTML and LaTEX documentation for the project's API. To install and run Doxygen:
 
@@ -126,6 +137,11 @@ cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_orde
 ```
 The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
+## Known Issues/Bugs
+1. Installation of ROS2 Foxy, OpenCV, TurtleBot3 packages might run into errors and the user is expected to resolve them by using the open-source ROS and GitHub answers.
+2. CMakeLists might produce errors as there are only stubs implemented as of Phase 1.
+3. The Colcon Build might run into some warnings due to rcl interface linkage which is updated in ROS2 new versions.
+4. The GitHub CI yml installation for ROS is yet to be figured out.
 
 ## File Tree
     ├── docs
