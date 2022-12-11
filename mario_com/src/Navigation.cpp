@@ -14,11 +14,11 @@
 #include "../include/mario_com/Navigation.hpp"
 
 Navigation::Navigation() {
-    m_curr_pose = nullptr;
-    m_next_pose = nullptr;
+    m_curr_pose.position.x = 0.0;
+    m_next_pose.position.x = 0.0;
 }
 
-void Navigation::search_bins(auto map) {
+void Navigation::search_bins(std::vector<int> map) {
     // Code Stub
 }
 

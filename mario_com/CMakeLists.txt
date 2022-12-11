@@ -58,27 +58,29 @@ if(BUILD_TESTING)
   )
 endif()
 
-add_executable(manipulation src/Manipulation.cpp)
-ament_target_dependencies(manipulation rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+# include_directories(
+#     ${CMAKE_SOURCE_DIR}/include/mario_com
+# )
+# add_executable(manipulation )
+# ament_target_dependencies(manipulation rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
-add_executable(navigation src/Navigation.cpp)
-ament_target_dependencies(navigation rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+# add_executable(navigation )
+# ament_target_dependencies(navigation rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
-add_executable(perception src/Perception.cpp)
-ament_target_dependencies(perception rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+# add_executable(perception )
+# ament_target_dependencies(perception rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
-add_executable(robotsim src/RobotSim.cpp)
-ament_target_dependencies(robotsim rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+# add_executable(robotsim )
+# ament_target_dependencies(robotsim rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
-add_executable(main src/main.cpp)
-ament_target_dependencies(main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+add_executable(my_main src/main.cpp src/Manipulation.cpp src/Navigation.cpp src/Perception.cpp src/RobotSim.cpp)
+ament_target_dependencies(my_main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include/mario_com
+)
 
 install(TARGETS
-  manipulation
-  navigation
-  perception
-  robotsim
-  main
+  my_main
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
