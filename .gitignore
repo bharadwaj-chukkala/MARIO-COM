@@ -1,0 +1,26 @@
+# VS Code files
+*.VC.db*
+
+# OS X files
+.DS_Store
+
+# Build artifacts
+build/
+
+# Log artifacts
+log/
+
+# Install artifacts
+install/
+
+# clangd and compile_commands
+.clangd/
+compile_commands.json
+
+# Python
+*.pyc
+
+# Temporary Files
+*~
+
+
