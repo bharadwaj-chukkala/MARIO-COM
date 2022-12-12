@@ -21,6 +21,7 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(gazebo_ros REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -82,5 +83,12 @@ include_directories(
 install(TARGETS
   my_main
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY 
+  launch
+  worlds
+  models
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()
