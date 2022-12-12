@@ -16,7 +16,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     world = os.path.join(get_package_share_directory('mario_com'),
-                         'worlds', 'simple_hospital.world')
+                         'worlds', 'small_hospital.world')
     
     model = os.path.join(get_package_share_directory('mario_com'),
                          'models')
@@ -27,7 +27,7 @@ def generate_launch_description():
     tb3_man_bgp = get_package_share_directory('turtlebot3_manipulation_bringup')
     included_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
                 tb3_man_bgp + '/launch/gazebo.launch.py']),
-                launch_arguments={'world': world, 'x_pose': '-7.0', 'y_pose': '4.0'}.items())
+                launch_arguments={'world': world, 'x_pose': '0.0', 'y_pose': '0.0'}.items())
 
     bins_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
                 launch_file_dir, '/bins.launch.py']))
@@ -37,6 +37,6 @@ def generate_launch_description():
         # SetEnvironmentVariable(name='TURTLEBOT3_MODEL', value='waffle_pi'), 
         # SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=model), 
         included_launch,
-        # bins_launch,
+        bins_launch,
     ])
         
