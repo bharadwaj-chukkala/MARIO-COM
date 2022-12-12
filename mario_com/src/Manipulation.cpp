@@ -14,8 +14,8 @@
 #include "../include/mario_com/Manipulation.hpp"
 
 Manipulation::Manipulation() {
-    m_pick_pose = nullptr;
-    m_place_pose = nullptr;
+    m_pick_pose.position.x = 0.0;
+    m_place_pose.position.x = 0.0;
 }
 
 void Manipulation::gripper_open() {

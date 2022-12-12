@@ -14,8 +14,8 @@
 #include "../include/mario_com/Perception.hpp"
 
 Perception::Perception() {
-    m_img_feed = nullptr;
-    m_lidar_feed = nullptr;
+    // m_img_feed = nullptr;
+    // m_lidar_feed = nullptr;
 }
 
 bool detect_bin() {

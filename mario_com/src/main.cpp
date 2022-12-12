@@ -12,8 +12,13 @@
  */
 
 #include "../include/mario_com/RobotSim.hpp"
-
-int main() {
+// # include "rclcpp/rclcpp.hpp"
+int main(int argc, char * argv[]) {
     // Code stub
     RobotSim rs;
+    rclcpp::init(argc, argv);
+
+    rclcpp::shutdown();
+
+    return 0;
 }

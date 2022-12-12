@@ -11,9 +11,12 @@
  * 
  */
 #pragma once
-#include <rclcpp>
+#include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "./Perception.hpp"
+
+#include<iostream>
+#include <vector>
 
 /**
  * @brief Navigation class to generate the search path of the robot and move it. The Perception class is a friend class of this.
@@ -32,7 +35,7 @@ class Navigation {
      * 
      * @param map Map of the robot's environment.
      */
-    void search_bins(auto map);
+    void search_bins(std::vector<int> map);
 
     /**
      * @brief Member function to move the robot & bin to the disposal zone. 
@@ -55,4 +58,4 @@ class Navigation {
     geometry_msgs::msg::Pose m_curr_pose;
     geometry_msgs::msg::Pose m_next_pose;
     friend class Perception;
-}
+};

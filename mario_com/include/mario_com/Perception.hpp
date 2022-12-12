@@ -11,7 +11,7 @@
  * 
  */
 #pragma once
-#include <rclcpp>
+#include "rclcpp/rclcpp.hpp"
 #include <opencv2/opencv.hpp>
 #include "geometry_msgs/msg/pose.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
@@ -53,5 +53,5 @@ class Perception {
 
  private:
     cv::Mat m_img_feed;
-    sensor_msgs::LaserScan m_lidar_feed;
-}
+    sensor_msgs::msg::LaserScan m_lidar_feed;
+};
