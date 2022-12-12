@@ -40,6 +40,5 @@ def generate_launch_description():
 
     return LaunchDescription([
         nodes[0],
-        nodes[1],
     ])
         

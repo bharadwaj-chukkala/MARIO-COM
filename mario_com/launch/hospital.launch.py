@@ -21,10 +21,14 @@ def generate_launch_description():
     model = os.path.join(get_package_share_directory('mario_com'),
                          'models')
 
+    map = os.path.join(get_package_share_directory('mario_com'),
+                         'maps', 'hospitalmap.yaml')
+    print(map)
     launch_file_dir = os.path.join(get_package_share_directory('mario_com'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-
     tb3_man_bgp = get_package_share_directory('turtlebot3_manipulation_bringup')
+    nav2_man = get_package_share_directory('turtlebot3_manipulation_navigation2')
+
     included_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
                 tb3_man_bgp + '/launch/gazebo.launch.py']),
                 launch_arguments={'world': world, 'x_pose': '0.0', 'y_pose': '0.0'}.items())
@@ -32,11 +36,21 @@ def generate_launch_description():
     bins_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
                 launch_file_dir, '/bins.launch.py']))
 
+    nav_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource([
+                nav2_man + '/launch/navigation2.launch.py']),
+                launch_arguments={'map_yaml_file': map, 'start_rviz': 'True', 'params_file': nav2_man+'/param/turtlebot3_use_sim_time.yaml'}.items())
+
+    initial_pose_pub = ExecuteProcess(
+        cmd=[
+            'ros2', 'topic pub -1', '/initialpose', 'geometry_msgs/PoseWithCovarianceStamped', '"{ header: {stamp: {sec: 0, nanosec: 0}, frame_id: "map"}, pose: { pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, } }"' 
+        ],
+        shell=True
+        )
 
     return LaunchDescription([
-        # SetEnvironmentVariable(name='TURTLEBOT3_MODEL', value='waffle_pi'), 
-        # SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=model), 
         included_launch,
         bins_launch,
+        nav_launch,
+        initial_pose_pub,
     ])
         

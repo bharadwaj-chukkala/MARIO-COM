@@ -88,6 +88,7 @@ install(DIRECTORY
   launch
   worlds
   models
+  maps
   DESTINATION share/${PROJECT_NAME}
 )
 
