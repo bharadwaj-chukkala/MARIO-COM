@@ -37,6 +37,6 @@ def generate_launch_description():
         # SetEnvironmentVariable(name='TURTLEBOT3_MODEL', value='waffle_pi'), 
         # SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=model), 
         included_launch,
-        bins_launch,
+        # bins_launch,
     ])
         
