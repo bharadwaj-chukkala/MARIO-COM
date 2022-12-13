@@ -1,4 +1,4 @@
-image: /home/adarsh/hospitalmap.pgm
+image: ./hospitalmap.pgm
 mode: trinary
 resolution: 0.05
 origin: [-1.32, -3.94, 0]
