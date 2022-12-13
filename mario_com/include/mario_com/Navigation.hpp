@@ -14,15 +14,26 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "./Perception.hpp"
-
+// #include "nav2_msgs/action/move_to_pose.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav_msgs/msg/odometry.hpp"
+#include <memory>
 #include<iostream>
 #include <vector>
+#include <chrono>
 
+using POSE = geometry_msgs::msg::PoseStamped;
+using PUBLISHER = rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr;
+using TIMER = rclcpp::TimerBase::SharedPtr;
+using ODOM = nav_msgs::msg::Odometry;
+using std::placeholders::_1;
+using std::chrono::duration;
+using namespace std::chrono_literals;
 /**
  * @brief Navigation class to generate the search path of the robot and move it. The Perception class is a friend class of this.
  *      
  */
-class Navigation {
+class Navigation : public rclcpp::Node {
  public:
     /**
      * @brief Construct a new Navigation object
@@ -52,10 +63,16 @@ class Navigation {
      * @return true If the search can be resumed
      * @return false If the search cannot be resumed
      */
-    bool resume_search(geometry_msgs::msg::Pose prev_bin_pose);
+    bool resume_search();
+
+   //  void odom_callback(const ODOM::SharedPtr msg);
 
  private:
     geometry_msgs::msg::Pose m_curr_pose;
     geometry_msgs::msg::Pose m_next_pose;
+    void timer_callback();
+    PUBLISHER nav_publisher_;
+    ODOM::SharedPtr msg_;
+    TIMER timer_;
     friend class Perception;
 };
