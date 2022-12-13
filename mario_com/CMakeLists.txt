@@ -22,6 +22,7 @@ find_package(tf2_ros REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(nav_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -75,13 +76,20 @@ endif()
 # ament_target_dependencies(robotsim rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
 add_executable(my_main src/main.cpp src/Manipulation.cpp src/Navigation.cpp src/Perception.cpp src/RobotSim.cpp)
-ament_target_dependencies(my_main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
+ament_target_dependencies(my_main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV nav_msgs)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include/mario_com
 )
 
+add_executable(test_odom src/sub_test.cpp)
+ament_target_dependencies(test_odom rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV nav_msgs)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include/mario_com
+) 
+
 install(TARGETS
   my_main
+  test_odom
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY 
