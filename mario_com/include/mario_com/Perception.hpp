@@ -23,16 +23,19 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "rclcpp/logging.hpp"
 #include <memory>
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <chrono>
 #include <iomanip>
 #include "geometry_msgs/msg/twist.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 
 using TWIST = geometry_msgs::msg::Twist;
 using std::placeholders::_1;
 using std::chrono::duration;
 using namespace std::chrono_literals;
+using ODOM = nav_msgs::msg::Odometry;
 
 /**
  * @brief Perception class to detect the bins using image processing.
@@ -70,16 +73,22 @@ class Perception : public rclcpp::Node {
     bool move_to_bin();
 
     void img_callback(const sensor_msgs::msg::Image::ConstSharedPtr& msg);
+    void odom_callback_search(const ODOM::SharedPtr msg);
 
  private:
     cv::Mat m_img_feed;
     sensor_msgs::msg::LaserScan m_lidar_feed;
     rclcpp::NodeOptions options;
     image_transport::Subscriber sub;
-    rclcpp::Node::SharedPtr node;
+    rclcpp::Node::SharedPtr img_node;
     rclcpp::Publisher<TWIST>::SharedPtr m_pub_vel;
+    rclcpp::Node::SharedPtr percep_odom_node;
+    rclcpp::Subscription<ODOM>::SharedPtr odom_sub;
     bool r_rotate_flag;
     bool l_rotate_flag;
     bool move_forward;
     bool stop_flag;
+    bool next_location;
+    double present_yaw;
+    double initial_yaw;
 };
