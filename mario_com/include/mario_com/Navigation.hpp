@@ -46,7 +46,7 @@ class Navigation : public rclcpp::Node {
      * 
      * @param map Map of the robot's environment.
      */
-    void search_bins(std::vector<int> map);
+    void search_bins();
 
     /**
      * @brief Member function to move the robot & bin to the disposal zone. 
@@ -65,7 +65,6 @@ class Navigation : public rclcpp::Node {
      */
     bool resume_search();
 
-   //  void odom_callback(const ODOM::SharedPtr msg);
 
  private:
     geometry_msgs::msg::Pose m_curr_pose;
