@@ -14,7 +14,4 @@
 #include "../include/mario_com/RobotSim.hpp"
 
 RobotSim::RobotSim() {
-    // m_nav = Navigation();
-    // m_perc = Perception();
-    // m_manip = Manipulation();
 }

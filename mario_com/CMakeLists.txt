@@ -26,6 +26,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(gazebo_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -80,28 +81,28 @@ endif()
 # ament_target_dependencies(robotsim rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
 
 add_executable(my_main src/main.cpp src/Manipulation.cpp src/Navigation.cpp src/Perception.cpp src/RobotSim.cpp)
-ament_target_dependencies(my_main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV nav_msgs)
+ament_target_dependencies(my_main rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV nav_msgs gazebo_msgs)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include/mario_com
 )
 
-add_executable(test_odom src/sub_test.cpp)
-ament_target_dependencies(test_odom rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV nav_msgs)
-include_directories(
-    ${CMAKE_SOURCE_DIR}/include/mario_com
-) 
+# add_executable(test_odom src/sub_test.cpp)
+# ament_target_dependencies(test_odom rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV nav_msgs)
+# include_directories(
+#     ${CMAKE_SOURCE_DIR}/include/mario_com
+# ) 
 
-add_executable(test_img src/sub_image.cpp)
-ament_target_dependencies(test_img rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV nav_msgs)
-include_directories(
-    ${CMAKE_SOURCE_DIR}/include/mario_com
-)
+# add_executable(test_img src/sub_image.cpp)
+# ament_target_dependencies(test_img rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV nav_msgs gazebo_msgs)
+# include_directories(
+#     ${CMAKE_SOURCE_DIR}/include/mario_com
+# )
 
 
 install(TARGETS
   my_main
-  test_odom
-  test_img
+  # test_odom
+  # test_img
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY 

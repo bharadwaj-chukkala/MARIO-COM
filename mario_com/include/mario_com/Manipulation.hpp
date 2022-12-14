@@ -13,12 +13,22 @@
 #pragma once
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
+#include "gazebo_msgs/srv/spawn_entity.hpp"
+#include "gazebo_msgs/srv/delete_entity.hpp"
+#include <gazebo_msgs/srv/detail/delete_entity__struct.hpp>
+
+using REQUEST = gazebo_msgs::srv::DeleteEntity::Request;
+using SERVICE = gazebo_msgs::srv::DeleteEntity;
+using CLIENT = rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr;
+using RESPONSE = rclcpp::Client<SERVICE>::SharedFuture;
+using namespace std::chrono_literals;
+using std::placeholders::_1;
 
 /**
  * @brief Manipulation class to command the gripper to pick and place the disposal bin.
  * 
  */
-class Manipulation {
+class Manipulation : public rclcpp::Node {
  public:
     /**
      * @brief Construct a new Manipulation object
@@ -54,7 +64,11 @@ class Manipulation {
      */
     bool place_bin();
 
+    void response_callback(RESPONSE future);
+
  private:
     geometry_msgs::msg::Pose m_pick_pose;
     geometry_msgs::msg::Pose m_place_pose;
+    CLIENT client;
+    rclcpp::Node::SharedPtr manip_node;
 };
