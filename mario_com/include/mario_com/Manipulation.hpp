@@ -16,11 +16,19 @@
 #include "gazebo_msgs/srv/spawn_entity.hpp"
 #include "gazebo_msgs/srv/delete_entity.hpp"
 #include <gazebo_msgs/srv/detail/delete_entity__struct.hpp>
+#include <fstream>
+#include <iostream>
 
-using REQUEST = gazebo_msgs::srv::DeleteEntity::Request;
-using SERVICE = gazebo_msgs::srv::DeleteEntity;
-using CLIENT = rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr;
-using RESPONSE = rclcpp::Client<SERVICE>::SharedFuture;
+using REQUEST_DELETE = gazebo_msgs::srv::DeleteEntity::Request;
+using SERVICE_DELETE = gazebo_msgs::srv::DeleteEntity;
+using CLIENT_DELETE = rclcpp::Client<gazebo_msgs::srv::DeleteEntity>::SharedPtr;
+using RESPONSE_DELETE = rclcpp::Client<SERVICE_DELETE>::SharedFuture;
+
+using REQUEST_SPAWN = gazebo_msgs::srv::SpawnEntity::Request;
+using SERVICE_SPAWN = gazebo_msgs::srv::SpawnEntity;
+using CLIENT_SPAWN = rclcpp::Client<gazebo_msgs::srv::SpawnEntity>::SharedPtr;
+using RESPONSE_SPAWN = rclcpp::Client<SERVICE_DELETE>::SharedFuture;
+
 using namespace std::chrono_literals;
 using std::placeholders::_1;
 
@@ -64,11 +72,10 @@ class Manipulation : public rclcpp::Node {
      */
     bool place_bin();
 
-    void response_callback(RESPONSE future);
 
  private:
-    geometry_msgs::msg::Pose m_pick_pose;
     geometry_msgs::msg::Pose m_place_pose;
-    CLIENT client;
+    CLIENT_DELETE pick_client;
+    CLIENT_SPAWN place_client;
     rclcpp::Node::SharedPtr manip_node;
 };

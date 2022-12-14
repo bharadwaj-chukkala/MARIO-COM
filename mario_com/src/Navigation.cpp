@@ -33,7 +33,7 @@ void odom_callback_search(const ODOM::SharedPtr msg) {
 }
 
 void odom_callback_disposal(const ODOM::SharedPtr msg) {
-    if ((std::abs(static_cast<int>(msg->pose.pose.position.x - 3.5)) == 0)
+    if ((std::abs(static_cast<int>(msg->pose.pose.position.x - 3)) == 0)
         && (std::abs(static_cast<int>(msg->pose.pose.position.y + 2.5)) == 0)) {
             check_odom = true;
     }
@@ -109,7 +109,7 @@ bool Navigation::move_to_disposal_zone() {
     rpyGoal.header.frame_id = "map";
     rpyGoal.header.stamp = this->get_clock()->now();
     // rpyGoal.header.stamp.nanosec = 0;
-    rpyGoal.pose.position.x = 3.5;
+    rpyGoal.pose.position.x = 3;
     rpyGoal.pose.position.y = -2.5;
     rpyGoal.pose.position.z = 0;
     // tf::Quaternion q(0, 0, goal.pose.orientation.z, goal.pose.orientation.w);

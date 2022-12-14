@@ -19,21 +19,19 @@ int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
     RobotSim rs;
     // rclcpp::sleep_for(5s);
+    RCLCPP_INFO(rclcpp::get_logger("log"), "Starting Trash Collection");
+    while (!rs.m_nav.search_bins()) {
+        // RCLCPP_INFO(rclcpp::get_logger("log"), "Inside while");
+        if (rs.m_perc.detect_bin()) {
+            // RCLCPP_INFO(rclcpp::get_logger("log"), "Inside det bin main");
+            break;
+        }
+    }
+    rclcpp::sleep_for(2s);
     rs.m_manip.pick_bin();
-    // rclcpp::spin(rs.m_nav);
-    // RCLCPP_INFO(rclcpp::get_logger("log"), "Before While Main");
-    // while (!rs.m_nav.search_bins()) {
-    //     RCLCPP_INFO(rclcpp::get_logger("log"), "Inside while");
-    //     if (rs.m_perc.detect_bin()) {
-    //         RCLCPP_INFO(rclcpp::get_logger("log"), "Inside det bin main");
-    //         break;
-    //     }
-    // }
-    // rs.m_nav.move_to_disposal_zone();
-    // rs.m_nav.resume_search();
-    // // while (rclcpp::ok()) {
-    // //     continue;
-    // // }
+    rs.m_nav.move_to_disposal_zone();
+    rs.m_manip.place_bin();
+    rs.m_nav.resume_search();
     rclcpp::shutdown();
     cv::destroyWindow("view");
     return 0;
