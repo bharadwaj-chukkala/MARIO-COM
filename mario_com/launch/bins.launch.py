@@ -34,6 +34,7 @@ def generate_launch_description():
     nodes = []
     for i in range(num_bins):
         nodes.append(gen_node(i+1, x_bins[i], y_bins[i]))
+        # nodes.append(gen_node(i+1, 1.5, 0.5))
 
     model = os.path.join(get_package_share_directory('mario_com'),
                          'models')

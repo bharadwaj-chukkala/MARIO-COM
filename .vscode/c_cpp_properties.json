@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/media/okritvik/NSSD/foxy_ws/install/turtlebot3_manipulation_hardware/include/**",
+        "/media/okritvik/NSSD/foxy_ws/install/turtlebot3_gazebo/include/**",
+        "/media/okritvik/NSSD/foxy_ws/install/turtlebot3_fake_node/include/**",
+        "/media/okritvik/NSSD/foxy_ws/install/moveit_visual_tools/include/**",
+        "/media/okritvik/NSSD/foxy_ws/install/rviz_visual_tools/include/**",
+        "/opt/ros/foxy/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/moveit_visual_tools/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/rviz_visual_tools/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/turtlebot3_manipulation/turtlebot3_manipulation_hardware/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/turtlebot3_manipulation/turtlebot3_manipulation_teleop/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/media/okritvik/NSSD/foxy_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
