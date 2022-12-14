@@ -18,7 +18,7 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include <memory>
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <chrono>
 
@@ -46,7 +46,7 @@ class Navigation : public rclcpp::Node {
      * 
      * @param map Map of the robot's environment.
      */
-    void search_bins();
+    bool search_bins();
 
     /**
      * @brief Member function to move the robot & bin to the disposal zone. 
@@ -71,7 +71,7 @@ class Navigation : public rclcpp::Node {
     geometry_msgs::msg::Pose m_next_pose;
     void timer_callback();
     PUBLISHER nav_publisher_;
-    ODOM::SharedPtr msg_;
     TIMER timer_;
-    friend class Perception;
+    std::shared_ptr<rclcpp::Node> node_odom_nav;
+   // Perception p;
 };
