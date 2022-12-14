@@ -18,9 +18,11 @@ int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
     RobotSim rs;
     // rclcpp::spin(rs.m_nav);
+    rs.m_perc.detect_bin();
     rs.m_nav.move_to_disposal_zone();
     rs.m_nav.resume_search();
+    rs.m_nav.search_bins();
     rclcpp::shutdown();
-
+    cv::destroyWindow("view");
     return 0;
 }
