@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['acme_20robotics_3a_20mobile_20autonomous_20robot_20for_20indoor_20and_20outdoor_20_2e_20collection_20of_20medical_20waste_20_28mario_2dcom_29_0',['Acme Robotics: Mobile Autonomous Robot for Indoor and Outdoor . Collection Of Medical Waste (MARIO-COM)',['../md__media_okritvik__n_s_s_d__e_n_p_m808_x-_final-_project__r_e_a_d_m_e.html',1,'']]]
+  ['architecture_5fid_0',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]]
 ];

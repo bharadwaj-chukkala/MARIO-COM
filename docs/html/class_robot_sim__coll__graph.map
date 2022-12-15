@@ -1,6 +1,8 @@
 <map id="RobotSim" name="RobotSim">
-<area shape="rect" id="node1" title="RobotSim class to simulate the medical disposal task of the robot." alt="" coords="131,95,216,121"/>
-<area shape="rect" id="node2" href="$class_perception.html" title="Perception class to detect the bins using image processing." alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node3" href="$class_manipulation.html" title="Manipulation class to command the gripper to pick and place the disposal bin." alt="" coords="120,5,227,32"/>
-<area shape="rect" id="node4" href="$class_navigation.html" title="Navigation class to generate the search path of the robot and move it. The Perception class is a frie..." alt="" coords="251,5,344,32"/>
+<area shape="rect" id="node1" title="RobotSim class to simulate the medical disposal task of the robot." alt="" coords="137,171,222,197"/>
+<area shape="rect" id="node2" href="$class_perception.html" title="Perception class to detect the bins using image processing." alt="" coords="11,81,102,108"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node4" href="$class_manipulation.html" title="Manipulation class to command the gripper to pick and place the disposal bin." alt="" coords="126,81,233,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="214,5,270,32"/>
+<area shape="rect" id="node6" href="$class_navigation.html" title="Navigation class to generate the search path of the robot and move it. The Perception class is a frie..." alt="" coords="257,81,350,108"/>
 </map>

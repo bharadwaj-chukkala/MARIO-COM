@@ -1,22 +1,39 @@
-\hypertarget{_perception_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\+Perception.hpp File Reference}
-\label{_perception_8hpp}\index{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Perception.hpp@{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Perception.hpp}}
+\hypertarget{_perception_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/include/mario\+\_\+com/\+Perception.hpp File Reference}
+\label{_perception_8hpp}\index{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Perception.hpp@{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Perception.hpp}}
 
 
 \mbox{\hyperlink{class_perception}{Perception}} class interface.  
 
 
-{\ttfamily \#include $<$rclcpp$>$}\newline
+{\ttfamily \#include \char`\"{}rclcpp/rclcpp.\+hpp\char`\"{}}\newline
 {\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}opencv2/core/core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgproc/imgproc.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/pose.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sensor\+\_\+msgs/msg/laser\+\_\+scan.\+hpp\char`\"{}}\newline
-Include dependency graph for Perception.\+hpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/msg/image.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image\+\_\+transport/image\+\_\+transport.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cv\+\_\+bridge/cv\+\_\+bridge.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/highgui/highgui.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rclcpp/logging.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/twist.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/pose\+\_\+stamped.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/msg/odometry.\+hpp\char`\"{}}\newline
+Include dependency graph for Perception.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_perception_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,6 +45,13 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{class_perception}{Perception}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_perception}{Perception}} class to detect the bins using image processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}{T\+W\+I\+ST}} = geometry\+\_\+msgs\+::msg\+::\+Twist
+\item 
+using \mbox{\hyperlink{_perception_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}} = nav\+\_\+msgs\+::msg\+::\+Odometry
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,3 +73,26 @@ Kumara Ritvik Oruganti (\href{mailto:okritvik@umd.edu}{\texttt{ okritvik@umd.\+e
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2022 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_perception_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}\label{_perception_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}} 
+\index{Perception.hpp@{Perception.hpp}!ODOM@{ODOM}}
+\index{ODOM@{ODOM}!Perception.hpp@{Perception.hpp}}
+\doxysubsubsection{\texorpdfstring{ODOM}{ODOM}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}} =  nav\+\_\+msgs\+::msg\+::\+Odometry}
+
+
+
+Definition at line 38 of file Perception.\+hpp.
+
+\mbox{\Hypertarget{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}\label{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}} 
+\index{Perception.hpp@{Perception.hpp}!TWIST@{TWIST}}
+\index{TWIST@{TWIST}!Perception.hpp@{Perception.hpp}}
+\doxysubsubsection{\texorpdfstring{TWIST}{TWIST}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}{T\+W\+I\+ST}} =  geometry\+\_\+msgs\+::msg\+::\+Twist}
+
+
+
+Definition at line 34 of file Perception.\+hpp.
+

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['perception_14',['Perception',['../class_perception.html',1,'Perception'],['../class_perception.html#a8bcf74df62599f91509d3fd2df14c5f7',1,'Perception::Perception()']]],
-  ['perception_2ecpp_15',['Perception.cpp',['../_perception_8cpp.html',1,'']]],
-  ['perception_2ehpp_16',['Perception.hpp',['../_perception_8hpp.html',1,'']]],
-  ['pick_5fbin_17',['pick_bin',['../class_manipulation.html#ab81e3d7603704484f3f942c6fd915000',1,'Manipulation']]],
-  ['place_5fbin_18',['place_bin',['../class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e',1,'Manipulation']]]
+  ['gen_5fnode_20',['gen_node',['../namespacebins.html#af1d9aec7e28270ffddbc47ced53822f9',1,'bins']]],
+  ['generate_5flaunch_5fdescription_21',['generate_launch_description',['../namespacebins.html#ae81b867d727cc094bfc8999674363d22',1,'bins.generate_launch_description()'],['../namespacehospital.html#a86460f757c0bc49ba5ae445e050ba167',1,'hospital.generate_launch_description()']]],
+  ['generate_5frandom_5fbins_22',['generate_random_bins',['../namespacebins.html#acfc32d308680efbeaaa663b93589d9b8',1,'bins']]]
 ];

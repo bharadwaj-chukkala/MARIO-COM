@@ -1,20 +1,27 @@
-\hypertarget{_manipulation_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\+Manipulation.hpp File Reference}
-\label{_manipulation_8hpp}\index{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Manipulation.hpp@{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Manipulation.hpp}}
+\hypertarget{_manipulation_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/include/mario\+\_\+com/\+Manipulation.hpp File Reference}
+\label{_manipulation_8hpp}\index{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Manipulation.hpp@{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Manipulation.hpp}}
 
 
 \mbox{\hyperlink{class_manipulation}{Manipulation}} class interface.  
 
 
-{\ttfamily \#include $<$rclcpp$>$}\newline
+{\ttfamily \#include \char`\"{}rclcpp/rclcpp.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/pose.\+hpp\char`\"{}}\newline
-Include dependency graph for Manipulation.\+hpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}gazebo\+\_\+msgs/srv/spawn\+\_\+entity.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gazebo\+\_\+msgs/srv/delete\+\_\+entity.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/srv/detail/delete\+\_\+entity\+\_\+\+\_\+struct.\+hpp$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Manipulation.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=311pt]{_manipulation_8hpp__incl}
+\includegraphics[width=350pt]{_manipulation_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +33,25 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{class_manipulation}{Manipulation}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_manipulation}{Manipulation}} class to command the gripper to pick and place the disposal bin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_a9058d19ad4722b0ab0fd356301b00207}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+L\+E\+TE}} = gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity\+::\+Request
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}} = gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_a61d471fd157aecba0e49bcd973cb5308}{C\+L\+I\+E\+N\+T\+\_\+\+D\+E\+L\+E\+TE}} = rclcpp\+::\+Client$<$ gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity $>$\+::Shared\+Ptr
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_ad63ce3fe14896a34f6e1117b7e048007}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+D\+E\+L\+E\+TE}} = rclcpp\+::\+Client$<$ \mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}} $>$\+::Shared\+Future
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_af5d4df2d0d0c4b923acefca2ccde35d5}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+P\+A\+WN}} = gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity\+::\+Request
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_a4cef29d9fdf8a2e4cfc88d0c624a08f5}{S\+E\+R\+V\+I\+C\+E\+\_\+\+S\+P\+A\+WN}} = gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_acb9bc840bf88b737d52fc4392a2af421}{C\+L\+I\+E\+N\+T\+\_\+\+S\+P\+A\+WN}} = rclcpp\+::\+Client$<$ gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity $>$\+::Shared\+Ptr
+\item 
+using \mbox{\hyperlink{_manipulation_8hpp_a782b77a8b034a000c22e0fb13161b65d}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+P\+A\+WN}} = rclcpp\+::\+Client$<$ \mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}} $>$\+::Shared\+Future
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -47,3 +73,86 @@ Kumara Ritvik Oruganti (\href{mailto:okritvik@umd.edu}{\texttt{ okritvik@umd.\+e
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2022 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_manipulation_8hpp_a61d471fd157aecba0e49bcd973cb5308}\label{_manipulation_8hpp_a61d471fd157aecba0e49bcd973cb5308}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!CLIENT\_DELETE@{CLIENT\_DELETE}}
+\index{CLIENT\_DELETE@{CLIENT\_DELETE}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{CLIENT\_DELETE}{CLIENT\_DELETE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_a61d471fd157aecba0e49bcd973cb5308}{C\+L\+I\+E\+N\+T\+\_\+\+D\+E\+L\+E\+TE}} =  rclcpp\+::\+Client$<$gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity$>$\+::Shared\+Ptr}
+
+
+
+Definition at line 24 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_acb9bc840bf88b737d52fc4392a2af421}\label{_manipulation_8hpp_acb9bc840bf88b737d52fc4392a2af421}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!CLIENT\_SPAWN@{CLIENT\_SPAWN}}
+\index{CLIENT\_SPAWN@{CLIENT\_SPAWN}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{CLIENT\_SPAWN}{CLIENT\_SPAWN}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_acb9bc840bf88b737d52fc4392a2af421}{C\+L\+I\+E\+N\+T\+\_\+\+S\+P\+A\+WN}} =  rclcpp\+::\+Client$<$gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity$>$\+::Shared\+Ptr}
+
+
+
+Definition at line 29 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_a9058d19ad4722b0ab0fd356301b00207}\label{_manipulation_8hpp_a9058d19ad4722b0ab0fd356301b00207}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!REQUEST\_DELETE@{REQUEST\_DELETE}}
+\index{REQUEST\_DELETE@{REQUEST\_DELETE}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_DELETE}{REQUEST\_DELETE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_a9058d19ad4722b0ab0fd356301b00207}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+L\+E\+TE}} =  gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity\+::\+Request}
+
+
+
+Definition at line 22 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_af5d4df2d0d0c4b923acefca2ccde35d5}\label{_manipulation_8hpp_af5d4df2d0d0c4b923acefca2ccde35d5}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!REQUEST\_SPAWN@{REQUEST\_SPAWN}}
+\index{REQUEST\_SPAWN@{REQUEST\_SPAWN}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_SPAWN}{REQUEST\_SPAWN}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_af5d4df2d0d0c4b923acefca2ccde35d5}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+P\+A\+WN}} =  gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity\+::\+Request}
+
+
+
+Definition at line 27 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_ad63ce3fe14896a34f6e1117b7e048007}\label{_manipulation_8hpp_ad63ce3fe14896a34f6e1117b7e048007}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!RESPONSE\_DELETE@{RESPONSE\_DELETE}}
+\index{RESPONSE\_DELETE@{RESPONSE\_DELETE}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{RESPONSE\_DELETE}{RESPONSE\_DELETE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_ad63ce3fe14896a34f6e1117b7e048007}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+D\+E\+L\+E\+TE}} =  rclcpp\+::\+Client$<$\mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}}$>$\+::Shared\+Future}
+
+
+
+Definition at line 25 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_a782b77a8b034a000c22e0fb13161b65d}\label{_manipulation_8hpp_a782b77a8b034a000c22e0fb13161b65d}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!RESPONSE\_SPAWN@{RESPONSE\_SPAWN}}
+\index{RESPONSE\_SPAWN@{RESPONSE\_SPAWN}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{RESPONSE\_SPAWN}{RESPONSE\_SPAWN}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_a782b77a8b034a000c22e0fb13161b65d}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+P\+A\+WN}} =  rclcpp\+::\+Client$<$\mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}}$>$\+::Shared\+Future}
+
+
+
+Definition at line 30 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}\label{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!SERVICE\_DELETE@{SERVICE\_DELETE}}
+\index{SERVICE\_DELETE@{SERVICE\_DELETE}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{SERVICE\_DELETE}{SERVICE\_DELETE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_add8bafb02c675b7d55ecc19cef0b16df}{S\+E\+R\+V\+I\+C\+E\+\_\+\+D\+E\+L\+E\+TE}} =  gazebo\+\_\+msgs\+::srv\+::\+Delete\+Entity}
+
+
+
+Definition at line 23 of file Manipulation.\+hpp.
+
+\mbox{\Hypertarget{_manipulation_8hpp_a4cef29d9fdf8a2e4cfc88d0c624a08f5}\label{_manipulation_8hpp_a4cef29d9fdf8a2e4cfc88d0c624a08f5}} 
+\index{Manipulation.hpp@{Manipulation.hpp}!SERVICE\_SPAWN@{SERVICE\_SPAWN}}
+\index{SERVICE\_SPAWN@{SERVICE\_SPAWN}!Manipulation.hpp@{Manipulation.hpp}}
+\doxysubsubsection{\texorpdfstring{SERVICE\_SPAWN}{SERVICE\_SPAWN}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_manipulation_8hpp_a4cef29d9fdf8a2e4cfc88d0c624a08f5}{S\+E\+R\+V\+I\+C\+E\+\_\+\+S\+P\+A\+WN}} =  gazebo\+\_\+msgs\+::srv\+::\+Spawn\+Entity}
+
+
+
+Definition at line 28 of file Manipulation.\+hpp.
+

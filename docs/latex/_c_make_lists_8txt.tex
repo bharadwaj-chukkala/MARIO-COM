@@ -1,0 +1,44 @@
+\hypertarget{_c_make_lists_8txt}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/\+C\+Make\+Lists.txt File Reference}
+\label{_c_make_lists_8txt}\index{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/CMakeLists.txt@{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_make_lists_8txt_aeebde7920b53ea325c443f80ec16a746}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+5) project(mario\+\_\+com) set(C\+M\+A\+K\+E\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+C\+O\+M\+M\+A\+N\+DS ON) set(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+S\+T\+A\+N\+D\+A\+RD 17) \mbox{\hyperlink{_c_make_lists_8txt_adbf639860917500e39755c901098b059}{execute\+\_\+process}}(C\+O\+M\+M\+A\+ND \char`\"{}rm\char`\"{} \char`\"{}-\/f\char`\"{} \char`\"{}\$
+\item 
+compile\+\_\+commands json \mbox{\hyperlink{_c_make_lists_8txt_adbf639860917500e39755c901098b059}{execute\+\_\+process}} (C\+O\+M\+M\+A\+ND \char`\"{}ln\char`\"{} \char`\"{}-\/s\char`\"{} \char`\"{}-\/r\char`\"{} \char`\"{}\$\{C\+M\+A\+K\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/compile\+\_\+commands.\+json\char`\"{} \char`\"{}\$\{C\+M\+A\+K\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/\char`\"{}) if(C\+M\+A\+K\+E\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+I\+S\+\_\+\+G\+N\+U\+C\+XX OR C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+ID M\+A\+T\+C\+H\+ES \char`\"{}Clang\char`\"{}) add\+\_\+compile\+\_\+options(-\/Wall -\/Wextra -\/Wpedantic) \mbox{\hyperlink{_c_make_lists_8txt_a9b1df9f111fe28cad7c7107f8ee59c6f}{endif}}() find\+\_\+package(ament\+\_\+cmake R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(rclcpp R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(std\+\_\+msgs R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(geometry\+\_\+msgs R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(cv\+\_\+bridge R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(image\+\_\+transport R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(tf2 R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(tf2\+\_\+ros R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(Open\+CV R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(sensor\+\_\+msgs R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(gazebo\+\_\+ros R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(pluginlib R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(nav\+\_\+msgs R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(gazebo\+\_\+msgs R\+E\+Q\+U\+I\+R\+ED) if(C\+O\+V\+E\+R\+A\+GE) set(C\+M\+A\+K\+E\+\_\+\+B\+U\+I\+L\+D\+\_\+\+T\+Y\+PE \char`\"{}Debug\char`\"{}) set(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+F\+L\+A\+GS \char`\"{}-\/-\/coverage\char`\"{}) set(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+R\+E\+P\+L\+A\+CE \char`\"{}ON\char`\"{}) set(A\+R\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+I\+LE \char`\"{}\$
+\item 
+uncrustify\+\_\+google\+\_\+cpp\+\_\+allman cfg C\+A\+C\+HE S\+T\+R\+I\+NG uncrustify config file \mbox{\hyperlink{_c_make_lists_8txt_a9b1df9f111fe28cad7c7107f8ee59c6f}{endif}} () if(B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG) find\+\_\+package(ament\+\_\+cmake\+\_\+gtest R\+E\+Q\+U\+I\+R\+ED) find\+\_\+package(ament\+\_\+lint\+\_\+auto R\+E\+Q\+U\+I\+R\+ED) set(ament\+\_\+cmake\+\_\+cppcheck\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+copyright\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+cpplint\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+flake8\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+uncrustify\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+xmllint\+\_\+\+F\+O\+U\+ND T\+R\+UE) set(ament\+\_\+cmake\+\_\+lint\+\_\+cmake\+\_\+\+F\+O\+U\+ND T\+R\+UE) ament\+\_\+lint\+\_\+auto\+\_\+find\+\_\+test\+\_\+dependencies() ament\+\_\+lint\+\_\+auto\+\_\+find\+\_\+test\+\_\+dependencies() set(T\+E\+S\+T\+F\+I\+L\+ES test/main.\+cpp test/manipulation\+\_\+test.\+cpp test/navigation\+\_\+test.\+cpp test/perception\+\_\+test.\+cpp src/Manipulation.\+cpp src/Navigation.\+cpp src/Perception.\+cpp src/Robot\+Sim.\+cpp) ament\+\_\+add\+\_\+gtest(test\+\_\+\$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_c_make_lists_8txt_aeebde7920b53ea325c443f80ec16a746}\label{_c_make_lists_8txt_aeebde7920b53ea325c443f80ec16a746}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{5 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{_c_make_lists_8txt_a9b1df9f111fe28cad7c7107f8ee59c6f}\label{_c_make_lists_8txt_a9b1df9f111fe28cad7c7107f8ee59c6f}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!endif@{endif}}
+\index{endif@{endif}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{endif()}{endif()}}
+{\footnotesize\ttfamily uncrustify\+\_\+google\+\_\+cpp\+\_\+allman cfg C\+A\+C\+HE S\+T\+R\+I\+NG uncrustify config file endif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file C\+Make\+Lists.\+txt.
+
+\mbox{\Hypertarget{_c_make_lists_8txt_adbf639860917500e39755c901098b059}\label{_c_make_lists_8txt_adbf639860917500e39755c901098b059}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!execute\_process@{execute\_process}}
+\index{execute\_process@{execute\_process}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{execute\_process()}{execute\_process()}}
+{\footnotesize\ttfamily compile\+\_\+commands json execute\+\_\+process (\begin{DoxyParamCaption}\item[{C\+O\+M\+M\+A\+ND \char`\"{}ln\char`\"{} \char`\"{}-\/s\char`\"{} \char`\"{}-\/r\char`\"{} \char`\"{}\$\{C\+M\+A\+K\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/compile\+\_\+commands.\+json\char`\"{} \char`\"{}\$\{C\+M\+A\+K\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file C\+Make\+Lists.\+txt.
+

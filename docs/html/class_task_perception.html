@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -52,23 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_task_perception.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,9 +62,11 @@ $(document).ready(function(){initNavTree('class_task_perception.html',''); initR
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_task_perception-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TaskPerception Class Reference</div>  </div>
@@ -99,7 +80,7 @@ Inheritance diagram for TaskPerception:</div>
 <area shape="rect" title=" " alt="" coords="5,80,125,107"/>
 <area shape="rect" title=" " alt="" coords="41,5,89,32"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for TaskPerception:</div>
 <div class="dyncontent">
@@ -108,30 +89,338 @@ Collaboration diagram for TaskPerception:</div>
 <area shape="rect" title=" " alt="" coords="5,80,125,107"/>
 <area shape="rect" title=" " alt="" coords="41,5,89,32"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a76d401b61419803834374847343ae627"><td class="memItemLeft" align="right" valign="top"><a id="a76d401b61419803834374847343ae627"></a>
-rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><b>node_</b></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1bd06077e1632290ca2ff36780e763c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a1bd06077e1632290ca2ff36780e763c7">odom_callback_search</a> (const ODOM::SharedPtr msg)</td></tr>
+<tr class="separator:a1bd06077e1632290ca2ff36780e763c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a76d401b61419803834374847343ae627"><td class="memItemLeft" align="right" valign="top">rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a76d401b61419803834374847343ae627">node_</a></td></tr>
 <tr class="separator:a76d401b61419803834374847343ae627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb00795114f60c4c4810f1d5d2d1da4"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#afeb00795114f60c4c4810f1d5d2d1da4">m_img_feed</a></td></tr>
+<tr class="separator:afeb00795114f60c4c4810f1d5d2d1da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bad280c4be95be3ca9f1d4e84e09bb"><td class="memItemLeft" align="right" valign="top">sensor_msgs::msg::LaserScan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a39bad280c4be95be3ca9f1d4e84e09bb">m_lidar_feed</a></td></tr>
+<tr class="separator:a39bad280c4be95be3ca9f1d4e84e09bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5447b173aa816389b8f501cee3c210"><td class="memItemLeft" align="right" valign="top">rclcpp::NodeOptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a2a5447b173aa816389b8f501cee3c210">options</a></td></tr>
+<tr class="separator:a2a5447b173aa816389b8f501cee3c210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e4f2158b624f68dd8a66566b42ebaf"><td class="memItemLeft" align="right" valign="top">image_transport::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a17e4f2158b624f68dd8a66566b42ebaf">sub</a></td></tr>
+<tr class="separator:a17e4f2158b624f68dd8a66566b42ebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f11b13e013eefa6666b0643da923f80"><td class="memItemLeft" align="right" valign="top">rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a4f11b13e013eefa6666b0643da923f80">img_node</a></td></tr>
+<tr class="separator:a4f11b13e013eefa6666b0643da923f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404e6b350fa806eeb012e69ac9ebc711"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; <a class="el" href="_perception_8hpp.html#ae1ddf8c7e712e519f42b1ace6a942c03">TWIST</a> &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a404e6b350fa806eeb012e69ac9ebc711">m_pub_vel</a></td></tr>
+<tr class="separator:a404e6b350fa806eeb012e69ac9ebc711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c679e9d76810e251bc99578153ac54"><td class="memItemLeft" align="right" valign="top">rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#ae0c679e9d76810e251bc99578153ac54">percep_odom_node</a></td></tr>
+<tr class="separator:ae0c679e9d76810e251bc99578153ac54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475c857e0c015ab065b45ee08d357a32"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; <a class="el" href="_navigation_8hpp.html#a0d14f9fa0f53f31f888a9fd88db78a51">ODOM</a> &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a475c857e0c015ab065b45ee08d357a32">odom_sub</a></td></tr>
+<tr class="separator:a475c857e0c015ab065b45ee08d357a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbaf25aa628e54d259e903f3a39378a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#accbaf25aa628e54d259e903f3a39378a">r_rotate_flag</a></td></tr>
+<tr class="separator:accbaf25aa628e54d259e903f3a39378a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfdf0c1c2dd6934413940463de449bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a1bfdf0c1c2dd6934413940463de449bc">l_rotate_flag</a></td></tr>
+<tr class="separator:a1bfdf0c1c2dd6934413940463de449bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae908ca39fdaafb4ced7328742218dfa2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#ae908ca39fdaafb4ced7328742218dfa2">move_forward</a></td></tr>
+<tr class="separator:ae908ca39fdaafb4ced7328742218dfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d9df3f3ff6b188ece883e7c21c121f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#ac8d9df3f3ff6b188ece883e7c21c121f">stop_flag</a></td></tr>
+<tr class="separator:ac8d9df3f3ff6b188ece883e7c21c121f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b071a1659a41b9adbe60b5dd5596f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a58b071a1659a41b9adbe60b5dd5596f7">next_location</a></td></tr>
+<tr class="separator:a58b071a1659a41b9adbe60b5dd5596f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d0736de9ef3ff6af2b8da1347f5094"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#af5d0736de9ef3ff6af2b8da1347f5094">present_yaw</a></td></tr>
+<tr class="separator:af5d0736de9ef3ff6af2b8da1347f5094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5be33a11f058152e4fda3972237edc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_perception.html#a7d5be33a11f058152e4fda3972237edc">initial_yaw</a></td></tr>
+<tr class="separator:a7d5be33a11f058152e4fda3972237edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00032">32</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/media/okritvik/NSSD/ENPM808X-Final-Project/mario_com/test/<a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a></li>
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00033">33</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1bd06077e1632290ca2ff36780e763c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd06077e1632290ca2ff36780e763c7">&#9670;&nbsp;</a></span>odom_callback_search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TaskPerception::odom_callback_search </td>
+          <td>(</td>
+          <td class="paramtype">const ODOM::SharedPtr&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00054">54</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4f11b13e013eefa6666b0643da923f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f11b13e013eefa6666b0643da923f80">&#9670;&nbsp;</a></span>img_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Node::SharedPtr TaskPerception::img_node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00040">40</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d5be33a11f058152e4fda3972237edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5be33a11f058152e4fda3972237edc">&#9670;&nbsp;</a></span>initial_yaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TaskPerception::initial_yaw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00050">50</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1bfdf0c1c2dd6934413940463de449bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfdf0c1c2dd6934413940463de449bc">&#9670;&nbsp;</a></span>l_rotate_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TaskPerception::l_rotate_flag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00045">45</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afeb00795114f60c4c4810f1d5d2d1da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb00795114f60c4c4810f1d5d2d1da4">&#9670;&nbsp;</a></span>m_img_feed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat TaskPerception::m_img_feed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00036">36</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a39bad280c4be95be3ca9f1d4e84e09bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bad280c4be95be3ca9f1d4e84e09bb">&#9670;&nbsp;</a></span>m_lidar_feed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sensor_msgs::msg::LaserScan TaskPerception::m_lidar_feed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00037">37</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a404e6b350fa806eeb012e69ac9ebc711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404e6b350fa806eeb012e69ac9ebc711">&#9670;&nbsp;</a></span>m_pub_vel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;<a class="el" href="_perception_8hpp.html#ae1ddf8c7e712e519f42b1ace6a942c03">TWIST</a>&gt;::SharedPtr TaskPerception::m_pub_vel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00041">41</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae908ca39fdaafb4ced7328742218dfa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae908ca39fdaafb4ced7328742218dfa2">&#9670;&nbsp;</a></span>move_forward</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TaskPerception::move_forward</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00046">46</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a58b071a1659a41b9adbe60b5dd5596f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b071a1659a41b9adbe60b5dd5596f7">&#9670;&nbsp;</a></span>next_location</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TaskPerception::next_location</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00048">48</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a76d401b61419803834374847343ae627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d401b61419803834374847343ae627">&#9670;&nbsp;</a></span>node_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Node::SharedPtr TaskPerception::node_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00035">35</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a475c857e0c015ab065b45ee08d357a32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475c857e0c015ab065b45ee08d357a32">&#9670;&nbsp;</a></span>odom_sub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;<a class="el" href="_navigation_8hpp.html#a0d14f9fa0f53f31f888a9fd88db78a51">ODOM</a>&gt;::SharedPtr TaskPerception::odom_sub</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00043">43</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2a5447b173aa816389b8f501cee3c210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5447b173aa816389b8f501cee3c210">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::NodeOptions TaskPerception::options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00038">38</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0c679e9d76810e251bc99578153ac54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c679e9d76810e251bc99578153ac54">&#9670;&nbsp;</a></span>percep_odom_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Node::SharedPtr TaskPerception::percep_odom_node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00042">42</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af5d0736de9ef3ff6af2b8da1347f5094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d0736de9ef3ff6af2b8da1347f5094">&#9670;&nbsp;</a></span>present_yaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TaskPerception::present_yaw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00049">49</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="accbaf25aa628e54d259e903f3a39378a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbaf25aa628e54d259e903f3a39378a">&#9670;&nbsp;</a></span>r_rotate_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TaskPerception::r_rotate_flag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00044">44</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac8d9df3f3ff6b188ece883e7c21c121f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d9df3f3ff6b188ece883e7c21c121f">&#9670;&nbsp;</a></span>stop_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TaskPerception::stop_flag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00047">47</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17e4f2158b624f68dd8a66566b42ebaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e4f2158b624f68dd8a66566b42ebaf">&#9670;&nbsp;</a></span>sub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">image_transport::Subscriber TaskPerception::sub</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="perception__test_8cpp_source.html#l00039">39</a> of file <a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/test/<a class="el" href="perception__test_8cpp_source.html">perception_test.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_task_perception.html">TaskPerception</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

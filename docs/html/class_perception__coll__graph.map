@@ -1,0 +1,4 @@
+<map id="Perception" name="Perception">
+<area shape="rect" id="node1" title="Perception class to detect the bins using image processing." alt="" coords="11,80,102,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,108,32"/>
+</map>

@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MARIO-COM: /media/okritvik/NSSD/ENPM808X-Final-Project/mario_com/test/manipulation_test.cpp Source File</title>
+<title>MARIO-COM: /media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/test/manipulation_test.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -52,23 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('manipulation__test_8cpp_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,6 +62,11 @@ $(document).ready(function(){initNavTree('manipulation__test_8cpp_source.html','
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_19e3b492da596434f87e736bcbe23e7c.html">test</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">manipulation_test.cpp</div>  </div>
@@ -110,29 +94,66 @@ $(document).ready(function(){initNavTree('manipulation__test_8cpp_source.html','
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;../include/mario_com/Manipulation.hpp&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_task_manipulation.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_task_manipulation.html">TaskManipulation</a> : <span class="keyword">public</span> testing::Test {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  rclcpp::Node::SharedPtr node_;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;TEST_F(TaskTalker, test_num_publishers) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  node_ = rclcpp::Node::make_shared(<span class="stringliteral">&quot;test_manipulation&quot;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">auto</span> test_pub = node_-&gt;create_publisher&lt;std_msgs::msg::String&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    (<span class="stringliteral">&quot;manipulation&quot;</span>, 10.0);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">auto</span> num_pub = node_-&gt;count_publishers(<span class="stringliteral">&quot;manipulation&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  EXPECT_EQ(0, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(num_pub));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_task_manipulation.html#a754d0f4c0c98733777e4fba1caf07f28">   34</a></span>&#160;  geometry_msgs::msg::Pose <a class="code" href="class_task_manipulation.html#a754d0f4c0c98733777e4fba1caf07f28">m_place_pose</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_task_manipulation.html#a543b5681178d721908ec43e0b9bbf7a2">   35</a></span>&#160;  <a class="code" href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">CLIENT_DELETE</a> <a class="code" href="class_task_manipulation.html#a543b5681178d721908ec43e0b9bbf7a2">pick_client</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_task_manipulation.html#ad07f0e7b903af74253951f287b7db756">   36</a></span>&#160;  <a class="code" href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">CLIENT_SPAWN</a> <a class="code" href="class_task_manipulation.html#ad07f0e7b903af74253951f287b7db756">place_client</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_task_manipulation.html#ae95b2c080711fd6ab82f47d862927527">   37</a></span>&#160;  rclcpp::Node::SharedPtr <a class="code" href="class_task_manipulation.html#ae95b2c080711fd6ab82f47d862927527">manip_node</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_task_manipulation.html#a8b57efc0adba3d277e84f2cdfb448b57">   38</a></span>&#160;  rclcpp::Node::SharedPtr <a class="code" href="class_task_manipulation.html#a8b57efc0adba3d277e84f2cdfb448b57">node_</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="manipulation__test_8cpp.html#a5cbadc0e6c4f2372af362cc2222dad04">   41</a></span>&#160;<a class="code" href="manipulation__test_8cpp.html#a5cbadc0e6c4f2372af362cc2222dad04">TEST_F</a>(<a class="code" href="class_task_manipulation.html">TaskManipulation</a>, test_pick_bin) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  node_ = rclcpp::Node::make_shared(<span class="stringliteral">&quot;test_manipulation&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  m_place_pose.position.x = 3.5;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  m_place_pose.position.y = -2.5;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  m_place_pose.position.z = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  m_place_pose.orientation.x = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  m_place_pose.orientation.y = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  m_place_pose.orientation.z = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  m_place_pose.orientation.w = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// Create the clients for picking and placing</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  pick_client = node_-&gt;create_client&lt;<a class="code" href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">SERVICE_DELETE</a>&gt;(<span class="stringliteral">&quot;delete_entity&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  place_client = node_-&gt;create_client&lt;<a class="code" href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">SERVICE_SPAWN</a>&gt;(<span class="stringliteral">&quot;spawn_entity&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">auto</span> test_pub = node_-&gt;create_publisher&lt;std_msgs::msg::String&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    (<span class="stringliteral">&quot;manipulation&quot;</span>, 10.0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">auto</span> num_pub = node_-&gt;count_publishers(<span class="stringliteral">&quot;manipulation&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  EXPECT_EQ(1, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(num_pub));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="manipulation__test_8cpp.html#a6b78d3f55aec8bb5165f2bae527969ed">   60</a></span>&#160;<a class="code" href="manipulation__test_8cpp.html#a5cbadc0e6c4f2372af362cc2222dad04">TEST_F</a>(<a class="code" href="class_task_manipulation.html">TaskManipulation</a>, test_place_bin) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  node_ = rclcpp::Node::make_shared(<span class="stringliteral">&quot;test_manipulation&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  m_place_pose.position.x = 3.5;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  m_place_pose.position.y = -2.5;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  m_place_pose.position.z = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  m_place_pose.orientation.x = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  m_place_pose.orientation.y = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  m_place_pose.orientation.z = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  m_place_pose.orientation.w = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// Create the clients for picking and placing</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  pick_client = node_-&gt;create_client&lt;<a class="code" href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">SERVICE_DELETE</a>&gt;(<span class="stringliteral">&quot;delete_entity&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  place_client = node_-&gt;create_client&lt;<a class="code" href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">SERVICE_SPAWN</a>&gt;(<span class="stringliteral">&quot;spawn_entity&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">auto</span> test_pub = node_-&gt;create_publisher&lt;std_msgs::msg::String&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    (<span class="stringliteral">&quot;manipulation&quot;</span>, 10.0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  EXPECT_EQ(3.5, m_place_pose.position.x);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
+<div class="ttc" id="a_manipulation_8hpp_html_a4cef29d9fdf8a2e4cfc88d0c624a08f5"><div class="ttname"><a href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">SERVICE_SPAWN</a></div><div class="ttdeci">gazebo_msgs::srv::SpawnEntity SERVICE_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00028">Manipulation.hpp:28</a></div></div>
+<div class="ttc" id="aclass_task_manipulation_html_a8b57efc0adba3d277e84f2cdfb448b57"><div class="ttname"><a href="class_task_manipulation.html#a8b57efc0adba3d277e84f2cdfb448b57">TaskManipulation::node_</a></div><div class="ttdeci">rclcpp::Node::SharedPtr node_</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00038">manipulation_test.cpp:38</a></div></div>
+<div class="ttc" id="amanipulation__test_8cpp_html_a5cbadc0e6c4f2372af362cc2222dad04"><div class="ttname"><a href="manipulation__test_8cpp.html#a5cbadc0e6c4f2372af362cc2222dad04">TEST_F</a></div><div class="ttdeci">TEST_F(TaskManipulation, test_pick_bin)</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00041">manipulation_test.cpp:41</a></div></div>
 <div class="ttc" id="aclass_task_manipulation_html"><div class="ttname"><a href="class_task_manipulation.html">TaskManipulation</a></div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00032">manipulation_test.cpp:32</a></div></div>
+<div class="ttc" id="aclass_task_manipulation_html_a543b5681178d721908ec43e0b9bbf7a2"><div class="ttname"><a href="class_task_manipulation.html#a543b5681178d721908ec43e0b9bbf7a2">TaskManipulation::pick_client</a></div><div class="ttdeci">CLIENT_DELETE pick_client</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00035">manipulation_test.cpp:35</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_acb9bc840bf88b737d52fc4392a2af421"><div class="ttname"><a href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">CLIENT_SPAWN</a></div><div class="ttdeci">rclcpp::Client&lt; gazebo_msgs::srv::SpawnEntity &gt;::SharedPtr CLIENT_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00029">Manipulation.hpp:29</a></div></div>
+<div class="ttc" id="aclass_task_manipulation_html_a754d0f4c0c98733777e4fba1caf07f28"><div class="ttname"><a href="class_task_manipulation.html#a754d0f4c0c98733777e4fba1caf07f28">TaskManipulation::m_place_pose</a></div><div class="ttdeci">geometry_msgs::msg::Pose m_place_pose</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00034">manipulation_test.cpp:34</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_a61d471fd157aecba0e49bcd973cb5308"><div class="ttname"><a href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">CLIENT_DELETE</a></div><div class="ttdeci">rclcpp::Client&lt; gazebo_msgs::srv::DeleteEntity &gt;::SharedPtr CLIENT_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00024">Manipulation.hpp:24</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_add8bafb02c675b7d55ecc19cef0b16df"><div class="ttname"><a href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">SERVICE_DELETE</a></div><div class="ttdeci">gazebo_msgs::srv::DeleteEntity SERVICE_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00023">Manipulation.hpp:23</a></div></div>
+<div class="ttc" id="aclass_task_manipulation_html_ad07f0e7b903af74253951f287b7db756"><div class="ttname"><a href="class_task_manipulation.html#ad07f0e7b903af74253951f287b7db756">TaskManipulation::place_client</a></div><div class="ttdeci">CLIENT_SPAWN place_client</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00036">manipulation_test.cpp:36</a></div></div>
+<div class="ttc" id="aclass_task_manipulation_html_ae95b2c080711fd6ab82f47d862927527"><div class="ttname"><a href="class_task_manipulation.html#ae95b2c080711fd6ab82f47d862927527">TaskManipulation::manip_node</a></div><div class="ttdeci">rclcpp::Node::SharedPtr manip_node</div><div class="ttdef"><b>Definition:</b> <a href="manipulation__test_8cpp_source.html#l00037">manipulation_test.cpp:37</a></div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_19e3b492da596434f87e736bcbe23e7c.html">test</a></li><li class="navelem"><a class="el" href="manipulation__test_8cpp.html">manipulation_test.cpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

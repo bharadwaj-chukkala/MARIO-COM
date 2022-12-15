@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MARIO-COM: /media/okritvik/NSSD/ENPM808X-Final-Project/mario_com/include/mario_com/Manipulation.hpp Source File</title>
+<title>MARIO-COM: /media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/include/mario_com/Manipulation.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -52,23 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_manipulation_8hpp_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,6 +62,11 @@ $(document).ready(function(){initNavTree('_manipulation_8hpp_source.html',''); i
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_a0e2c05b1840a70dd43ea6bb8077039e.html">include</a></li><li class="navelem"><a class="el" href="dir_2af36b0af8aa45ed104f5e581fae94aa.html">mario_com</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Manipulation.hpp</div>  </div>
@@ -90,41 +74,57 @@ $(document).ready(function(){initNavTree('_manipulation_8hpp_source.html',''); i
 <div class="contents">
 <a href="_manipulation_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;rclcpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;geometry_msgs/msg/pose.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_manipulation.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_manipulation.html">Manipulation</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_manipulation.html#ae30eef2d506ae9c4dad0d85eb01d0833">Manipulation</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_manipulation.html#a74b2b91af21ced6cd27834d32410f25d">gripper_open</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;gazebo_msgs/srv/spawn_entity.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;gazebo_msgs/srv/delete_entity.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;gazebo_msgs/srv/detail/delete_entity__struct.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#a9058d19ad4722b0ab0fd356301b00207">   22</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#a9058d19ad4722b0ab0fd356301b00207">REQUEST_DELETE</a> = gazebo_msgs::srv::DeleteEntity::Request;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">   23</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">SERVICE_DELETE</a> = gazebo_msgs::srv::DeleteEntity;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">   24</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">CLIENT_DELETE</a> = rclcpp::Client&lt;gazebo_msgs::srv::DeleteEntity&gt;::SharedPtr;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#ad63ce3fe14896a34f6e1117b7e048007">   25</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#ad63ce3fe14896a34f6e1117b7e048007">RESPONSE_DELETE</a> = rclcpp::Client&lt;SERVICE_DELETE&gt;::SharedFuture;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#af5d4df2d0d0c4b923acefca2ccde35d5">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#af5d4df2d0d0c4b923acefca2ccde35d5">REQUEST_SPAWN</a> = gazebo_msgs::srv::SpawnEntity::Request;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">   28</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">SERVICE_SPAWN</a> = gazebo_msgs::srv::SpawnEntity;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">   29</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">CLIENT_SPAWN</a> = rclcpp::Client&lt;gazebo_msgs::srv::SpawnEntity&gt;::SharedPtr;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_manipulation_8hpp.html#a782b77a8b034a000c22e0fb13161b65d">   30</a></span>&#160;<span class="keyword">using</span> <a class="code" href="_manipulation_8hpp.html#a782b77a8b034a000c22e0fb13161b65d">RESPONSE_SPAWN</a> = rclcpp::Client&lt;SERVICE_DELETE&gt;::SharedFuture;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> std::placeholders::_1;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_manipulation.html#a082b736daf27e4ada3fbeceb8bc10d29">gripper_close</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_manipulation.html#ab81e3d7603704484f3f942c6fd915000">pick_bin</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e">place_bin</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    geometry_msgs::msg::Pose m_pick_pose;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    geometry_msgs::msg::Pose m_place_pose;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_manipulation.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_manipulation.html">Manipulation</a> : <span class="keyword">public</span> rclcpp::Node {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_manipulation.html">Manipulation</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> pick_bin();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> place_bin();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    geometry_msgs::msg::Pose m_place_pose;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">CLIENT_DELETE</a> pick_client;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">CLIENT_SPAWN</a> place_client;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    rclcpp::Node::SharedPtr manip_node;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="aclass_manipulation_html_ab81e3d7603704484f3f942c6fd915000"><div class="ttname"><a href="class_manipulation.html#ab81e3d7603704484f3f942c6fd915000">Manipulation::pick_bin</a></div><div class="ttdeci">bool pick_bin()</div><div class="ttdoc">Member function to pick the bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00028">Manipulation.cpp:28</a></div></div>
-<div class="ttc" id="aclass_manipulation_html_aaa51347c5b8dbe3a99bf0d612f4bd49e"><div class="ttname"><a href="class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e">Manipulation::place_bin</a></div><div class="ttdeci">bool place_bin()</div><div class="ttdoc">Member function to place the bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00032">Manipulation.cpp:32</a></div></div>
-<div class="ttc" id="aclass_manipulation_html_ae30eef2d506ae9c4dad0d85eb01d0833"><div class="ttname"><a href="class_manipulation.html#ae30eef2d506ae9c4dad0d85eb01d0833">Manipulation::Manipulation</a></div><div class="ttdeci">Manipulation()</div><div class="ttdoc">Construct a new Manipulation object.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00016">Manipulation.cpp:16</a></div></div>
-<div class="ttc" id="aclass_manipulation_html"><div class="ttname"><a href="class_manipulation.html">Manipulation</a></div><div class="ttdoc">Manipulation class to command the gripper to pick and place the disposal bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00021">Manipulation.hpp:21</a></div></div>
-<div class="ttc" id="aclass_manipulation_html_a082b736daf27e4ada3fbeceb8bc10d29"><div class="ttname"><a href="class_manipulation.html#a082b736daf27e4ada3fbeceb8bc10d29">Manipulation::gripper_close</a></div><div class="ttdeci">void gripper_close()</div><div class="ttdoc">Member function to close the gripper.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00025">Manipulation.cpp:25</a></div></div>
-<div class="ttc" id="aclass_manipulation_html_a74b2b91af21ced6cd27834d32410f25d"><div class="ttname"><a href="class_manipulation.html#a74b2b91af21ced6cd27834d32410f25d">Manipulation::gripper_open</a></div><div class="ttdeci">void gripper_open()</div><div class="ttdoc">Member function to open the gripper.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00021">Manipulation.cpp:21</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_a4cef29d9fdf8a2e4cfc88d0c624a08f5"><div class="ttname"><a href="_manipulation_8hpp.html#a4cef29d9fdf8a2e4cfc88d0c624a08f5">SERVICE_SPAWN</a></div><div class="ttdeci">gazebo_msgs::srv::SpawnEntity SERVICE_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00028">Manipulation.hpp:28</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_a9058d19ad4722b0ab0fd356301b00207"><div class="ttname"><a href="_manipulation_8hpp.html#a9058d19ad4722b0ab0fd356301b00207">REQUEST_DELETE</a></div><div class="ttdeci">gazebo_msgs::srv::DeleteEntity::Request REQUEST_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00022">Manipulation.hpp:22</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_acb9bc840bf88b737d52fc4392a2af421"><div class="ttname"><a href="_manipulation_8hpp.html#acb9bc840bf88b737d52fc4392a2af421">CLIENT_SPAWN</a></div><div class="ttdeci">rclcpp::Client&lt; gazebo_msgs::srv::SpawnEntity &gt;::SharedPtr CLIENT_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00029">Manipulation.hpp:29</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_af5d4df2d0d0c4b923acefca2ccde35d5"><div class="ttname"><a href="_manipulation_8hpp.html#af5d4df2d0d0c4b923acefca2ccde35d5">REQUEST_SPAWN</a></div><div class="ttdeci">gazebo_msgs::srv::SpawnEntity::Request REQUEST_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00027">Manipulation.hpp:27</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_a61d471fd157aecba0e49bcd973cb5308"><div class="ttname"><a href="_manipulation_8hpp.html#a61d471fd157aecba0e49bcd973cb5308">CLIENT_DELETE</a></div><div class="ttdeci">rclcpp::Client&lt; gazebo_msgs::srv::DeleteEntity &gt;::SharedPtr CLIENT_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00024">Manipulation.hpp:24</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_add8bafb02c675b7d55ecc19cef0b16df"><div class="ttname"><a href="_manipulation_8hpp.html#add8bafb02c675b7d55ecc19cef0b16df">SERVICE_DELETE</a></div><div class="ttdeci">gazebo_msgs::srv::DeleteEntity SERVICE_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00023">Manipulation.hpp:23</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_ad63ce3fe14896a34f6e1117b7e048007"><div class="ttname"><a href="_manipulation_8hpp.html#ad63ce3fe14896a34f6e1117b7e048007">RESPONSE_DELETE</a></div><div class="ttdeci">rclcpp::Client&lt; SERVICE_DELETE &gt;::SharedFuture RESPONSE_DELETE</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00025">Manipulation.hpp:25</a></div></div>
+<div class="ttc" id="aclass_manipulation_html"><div class="ttname"><a href="class_manipulation.html">Manipulation</a></div><div class="ttdoc">Manipulation class to command the gripper to pick and place the disposal bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00039">Manipulation.hpp:39</a></div></div>
+<div class="ttc" id="a_manipulation_8hpp_html_a782b77a8b034a000c22e0fb13161b65d"><div class="ttname"><a href="_manipulation_8hpp.html#a782b77a8b034a000c22e0fb13161b65d">RESPONSE_SPAWN</a></div><div class="ttdeci">rclcpp::Client&lt; SERVICE_DELETE &gt;::SharedFuture RESPONSE_SPAWN</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8hpp_source.html#l00030">Manipulation.hpp:30</a></div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_a0e2c05b1840a70dd43ea6bb8077039e.html">include</a></li><li class="navelem"><a class="el" href="dir_2af36b0af8aa45ed104f5e581fae94aa.html">mario_com</a></li><li class="navelem"><a class="el" href="_manipulation_8hpp.html">Manipulation.hpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

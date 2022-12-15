@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -52,23 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_task_navigation.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,9 +62,11 @@ $(document).ready(function(){initNavTree('class_task_navigation.html',''); initR
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_task_navigation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TaskNavigation Class Reference</div>  </div>
@@ -99,7 +80,7 @@ Inheritance diagram for TaskNavigation:</div>
 <area shape="rect" title=" " alt="" coords="5,80,128,107"/>
 <area shape="rect" title=" " alt="" coords="16,5,117,32"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for TaskNavigation:</div>
 <div class="dyncontent">
@@ -108,30 +89,121 @@ Collaboration diagram for TaskNavigation:</div>
 <area shape="rect" title=" " alt="" coords="5,80,128,107"/>
 <area shape="rect" title=" " alt="" coords="16,5,117,32"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ae3d1bc3543f30838e7663fc8caecef77"><td class="memItemLeft" align="right" valign="top"><a id="ae3d1bc3543f30838e7663fc8caecef77"></a>
-rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><b>node_</b></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5ab5aae807fd3c32f4c816879d86b620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_navigation.html#a5ab5aae807fd3c32f4c816879d86b620">callback</a> ()</td></tr>
+<tr class="separator:a5ab5aae807fd3c32f4c816879d86b620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae3d1bc3543f30838e7663fc8caecef77"><td class="memItemLeft" align="right" valign="top">rclcpp::Node::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_navigation.html#ae3d1bc3543f30838e7663fc8caecef77">node_</a></td></tr>
 <tr class="separator:ae3d1bc3543f30838e7663fc8caecef77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103d5c2c602692197340d45974dec4d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_navigation_8hpp.html#a59fbe15a44ccf259bfb94512a32d2a84">TIMER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_navigation.html#a103d5c2c602692197340d45974dec4d6">timer_</a></td></tr>
+<tr class="separator:a103d5c2c602692197340d45974dec4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b15b25d7955966bfec3c3b7cffb192"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; <a class="el" href="_navigation_8hpp.html#a0d14f9fa0f53f31f888a9fd88db78a51">ODOM</a> &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_navigation.html#a38b15b25d7955966bfec3c3b7cffb192">test_pub</a></td></tr>
+<tr class="separator:a38b15b25d7955966bfec3c3b7cffb192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7c1bf006d711e6cacec4101522a5f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_navigation_8hpp.html#a8b2f8cdf31799f7eea86076f177d254b">PUBLISHER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task_navigation.html#acf7c1bf006d711e6cacec4101522a5f8">nav_publisher_</a></td></tr>
+<tr class="separator:acf7c1bf006d711e6cacec4101522a5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00033">33</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/media/okritvik/NSSD/ENPM808X-Final-Project/mario_com/test/<a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a></li>
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00038">38</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5ab5aae807fd3c32f4c816879d86b620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab5aae807fd3c32f4c816879d86b620">&#9670;&nbsp;</a></span>callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TaskNavigation::callback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00046">46</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acf7c1bf006d711e6cacec4101522a5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7c1bf006d711e6cacec4101522a5f8">&#9670;&nbsp;</a></span>nav_publisher_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_navigation_8hpp.html#a8b2f8cdf31799f7eea86076f177d254b">PUBLISHER</a> TaskNavigation::nav_publisher_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00044">44</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae3d1bc3543f30838e7663fc8caecef77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d1bc3543f30838e7663fc8caecef77">&#9670;&nbsp;</a></span>node_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Node::SharedPtr TaskNavigation::node_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00040">40</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a38b15b25d7955966bfec3c3b7cffb192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b15b25d7955966bfec3c3b7cffb192">&#9670;&nbsp;</a></span>test_pub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;<a class="el" href="_navigation_8hpp.html#a0d14f9fa0f53f31f888a9fd88db78a51">ODOM</a>&gt;::SharedPtr TaskNavigation::test_pub</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00042">42</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a103d5c2c602692197340d45974dec4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103d5c2c602692197340d45974dec4d6">&#9670;&nbsp;</a></span>timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_navigation_8hpp.html#a59fbe15a44ccf259bfb94512a32d2a84">TIMER</a> TaskNavigation::timer_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="navigation__test_8cpp_source.html#l00041">41</a> of file <a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/test/<a class="el" href="navigation__test_8cpp_source.html">navigation_test.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_task_navigation.html">TaskNavigation</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

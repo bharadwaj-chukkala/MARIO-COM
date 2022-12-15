@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -53,22 +49,6 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,18 +64,72 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div><ul>
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>callback()
+: <a class="el" href="class_task_navigation.html#a5ab5aae807fd3c32f4c816879d86b620">TaskNavigation</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
 <li>detect_bin()
 : <a class="el" href="class_perception.html#a915ef7af41f2881f500e8fae833e8443">Perception</a>
 </li>
-<li>gripper_close()
-: <a class="el" href="class_manipulation.html#a082b736daf27e4ada3fbeceb8bc10d29">Manipulation</a>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>img_callback()
+: <a class="el" href="class_perception.html#ae56ca83a1f89a168ee1d9526344c1c80">Perception</a>
 </li>
-<li>gripper_open()
-: <a class="el" href="class_manipulation.html#a74b2b91af21ced6cd27834d32410f25d">Manipulation</a>
+<li>img_node
+: <a class="el" href="class_task_perception.html#a4f11b13e013eefa6666b0643da923f80">TaskPerception</a>
+</li>
+<li>initial_yaw
+: <a class="el" href="class_task_perception.html#a7d5be33a11f058152e4fda3972237edc">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>l_rotate_flag
+: <a class="el" href="class_task_perception.html#a1bfdf0c1c2dd6934413940463de449bc">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>m_img_feed
+: <a class="el" href="class_task_perception.html#afeb00795114f60c4c4810f1d5d2d1da4">TaskPerception</a>
+</li>
+<li>m_lidar_feed
+: <a class="el" href="class_task_perception.html#a39bad280c4be95be3ca9f1d4e84e09bb">TaskPerception</a>
+</li>
+<li>m_manip
+: <a class="el" href="class_robot_sim.html#af7e5cbfeffd0cfeacf145ed83853a4fe">RobotSim</a>
+</li>
+<li>m_nav
+: <a class="el" href="class_robot_sim.html#aa002b6c3bdce4e4ec5e297caffca6034">RobotSim</a>
+</li>
+<li>m_perc
+: <a class="el" href="class_robot_sim.html#a2b8354d10f913742fd50c18018cd9342">RobotSim</a>
+</li>
+<li>m_place_pose
+: <a class="el" href="class_task_manipulation.html#a754d0f4c0c98733777e4fba1caf07f28">TaskManipulation</a>
+</li>
+<li>m_pub_vel
+: <a class="el" href="class_task_perception.html#a404e6b350fa806eeb012e69ac9ebc711">TaskPerception</a>
+</li>
+<li>manip_node
+: <a class="el" href="class_task_manipulation.html#ae95b2c080711fd6ab82f47d862927527">TaskManipulation</a>
 </li>
 <li>Manipulation()
 : <a class="el" href="class_manipulation.html#ae30eef2d506ae9c4dad0d85eb01d0833">Manipulation</a>
+</li>
+<li>move_forward
+: <a class="el" href="class_task_perception.html#ae908ca39fdaafb4ced7328742218dfa2">TaskPerception</a>
 </li>
 <li>move_to_bin()
 : <a class="el" href="class_perception.html#ae54b17f3c79eea35e58ad5ad7865b365">Perception</a>
@@ -103,8 +137,51 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>move_to_disposal_zone()
 : <a class="el" href="class_navigation.html#a18fe18719feb0c120d8e943e61d8501f">Navigation</a>
 </li>
+</ul>
+
+
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>nav_publisher_
+: <a class="el" href="class_task_navigation.html#acf7c1bf006d711e6cacec4101522a5f8">TaskNavigation</a>
+</li>
 <li>Navigation()
 : <a class="el" href="class_navigation.html#a81fdffdefe46340da5fa6c570066b42b">Navigation</a>
+</li>
+<li>next_location
+: <a class="el" href="class_task_perception.html#a58b071a1659a41b9adbe60b5dd5596f7">TaskPerception</a>
+</li>
+<li>node_
+: <a class="el" href="class_task_manipulation.html#a8b57efc0adba3d277e84f2cdfb448b57">TaskManipulation</a>
+, <a class="el" href="class_task_navigation.html#ae3d1bc3543f30838e7663fc8caecef77">TaskNavigation</a>
+, <a class="el" href="class_task_perception.html#a76d401b61419803834374847343ae627">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>odom_callback_disposal()
+: <a class="el" href="class_navigation.html#a276dfd50915ef30db7d6c1a94abe54a0">Navigation</a>
+</li>
+<li>odom_callback_resume()
+: <a class="el" href="class_navigation.html#add4e01f166ca6692d355ff6a0d9996e9">Navigation</a>
+</li>
+<li>odom_callback_search()
+: <a class="el" href="class_navigation.html#af66514aaf77289b5a99b779c144d5902">Navigation</a>
+, <a class="el" href="class_perception.html#a6b156a18bd59f24edce269a06eed7287">Perception</a>
+, <a class="el" href="class_task_perception.html#a1bd06077e1632290ca2ff36780e763c7">TaskPerception</a>
+</li>
+<li>odom_sub
+: <a class="el" href="class_task_perception.html#a475c857e0c015ab065b45ee08d357a32">TaskPerception</a>
+</li>
+<li>options
+: <a class="el" href="class_task_perception.html#a2a5447b173aa816389b8f501cee3c210">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>percep_odom_node
+: <a class="el" href="class_task_perception.html#ae0c679e9d76810e251bc99578153ac54">TaskPerception</a>
 </li>
 <li>Perception()
 : <a class="el" href="class_perception.html#a8bcf74df62599f91509d3fd2df14c5f7">Perception</a>
@@ -112,31 +189,61 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>pick_bin()
 : <a class="el" href="class_manipulation.html#ab81e3d7603704484f3f942c6fd915000">Manipulation</a>
 </li>
+<li>pick_client
+: <a class="el" href="class_task_manipulation.html#a543b5681178d721908ec43e0b9bbf7a2">TaskManipulation</a>
+</li>
 <li>place_bin()
 : <a class="el" href="class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e">Manipulation</a>
 </li>
+<li>place_client
+: <a class="el" href="class_task_manipulation.html#ad07f0e7b903af74253951f287b7db756">TaskManipulation</a>
+</li>
+<li>present_yaw
+: <a class="el" href="class_task_perception.html#af5d0736de9ef3ff6af2b8da1347f5094">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>r_rotate_flag
+: <a class="el" href="class_task_perception.html#accbaf25aa628e54d259e903f3a39378a">TaskPerception</a>
+</li>
 <li>resume_search()
-: <a class="el" href="class_navigation.html#a1a5272cfe619ad19eb99951537daf382">Navigation</a>
+: <a class="el" href="class_navigation.html#a6a4e9d073deed788a60811282b752fba">Navigation</a>
 </li>
 <li>RobotSim()
 : <a class="el" href="class_robot_sim.html#a75ca96f997897176b1f3935d5d0a4dd9">RobotSim</a>
 </li>
+</ul>
+
+
+<h3><a id="index_s"></a>- s -</h3><ul>
 <li>search_bins()
-: <a class="el" href="class_navigation.html#ad31357ca22e0cc1b15d01211c2de0be6">Navigation</a>
+: <a class="el" href="class_navigation.html#a7b80700112a25dc3206e2412b588befb">Navigation</a>
 </li>
-<li>select_bin()
-: <a class="el" href="class_perception.html#aa20bb611efaed97197e4743f9e58f088">Perception</a>
+<li>stop_flag
+: <a class="el" href="class_task_perception.html#ac8d9df3f3ff6b188ece883e7c21c121f">TaskPerception</a>
+</li>
+<li>sub
+: <a class="el" href="class_task_perception.html#a17e4f2158b624f68dd8a66566b42ebaf">TaskPerception</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>test_pub
+: <a class="el" href="class_task_navigation.html#a38b15b25d7955966bfec3c3b7cffb192">TaskNavigation</a>
+</li>
+<li>timer_
+: <a class="el" href="class_task_navigation.html#a103d5c2c602692197340d45974dec4d6">TaskNavigation</a>
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

@@ -1,0 +1,262 @@
+\href{https://opensource.org/licenses/Apache-2.0}{\texttt{ }} \href{https://github.com/bharadwaj-chukkala/MARIO-COM/actions/workflows/build_and_coveralls.yml}{\texttt{ }} \href{https://codecov.io/github/bharadwaj-chukkala/MARIO-COM}{\texttt{ }} \hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md0}{}\doxysection{Acme Robotics\+: Mobile Autonomous Robot for Indoor and Outdoor Collection Of Medical Waste (\+M\+A\+R\+I\+O-\/\+C\+O\+M)}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md0}
+ 
+
+Image for representative purposes only. Source\+: \href{https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/\#manipulation}{\texttt{ https\+://emanual.\+robotis.\+com/docs/en/platform/turtlebot3/manipulation/\#manipulation}} \hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{Overview}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md1}
+With the successful design and deployment of a robotic manipulator-\/based software solution for the automation of assembly line production of automobiles, Acme Robotics, Inc. has been able to maximize the efficiency of the automobile plant. As a part of its 5-\/year roadmap to further expand its expertise areas and leverage robotic solutions to touch human lives, a mobile robot-\/based medical waste collection and disposal solution is proposed to efficiently and safely transport medical waste trash bins from different locations inside a hospital to the disposal zone.
+
+Hospital waste transport and handling is a time-\/consuming, hazardous and infectious process as the staff is exposed to be in contact with medical and bio-\/hazardous substances. The biomedical waste collected from hospital should not be stored in bins for more than 24 hours and has to be disposed immediately. In order to avoid this we need to ensure regular and safe disposal of waste to help the hospital maintain a clean environment for the patients, staff and visitors. There needs to exist a practical solution, if not one stop, that can take out the risk in the disposal and also be a safe and sustainable way to use technology for the betterment of human lives
+
+The software design and development process shall involve adhering to an amalgamation of Agile Iterative Processes and pair-\/programming techniques over a course of three weeks. The efficacy of the implementation shall be verified using the test-\/driven development approach. The driver and navigator roles are exchanged during each phase of the project to effectively develop and complete the backlogs.\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Purpose \& Methodology}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md2}
+The Robot will identify the bins in the surrounding environment and dispose them at a designated site. The robot will be deployed from an initial position from which it will traverse through the environment while scanning its nearby surroundings to check if a bin is present in the locality. If the robot recognizes a medical waste bin, it will move towards it, pick it up and dispose the trash in it at the site. After doing that it will rendezvous to the bin position to place the empty bin it it\textquotesingle{}s place and start moving around to find other bins.
+
+This Product will eliminate the usage of manual labour to dispose hazardous waste, thus restricting risks to human lives. Automating the process of disposal also saves the havoc of missing or delaying the disposal. Besides reducing human interaction in the process, it is also way more efficient than a typical human being, thus being an advancement for the better.
+
+The product is a R\+O\+B\+O\+T\+IS turtlebot with Open Manipulator X Gripper attached to it. As the turtlebot moves around in the environment, the Manipulator attached to it will pick the bins and dispose the trash. The Product uses perception principles to identify a bin, pick it from it\textquotesingle{}s initial position and place it back. The robot will have a visual sensor to perform the perception aspect of the product. The robot runs on a software with a built in search algorithm to traverse through the environment.
+
+Assumptions\+:
+\begin{DoxyItemize}
+\item The Trigger for the robot to start it\textquotesingle{}s search will be a set time in the night, because hospitals have lesser traffic in the night times.
+\item The Robot will move towards the closest bin in it\textquotesingle{}s reach, if it encounters multiple bins in its visual frame
+\item All the trash cans in the hospital scene will be mostly full at the end of the day, so we assume full bins when the robot starts its search
+\item Once the trash cans are disposed, the robot will place the bin back at its initial position and tag it as empty so that it wont pick it up again until next disposal iteration.
+\end{DoxyItemize}
+
+Risks and Mitigation\+:~\newline
+ The possible risk includes the trade-\/off between the processing rate of the images captured by the robot to detect the obstacles while moving from the initial pose to the goal pose. Since the environment is unknown to the robot and the search algorithm implements a grid-\/based search, there is a possibility that the robot may not find the hazardous trash or reach the goal pose generated from the grid search accurately due to dynamic obstacles. Mitigations include the restriction on target object size and its position in the randomized world space. The initial assumption is that the robot should reach the target location and simulate its pickup and reach the disposal zone.
+
+Presentation\+: ~\newline
+ \href{https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true}{\texttt{ Here}} is link to final presentation.
+
+\href{https://youtu.be/U7UHgr7ei_M}{\texttt{ Here}} is the simulation of M\+A\+R\+I\+O-\/\+C\+O\+M! \hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Personnel\+:}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Bharadwaj Chukkala}}~\newline
+ U\+ID\+: 118341705~\newline
+ Bharadwaj Chukkala is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Machine Learning, \mbox{\hyperlink{class_perception}{Perception}} and Path Planning.~\newline
+ \href{bchukkal@umd.edu}{\texttt{ }} \href{https://www.linkedin.com/in/bharadwaj-chukkala/}{\texttt{ }} \href{https://github.com/bharadwaj-chukkala}{\texttt{ }}
+\item {\bfseries{Adarsh Malapaka}}~\newline
+ U\+ID\+: 118119625~\newline
+ Adarsh Malapaka is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Control Systems, Robot Kinematics, Path Planning, and A\+D\+AS.~\newline
+ \href{amalapak@terpmail.umd.edu}{\texttt{ }} \href{[https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/adarsh-malapaka/)}{\texttt{ }} \href{https://github.com/adarshmalapaka}{\texttt{ }}
+\item {\bfseries{Kumara Ritvik Oruganti}}~\newline
+ U\+ID\+: 117368963~\newline
+ Kumara Ritvik Oruganti is currently a Master\textquotesingle{}s student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include developing sustainable, efficient and intelligent robots and embedded systems for real-\/world problems.~\newline
+ \href{okritvik@terpmail.umd.edu}{\texttt{ }} \href{[https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/okritvik/)}{\texttt{ }} \href{https://github.com/okritvik}{\texttt{ }} \href{https://www.okritvik.com/}{\texttt{ }}
+\end{DoxyItemize}\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Agile-\/\+Iterative Process (\+A\+I\+P) Resources}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsection{Pair Programming}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Phase} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Adarsh Malapaka} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Bharadwaj Chukkala} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Kumara Ritvik Oruganti}  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Phase} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Adarsh Malapaka} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Bharadwaj Chukkala} }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily Kumara Ritvik Oruganti}  }\\\cline{1-4}
+\endhead
+1 &Navigator &Driver &Design Keeper  \\\cline{1-4}
+2 &Driver &Design Keeper &Navigator  \\\cline{1-4}
+3 &Design Keeper &Navigator &Driver  \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md6}{}\doxysubsubsection{Product Backlog\+:}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md6}
+\href{https://docs.google.com/spreadsheets/d/1XZ4UL9ePxGej_Jj6zL2NBFaGKRe57Hb5tn70BDvRW7s/edit\#gid=0}{\texttt{ https\+://docs.\+google.\+com/spreadsheets/d/1\+X\+Z4\+U\+L9e\+Px\+Gej\+\_\+\+Jj6z\+L2\+N\+B\+Fa\+G\+K\+Re57\+Hb5tn70\+B\+Dv\+R\+W7s/edit\#gid=0}}\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{Sprint Planning Notes}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md7}
+\href{https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/edit}{\texttt{ https\+://docs.\+google.\+com/document/d/1\+Jsw\+T\+Ikv\+G\+N\+D\+T8kqs0\+M8pb\+F\+I\+W\+Wat\+No\+Kk5q\+Qq9jqd\+Afd\+C\+M/edit}}\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{Quad Chart}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md8}
+ \hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Developer Documentation}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md9}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md10}{}\doxysubsubsection{Dependencies}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item \href{https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html}{\texttt{ R\+O\+S2 Foxy}}\+: R\+O\+S2 Foxy installed on an Ubuntu 20.\+04 machine is used for this project. The steps to install R\+O\+S2 Foxy are mentioned in the above link.
+\item \href{https://www.opencv-srf.com/p/introduction.html}{\texttt{ Open\+CV}}\+: Open\+CV is used to detect the medical waste bins using classical image processing algorithms and can be installed from this \href{https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/}{\texttt{ link.}}
+\item \href{https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/}{\texttt{ Turtle\+Bot3}}\+: The Turtlebot3 R\+O\+S2 simulation packages are used to simulate the medical waste disposal robot. Upon installing and configuring the R\+O\+S2 workspace, the steps to install these packages are mentioned in the above link.
+\item \href{https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/\#turtlebot3-with-openmanipulator}{\texttt{ Open\+M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R-\/X}}\+: The R\+O\+B\+O\+T\+IS Open\+M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R-\/X gripper mounted on the Turtle\+Bot3 robot is used to pick and place the disposal bins. The steps to install and visualize the robot with this gripper are given in the link above.
+\item \href{https://classic.gazebosim.org/tutorials?tut=install_ubuntu}{\texttt{ Gazebo}}\+: Gazebo latest version was installed for deploying simulation environments and running the models in the project package.
+\item \href{https://navigation.ros.org/build_instructions/index.html}{\texttt{ Navigation2 R\+OS}}\+: The \mbox{\hyperlink{class_navigation}{Navigation}} stack was installed to control the turtlebot3 model to traverse between spawn zone to collection zones and disposal zone.
+\item cv\+\_\+bridge\+: The cv bridge tool can be installed on ypur system using this command {\ttfamily sudo apt-\/get install ros-\/(R\+OS version name)-\/cv-\/bridge}
+\end{DoxyEnumerate}\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsection{Environment Setup}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md11}
+Clone the following repo in any directory and place the {\ttfamily mario\+\_\+com} folder in your R\+O\+S2 workspace 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/bharadwaj-\/chukkala/MARIO-\/COM.git}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{Build}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md12}
+In the R\+O\+S2 Foxy workspace, run the following\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source /opt/ros/foxy/setup.bash}
+\DoxyCodeLine{colcon build -\/-\/symlink-\/install}
+\DoxyCodeLine{colcon build -\/-\/packages-\/select mario\_com}
+\end{DoxyCode}
+
+
+Note\+: Make sure that the Turtle\+Bot3\+\_\+manipulation, moveit2\+\_\+tutorials, moveit\+\_\+visual\+\_\+tools, rviz\+\_\+visual\+\_\+tools, and turtlebot3\+\_\+simulations are there in the R\+O\+S2 Foxy workspace created earlier\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md13}{}\doxysubsubsection{Run the simulation}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md13}
+In the terminal after building the package, run the below commands to set the gazebo model path and Turtle\+Bot3 model. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{colcon build -\/-\/symlink-\/install -\/-\/packages-\/select mario\_com}
+\DoxyCodeLine{export GAZEBO\_MODEL\_PATH=`ros2 pkg prefix mario\_com`/share/mario\_com/models/}
+\DoxyCodeLine{. /usr/share/gazebo/setup.bash}
+\DoxyCodeLine{export TURTLEBOT3\_MODEL=waffle\_pi}
+\DoxyCodeLine{. install/setup.bash}
+\end{DoxyCode}
+
+
+Then, in one terminal run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ros2 launch mario\_com hospital.launch.py}
+\end{DoxyCode}
+
+
+Wait for the Gazebo and R\+Viz to spawn and show the models. If not shown, quit both the windows and run the above commands to set the model paths. In another terminal, run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ros2 run mario\_com my\_main}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md14}{}\doxysubsubsection{Build for Test Coverage}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md14}
+Make sure that you are in the R\+O\+S2 workspace. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get install lcov}
+\DoxyCodeLine{rm -\/rf build/mario\_com/}
+\DoxyCodeLine{source /opt/ros/foxy/setup.bash}
+\DoxyCodeLine{colcon build -\/-\/cmake-\/args -\/DCOVERAGE=1 -\/-\/packages-\/select mario\_com}
+\DoxyCodeLine{cat log/latest\_build/mario\_com/stdout\_stderr.log}
+\DoxyCodeLine{find build/mario\_com/ | grep -\/E 'gcno' \# catch error -\/-\/ exepct to see .gcno files}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md15}{}\doxysubsubsection{Run Unit Tests and Check for code errors}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source install/setup.bash}
+\DoxyCodeLine{colcon test -\/-\/packages-\/select mario\_com}
+\DoxyCodeLine{cat log/latest\_test/mario\_com/stdout\_stderr.log}
+\DoxyCodeLine{find build/mario\_com/ | grep -\/E 'gcda' \# catch error -\/-\/ expect to see .gcda files}
+\DoxyCodeLine{colcon test-\/result -\/-\/test-\/result-\/base build/mario\_com/ \# catch error}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md16}{}\doxysubsubsection{Generate Coverage report}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source install/setup.bash}
+\DoxyCodeLine{ros2 run mario\_com generate\_coverage\_report.bash}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md17}{}\doxysubsubsection{View Coverage report}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{firefox ../install/mario\_com/coverage/index.html}
+\end{DoxyCode}
+\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md18}{}\doxysubsubsection{Doxygen Docs}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md18}
+\href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} is used to generate H\+T\+ML and La\+T\+EX documentation for the project\textquotesingle{}s A\+PI. To install and run Doxygen\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install doxywizard}
+\DoxyCodeLine{sudo apt install doxygen-\/gui}
+\DoxyCodeLine{sudo apt install graphviz}
+\DoxyCodeLine{}
+\DoxyCodeLine{// To run the GUI and generate documentation}
+\DoxyCodeLine{dozywizard}
+\end{DoxyCode}
+
+
+To display the documentation in a Web Browser (like firefox)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{firefox ./docs/html/index.html}
+\end{DoxyCode}
+
+
+The documentation is saved in the {\ttfamily /docs} directory.\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md19}{}\doxysubsubsection{cppcheck}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md19}
+Change to the root directory of the cloned project, and run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cppcheck -\/-\/enable=all -\/-\/std=c++17 mario\_com/src/*.cpp mario\_com/include/mario\_com/*.hpp mario\_com/test/*.cpp -\/-\/suppress=missingIncludeSystem -\/-\/suppress=missingInclude -\/-\/suppress=unmatchedSuppression -\/-\/suppress=unusedFunction -\/-\/suppress=unreadVariable -\/-\/suppress=useInitializationList > ./results/cppcheck.txt}
+\end{DoxyCode}
+
+
+The results of running {\ttfamily cppcheck} can be found in {\ttfamily /results/cppcheck.txt}.\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md20}{}\doxysubsubsection{cpplint}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md20}
+Change to the root directory of the project, and run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cpplint -\/-\/filter=-\/build/c++11,+build/c++17,-\/build/namespaces,-\/build/include\_order mario\_com/src/*.cpp mario\_com/include/mario\_com/*.hpp mario\_com/test/*.cpp \&> ./results/cpplint.txt}
+\end{DoxyCode}
+
+
+The results of running {\ttfamily cpplint} can be found in {\ttfamily /results/cpplint.txt}.\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{Known Issues/\+Bugs}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md21}
+
+\begin{DoxyEnumerate}
+\item Installation of R\+O\+S2 Foxy, Open\+CV, Turtle\+Bot3 packages might run into errors and the user is expected to resolve them by using the open-\/source R\+OS and Git\+Hub answers.
+\item C\+Make\+Lists might produce errors for dependencies. It is required by the user to install them in the system before running the colcon build.
+\item The Colcon Build might run into some warnings due to rcl interface linkage which is updated in R\+O\+S2 new versions. The Open\+CV installation might override the R\+O\+S2 Foxy cv\+\_\+bridge core headers. Ignore the warnings.
+\item The Git\+Hub CI yml installation for R\+O\+S2 is yet to be figured out.
+\item Since the code developed is purely based on the Gazebo, R\+Viz and Open\+CV simulation, the unit tests will have the code written in the project to test their functionality instead of calling the actual functions. Those test cases will run given that the user is running the simulation environment in their system.
+\item The Open\+Manipulator-\/X with Turtle\+Bot3 is yet to update their page for R\+O\+S2 Move\+It functionality.
+\item The assumption is that the bins spawned in the environment will be deleted and respawned at the disposal location which is considered to be the expected behavior of the robot.
+\item Minimal support for errors and continuous integration is available from the community for specific questions in R\+O\+S2.
+\item S\+DF file reading using C++ and parsing to Gazebo\textquotesingle{}s /spawn\+\_\+entity action doesn\textquotesingle{}t exist. Work arounds can be using the R\+OS Parameter Server or C++ System Command.
+\item Cartographer map generation doesn\textquotesingle{}t work for big size maps that has a lot of open space.
+\item The model or Turtle\+Bot3 might not spawn in the Gazebo World. Please check the previously mentioned commands that needs to be run (Try out diffent combinations!).
+\item If {\ttfamily . install/setup.\+bash} doesn\textquotesingle{}t work, use {\ttfamily source install/setup.\+bash}
+\end{DoxyEnumerate}\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{File Tree}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyPre}
+    ├── docs
+    │~~ ├── html
+    │~~ └── latex
+    ├── LICENSE
+    ├── mario\_com
+    │   ├── \mbox{\hyperlink{_c_make_lists_8txt}{CMakeLists.txt}}
+    │   ├── include
+    │   │   └── mario\_com
+    │   │       ├── \mbox{\hyperlink{_manipulation_8hpp}{Manipulation.hpp}}
+    │   │       ├── \mbox{\hyperlink{_navigation_8hpp}{Navigation.hpp}}
+    │   │       ├── \mbox{\hyperlink{_perception_8hpp}{Perception.hpp}}
+    │   │       └── \mbox{\hyperlink{_robot_sim_8hpp}{RobotSim.hpp}}
+    │   ├── launch
+    │   │   ├── \mbox{\hyperlink{bins_8launch_8py}{bins.launch.py}}
+    │   │   └── \mbox{\hyperlink{hospital_8launch_8py}{hospital.launch.py}}
+    │   ├── maps
+    │   │   ├── hospitalmap.pgm
+    │   │   └── hospitalmap.yaml
+    │   ├── models
+    │   │   ├── ambulance
+    │   │   ├── AnesthesiaMachine
+    │   │   ├── aws\_robomaker\_residential\_Trash\_01
+    │   │   ├── BedsideTable
+    │   │   ├── bin\_cylinder
+    │   │   ├── CGMClassic
+    │   │   ├── ElderLadyPatient
+    │   │   ├── InstrumentCart1
+    │   │   ├── MalePatientBed
+    │   │   ├── simple\_hospital
+    │   │   ├── small\_hospital
+    │   │   ├── StorageRackCovered
+    │   │   └── XRayMachine
+    │   ├── package.xml
+    │   ├── scripts
+    │   │   ├── coverage\_cleaned.info
+    │   │   ├── coverage.info
+    │   │   └── generate\_coverage\_report.bash
+    │   ├── src
+    │   │   ├── main.cpp
+    │   │   ├── \mbox{\hyperlink{_manipulation_8cpp}{Manipulation.cpp}}
+    │   │   ├── \mbox{\hyperlink{_navigation_8cpp}{Navigation.cpp}}
+    │   │   ├── \mbox{\hyperlink{_perception_8cpp}{Perception.cpp}}
+    │   │   └── \mbox{\hyperlink{_robot_sim_8cpp}{RobotSim.cpp}}
+    │   ├── test
+    │   │   ├── main.cpp
+    │   │   ├── \mbox{\hyperlink{manipulation__test_8cpp}{manipulation\_test.cpp}}
+    │   │   ├── \mbox{\hyperlink{navigation__test_8cpp}{navigation\_test.cpp}}
+    │   │   └── \mbox{\hyperlink{perception__test_8cpp}{perception\_test.cpp}}
+    │   ├── uncrustify\_google\_cpp\_allman.cfg
+    │   └── worlds
+    │       ├── simple\_hospital.world
+    │       └── small\_hospital.world
+    ├── proposal
+    │   └── ENPM808X\_\_\_FinalProject\_\_\_Proposal.pdf
+    ├── quadchart
+    │   └── quad\_chart\_v1.png
+    ├── \mbox{\hyperlink{_r_e_a_d_m_e_8md}{README.md}}
+    ├── results
+    │   ├── \mbox{\hyperlink{cppcheck_8txt}{cppcheck.txt}}
+    │   └── \mbox{\hyperlink{cpplint_8txt}{cpplint.txt}}
+    └── UML
+        ├── initial
+        │   ├── activity\_diagram\_v1.pdf
+        │   └── class\_diagram\_v1.pdf
+        └── revised
+            └── class\_diagram\_v2.pdf
+\end{DoxyPre}
+
+
+\#\hypertarget{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md23}{}\doxysection{License}\label{md__media_okritvik__n_s_s_d_foxy_ws_src__m_a_r_i_o-_c_o_m__r_e_a_d_m_e_autotoc_md23}
+This project is licensed under the \href{https://www.apache.org/licenses/LICENSE-2.0}{\texttt{ Apache 2.\+0 License}} and can be found in the {\ttfamily L\+I\+C\+E\+N\+SE} file. 

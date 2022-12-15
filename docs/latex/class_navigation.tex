@@ -9,23 +9,41 @@
 
 {\ttfamily \#include $<$Navigation.\+hpp$>$}
 
+
+
+Inheritance diagram for Navigation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_navigation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Navigation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_navigation__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_navigation_a81fdffdefe46340da5fa6c570066b42b}{Navigation}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_navigation}{Navigation}} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}{search\+\_\+bins}} (auto map)
+bool \mbox{\hyperlink{class_navigation_a7b80700112a25dc3206e2412b588befb}{search\+\_\+bins}} ()
 \begin{DoxyCompactList}\small\item\em Member function to execute the search algorithm in the map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_navigation_a18fe18719feb0c120d8e943e61d8501f}{move\+\_\+to\+\_\+disposal\+\_\+zone}} ()
 \begin{DoxyCompactList}\small\item\em Member function to move the robot \& bin to the disposal zone. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_navigation_a1a5272cfe619ad19eb99951537daf382}{resume\+\_\+search}} (geometry\+\_\+msgs\+::msg\+::\+Pose prev\+\_\+bin\+\_\+pose)
-\begin{DoxyCompactList}\small\item\em Member function to resume search algorithm after disposal. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Friends}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_navigation_ab16f66da292ba8a4bf8ccebd6fe4d37a}\label{class_navigation_ab16f66da292ba8a4bf8ccebd6fe4d37a}} 
-class {\bfseries Perception}
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_navigation_a6a4e9d073deed788a60811282b752fba}{resume\+\_\+search}} ()
+\begin{DoxyCompactList}\small\item\em Member function to resume search algorithm after disposal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_navigation_af66514aaf77289b5a99b779c144d5902}{odom\+\_\+callback\+\_\+search}} (const O\+D\+O\+M\+::\+Shared\+Ptr msg)
+\begin{DoxyCompactList}\small\item\em Call back for odom topic while searching. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_navigation_a276dfd50915ef30db7d6c1a94abe54a0}{odom\+\_\+callback\+\_\+disposal}} (const O\+D\+O\+M\+::\+Shared\+Ptr msg)
+\begin{DoxyCompactList}\small\item\em Call back for odom topic while disposing the bin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_navigation_add4e01f166ca6692d355ff6a0d9996e9}{odom\+\_\+callback\+\_\+resume}} (const O\+D\+O\+M\+::\+Shared\+Ptr msg)
+\begin{DoxyCompactList}\small\item\em Call back for odom topic while resuming search. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -33,7 +51,7 @@ class {\bfseries Perception}
 
 
 
-Definition at line 22 of file Navigation.\+hpp.
+Definition at line 35 of file Navigation.\+hpp.
 
 
 
@@ -50,7 +68,7 @@ Construct a new \mbox{\hyperlink{class_navigation}{Navigation}} object.
 
 
 
-Definition at line 16 of file Navigation.\+cpp.
+Definition at line 45 of file Navigation.\+cpp.
 
 
 
@@ -72,23 +90,75 @@ false If the robot cannot reach the disposal zone
 \end{DoxyReturn}
 
 
-Definition at line 25 of file Navigation.\+cpp.
+Definition at line 93 of file Navigation.\+cpp.
 
-\mbox{\Hypertarget{class_navigation_a1a5272cfe619ad19eb99951537daf382}\label{class_navigation_a1a5272cfe619ad19eb99951537daf382}} 
+\mbox{\Hypertarget{class_navigation_a276dfd50915ef30db7d6c1a94abe54a0}\label{class_navigation_a276dfd50915ef30db7d6c1a94abe54a0}} 
+\index{Navigation@{Navigation}!odom\_callback\_disposal@{odom\_callback\_disposal}}
+\index{odom\_callback\_disposal@{odom\_callback\_disposal}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{odom\_callback\_disposal()}{odom\_callback\_disposal()}}
+{\footnotesize\ttfamily void Navigation\+::odom\+\_\+callback\+\_\+disposal (\begin{DoxyParamCaption}\item[{const O\+D\+O\+M\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})}
+
+
+
+Call back for odom topic while disposing the bin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & O\+D\+OM message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Navigation.\+cpp.
+
+\mbox{\Hypertarget{class_navigation_add4e01f166ca6692d355ff6a0d9996e9}\label{class_navigation_add4e01f166ca6692d355ff6a0d9996e9}} 
+\index{Navigation@{Navigation}!odom\_callback\_resume@{odom\_callback\_resume}}
+\index{odom\_callback\_resume@{odom\_callback\_resume}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{odom\_callback\_resume()}{odom\_callback\_resume()}}
+{\footnotesize\ttfamily void Navigation\+::odom\+\_\+callback\+\_\+resume (\begin{DoxyParamCaption}\item[{const O\+D\+O\+M\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})}
+
+
+
+Call back for odom topic while resuming search. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & O\+D\+OM message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Navigation.\+cpp.
+
+\mbox{\Hypertarget{class_navigation_af66514aaf77289b5a99b779c144d5902}\label{class_navigation_af66514aaf77289b5a99b779c144d5902}} 
+\index{Navigation@{Navigation}!odom\_callback\_search@{odom\_callback\_search}}
+\index{odom\_callback\_search@{odom\_callback\_search}!Navigation@{Navigation}}
+\doxysubsubsection{\texorpdfstring{odom\_callback\_search()}{odom\_callback\_search()}}
+{\footnotesize\ttfamily void Navigation\+::odom\+\_\+callback\+\_\+search (\begin{DoxyParamCaption}\item[{const O\+D\+O\+M\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})}
+
+
+
+Call back for odom topic while searching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & O\+D\+OM message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Navigation.\+cpp.
+
+\mbox{\Hypertarget{class_navigation_a6a4e9d073deed788a60811282b752fba}\label{class_navigation_a6a4e9d073deed788a60811282b752fba}} 
 \index{Navigation@{Navigation}!resume\_search@{resume\_search}}
 \index{resume\_search@{resume\_search}!Navigation@{Navigation}}
 \doxysubsubsection{\texorpdfstring{resume\_search()}{resume\_search()}}
-{\footnotesize\ttfamily bool Navigation\+::resume\+\_\+search (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::msg\+::\+Pose}]{prev\+\_\+bin\+\_\+pose }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Navigation\+::resume\+\_\+search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Member function to resume search algorithm after disposal. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em prev\+\_\+bin\+\_\+pose} & Pose of the bin previously disposed. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true If the search can be resumed 
 
@@ -96,30 +166,25 @@ false If the search cannot be resumed
 \end{DoxyReturn}
 
 
-Definition at line 30 of file Navigation.\+cpp.
+Definition at line 119 of file Navigation.\+cpp.
 
-\mbox{\Hypertarget{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}\label{class_navigation_ad31357ca22e0cc1b15d01211c2de0be6}} 
+\mbox{\Hypertarget{class_navigation_a7b80700112a25dc3206e2412b588befb}\label{class_navigation_a7b80700112a25dc3206e2412b588befb}} 
 \index{Navigation@{Navigation}!search\_bins@{search\_bins}}
 \index{search\_bins@{search\_bins}!Navigation@{Navigation}}
 \doxysubsubsection{\texorpdfstring{search\_bins()}{search\_bins()}}
-{\footnotesize\ttfamily void Navigation\+::search\+\_\+bins (\begin{DoxyParamCaption}\item[{auto}]{map }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Navigation\+::search\+\_\+bins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Member function to execute the search algorithm in the map. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em map} & Map of the robot\textquotesingle{}s environment. \\
-\hline
-\end{DoxyParams}
 
-
-Definition at line 21 of file Navigation.\+cpp.
+Definition at line 55 of file Navigation.\+cpp.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_navigation_8hpp}{Navigation.\+hpp}}\item 
-/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/src/\mbox{\hyperlink{_navigation_8cpp}{Navigation.\+cpp}}\end{DoxyCompactItemize}
+/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_navigation_8hpp}{Navigation.\+hpp}}\item 
+/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/src/\mbox{\hyperlink{_navigation_8cpp}{Navigation.\+cpp}}\end{DoxyCompactItemize}

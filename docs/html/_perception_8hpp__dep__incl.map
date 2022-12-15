@@ -1,11 +1,11 @@
-<map id="/media/okritvik/NSSD/ENPM808X&#45;Final&#45;Project/mario_com/include/mario_com/Perception.hpp" name="/media/okritvik/NSSD/ENPM808X&#45;Final&#45;Project/mario_com/include/mario_com/Perception.hpp">
-<area shape="rect" id="node1" title="Perception class interface." alt="" coords="437,5,629,76"/>
-<area shape="rect" id="node2" href="$_navigation_8hpp.html" title="Navigation class interface." alt="" coords="321,124,513,195"/>
-<area shape="rect" id="node3" href="$_robot_sim_8hpp.html" title="RobotSim class interface." alt="" coords="115,243,307,313"/>
-<area shape="rect" id="node8" href="$_perception_8cpp.html" title="Perception class implementation (code stub)" alt="" coords="538,131,761,187"/>
-<area shape="rect" id="node9" href="$perception__test_8cpp_source.html" title=" " alt="" coords="785,124,986,195"/>
-<area shape="rect" id="node6" href="$_navigation_8cpp.html" title="Navigation class implementation (code stubs)" alt="" coords="331,250,555,306"/>
-<area shape="rect" id="node7" href="$navigation__test_8cpp_source.html" title=" " alt="" coords="579,243,781,313"/>
-<area shape="rect" id="node4" href="$src_2main_8cpp.html" title="Main file for simulation and demo." alt="" coords="5,361,192,417"/>
-<area shape="rect" id="node5" href="$_robot_sim_8cpp.html" title="RobotSim class implementation (code stub)" alt="" coords="216,361,432,417"/>
+<map id="/media/okritvik/NSSD/foxy_ws/src/MARIO&#45;COM/mario_com/include/mario_com/Perception.hpp" name="/media/okritvik/NSSD/foxy_ws/src/MARIO&#45;COM/mario_com/include/mario_com/Perception.hpp">
+<area shape="rect" id="node1" title="Perception class interface." alt="" coords="534,5,726,76"/>
+<area shape="rect" id="node2" href="$_navigation_8hpp.html" title="Navigation class interface." alt="" coords="467,124,659,195"/>
+<area shape="rect" id="node3" href="$_robot_sim_8hpp.html" title="RobotSim class interface." alt="" coords="117,243,309,313"/>
+<area shape="rect" id="node7" href="$_perception_8cpp.html" title="Perception class implementation (code stub)" alt="" coords="807,250,1029,306"/>
+<area shape="rect" id="node9" href="$perception__test_8cpp.html" title=" " alt="" coords="735,124,936,195"/>
+<area shape="rect" id="node6" href="$_navigation_8cpp.html" title="Navigation class implementation (code stubs)" alt="" coords="333,250,557,306"/>
+<area shape="rect" id="node8" href="$navigation__test_8cpp.html" title=" " alt="" coords="581,243,783,313"/>
+<area shape="rect" id="node4" href="$src_2main_8cpp.html" title="Main file for simulation and demo." alt="" coords="5,361,193,417"/>
+<area shape="rect" id="node5" href="$_robot_sim_8cpp.html" title="RobotSim class implementation (code stub)" alt="" coords="218,361,434,417"/>
 </map>

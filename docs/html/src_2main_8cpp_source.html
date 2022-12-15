@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MARIO-COM: /media/okritvik/NSSD/ENPM808X-Final-Project/mario_com/src/main.cpp Source File</title>
+<title>MARIO-COM: /media/okritvik/NSSD/foxy_ws/src/MARIO-COM/mario_com/src/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -27,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="acme.jpeg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MARIO-COM
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">Mobile Autonomous Robot for Indoor and Outdoor Collection of Medical Waste</div>
   </td>
@@ -52,23 +48,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('src_2main_8cpp_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,6 +62,11 @@ $(document).ready(function(){initNavTree('src_2main_8cpp_source.html',''); initR
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_673edafc07d2dfea7b360f77263e2648.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">main.cpp</div>  </div>
@@ -90,22 +74,46 @@ $(document).ready(function(){initNavTree('src_2main_8cpp_source.html',''); initR
 <div class="contents">
 <a href="src_2main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../include/mario_com/RobotSim.hpp&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">int</span> main() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Code stub</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_robot_sim.html">RobotSim</a> rs;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;rclcpp/utilities.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   16</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[]) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Initialize the ROS</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    rclcpp::init(argc, argv);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Create Robot Simulator Object</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_robot_sim.html">RobotSim</a> rs;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Start the operation</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    RCLCPP_INFO(rclcpp::get_logger(<span class="stringliteral">&quot;log&quot;</span>), <span class="stringliteral">&quot;Starting Trash Collection&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">while</span> (!rs.<a class="code" href="class_robot_sim.html#aa002b6c3bdce4e4ec5e297caffca6034">m_nav</a>.<a class="code" href="class_navigation.html#a7b80700112a25dc3206e2412b588befb">search_bins</a>()) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (rs.<a class="code" href="class_robot_sim.html#a2b8354d10f913742fd50c18018cd9342">m_perc</a>.<a class="code" href="class_perception.html#a915ef7af41f2881f500e8fae833e8443">detect_bin</a>()) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    rclcpp::sleep_for(2s);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    rs.<a class="code" href="class_robot_sim.html#af7e5cbfeffd0cfeacf145ed83853a4fe">m_manip</a>.<a class="code" href="class_manipulation.html#ab81e3d7603704484f3f942c6fd915000">pick_bin</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    rs.<a class="code" href="class_robot_sim.html#aa002b6c3bdce4e4ec5e297caffca6034">m_nav</a>.<a class="code" href="class_navigation.html#a18fe18719feb0c120d8e943e61d8501f">move_to_disposal_zone</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    rs.<a class="code" href="class_robot_sim.html#af7e5cbfeffd0cfeacf145ed83853a4fe">m_manip</a>.<a class="code" href="class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e">place_bin</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    rs.<a class="code" href="class_robot_sim.html#aa002b6c3bdce4e4ec5e297caffca6034">m_nav</a>.<a class="code" href="class_navigation.html#a6a4e9d073deed788a60811282b752fba">resume_search</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Shutdown ROS</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    rclcpp::shutdown();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// cv::destroyWindow(&quot;view&quot;);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
+<div class="ttc" id="aclass_navigation_html_a6a4e9d073deed788a60811282b752fba"><div class="ttname"><a href="class_navigation.html#a6a4e9d073deed788a60811282b752fba">Navigation::resume_search</a></div><div class="ttdeci">bool resume_search()</div><div class="ttdoc">Member function to resume search algorithm after disposal.</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_8cpp_source.html#l00119">Navigation.cpp:119</a></div></div>
+<div class="ttc" id="aclass_manipulation_html_ab81e3d7603704484f3f942c6fd915000"><div class="ttname"><a href="class_manipulation.html#ab81e3d7603704484f3f942c6fd915000">Manipulation::pick_bin</a></div><div class="ttdeci">bool pick_bin()</div><div class="ttdoc">Member function to pick the bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00036">Manipulation.cpp:36</a></div></div>
+<div class="ttc" id="aclass_navigation_html_a7b80700112a25dc3206e2412b588befb"><div class="ttname"><a href="class_navigation.html#a7b80700112a25dc3206e2412b588befb">Navigation::search_bins</a></div><div class="ttdeci">bool search_bins()</div><div class="ttdoc">Member function to execute the search algorithm in the map.</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_8cpp_source.html#l00055">Navigation.cpp:55</a></div></div>
+<div class="ttc" id="aclass_robot_sim_html_aa002b6c3bdce4e4ec5e297caffca6034"><div class="ttname"><a href="class_robot_sim.html#aa002b6c3bdce4e4ec5e297caffca6034">RobotSim::m_nav</a></div><div class="ttdeci">Navigation m_nav</div><div class="ttdef"><b>Definition:</b> <a href="_robot_sim_8hpp_source.html#l00031">RobotSim.hpp:31</a></div></div>
+<div class="ttc" id="aclass_manipulation_html_aaa51347c5b8dbe3a99bf0d612f4bd49e"><div class="ttname"><a href="class_manipulation.html#aaa51347c5b8dbe3a99bf0d612f4bd49e">Manipulation::place_bin</a></div><div class="ttdeci">bool place_bin()</div><div class="ttdoc">Member function to place the bin.</div><div class="ttdef"><b>Definition:</b> <a href="_manipulation_8cpp_source.html#l00063">Manipulation.cpp:63</a></div></div>
+<div class="ttc" id="aclass_robot_sim_html_af7e5cbfeffd0cfeacf145ed83853a4fe"><div class="ttname"><a href="class_robot_sim.html#af7e5cbfeffd0cfeacf145ed83853a4fe">RobotSim::m_manip</a></div><div class="ttdeci">Manipulation m_manip</div><div class="ttdef"><b>Definition:</b> <a href="_robot_sim_8hpp_source.html#l00033">RobotSim.hpp:33</a></div></div>
+<div class="ttc" id="aclass_navigation_html_a18fe18719feb0c120d8e943e61d8501f"><div class="ttname"><a href="class_navigation.html#a18fe18719feb0c120d8e943e61d8501f">Navigation::move_to_disposal_zone</a></div><div class="ttdeci">bool move_to_disposal_zone()</div><div class="ttdoc">Member function to move the robot &amp; bin to the disposal zone.</div><div class="ttdef"><b>Definition:</b> <a href="_navigation_8cpp_source.html#l00093">Navigation.cpp:93</a></div></div>
 <div class="ttc" id="aclass_robot_sim_html"><div class="ttname"><a href="class_robot_sim.html">RobotSim</a></div><div class="ttdoc">RobotSim class to simulate the medical disposal task of the robot.</div><div class="ttdef"><b>Definition:</b> <a href="_robot_sim_8hpp_source.html#l00023">RobotSim.hpp:23</a></div></div>
+<div class="ttc" id="aclass_robot_sim_html_a2b8354d10f913742fd50c18018cd9342"><div class="ttname"><a href="class_robot_sim.html#a2b8354d10f913742fd50c18018cd9342">RobotSim::m_perc</a></div><div class="ttdeci">Perception m_perc</div><div class="ttdef"><b>Definition:</b> <a href="_robot_sim_8hpp_source.html#l00032">RobotSim.hpp:32</a></div></div>
+<div class="ttc" id="aclass_perception_html_a915ef7af41f2881f500e8fae833e8443"><div class="ttname"><a href="class_perception.html#a915ef7af41f2881f500e8fae833e8443">Perception::detect_bin</a></div><div class="ttdeci">bool detect_bin()</div><div class="ttdoc">Member function to detect the disposal bin.</div><div class="ttdef"><b>Definition:</b> <a href="_perception_8cpp_source.html#l00126">Perception.cpp:126</a></div></div>
+<div class="ttc" id="asrc_2main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_8af463218838229baaa5c36d6ace929b.html">mario_com</a></li><li class="navelem"><a class="el" href="dir_673edafc07d2dfea7b360f77263e2648.html">src</a></li><li class="navelem"><a class="el" href="src_2main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

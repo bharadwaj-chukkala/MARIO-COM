@@ -9,6 +9,24 @@
 
 {\ttfamily \#include $<$Perception.\+hpp$>$}
 
+
+
+Inheritance diagram for Perception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_perception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Perception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_perception__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,10 +34,12 @@
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_perception}{Perception}} object. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_perception_a915ef7af41f2881f500e8fae833e8443}{detect\+\_\+bin}} ()
 \begin{DoxyCompactList}\small\item\em Member function to detect the disposal bin. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_perception_aa20bb611efaed97197e4743f9e58f088}{select\+\_\+bin}} (geometry\+\_\+msgs\+::msg\+::\+Pose pose)
-\begin{DoxyCompactList}\small\item\em Member function to select a bin and orient the bot to make the bin appear in the center of the image frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}{move\+\_\+to\+\_\+bin}} ()
-\begin{DoxyCompactList}\small\item\em Member function to move the robot towards the bin using camera and Li\+D\+AR data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Member function to move the robot towards the bin using camera and Li\+D\+AR data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perception_ae56ca83a1f89a168ee1d9526344c1c80}{img\+\_\+callback}} (const sensor\+\_\+msgs\+::msg\+::\+Image\+::\+Const\+Shared\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Call back function to read the image from the robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perception_a6b156a18bd59f24edce269a06eed7287}{odom\+\_\+callback\+\_\+search}} (const O\+D\+O\+M\+::\+Shared\+Ptr msg)
+\begin{DoxyCompactList}\small\item\em Call back function to subscribe the odometry topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,7 +47,7 @@ bool \mbox{\hyperlink{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}{move\+
 
 
 
-Definition at line 23 of file Perception.\+hpp.
+Definition at line 44 of file Perception.\+hpp.
 
 
 
@@ -44,7 +64,7 @@ Construct a new \mbox{\hyperlink{class_perception}{Perception}} object.
 
 
 
-Definition at line 16 of file Perception.\+cpp.
+Definition at line 24 of file Perception.\+cpp.
 
 
 
@@ -64,6 +84,29 @@ true If the bin is detected.
 
 false If the bin is not detected. 
 \end{DoxyReturn}
+
+
+Definition at line 126 of file Perception.\+cpp.
+
+\mbox{\Hypertarget{class_perception_ae56ca83a1f89a168ee1d9526344c1c80}\label{class_perception_ae56ca83a1f89a168ee1d9526344c1c80}} 
+\index{Perception@{Perception}!img\_callback@{img\_callback}}
+\index{img\_callback@{img\_callback}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{img\_callback()}{img\_callback()}}
+{\footnotesize\ttfamily void Perception\+::img\+\_\+callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::msg\+::\+Image\+::\+Const\+Shared\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Call back function to read the image from the robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Image message. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Perception.\+cpp.
+
 \mbox{\Hypertarget{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}\label{class_perception_ae54b17f3c79eea35e58ad5ad7865b365}} 
 \index{Perception@{Perception}!move\_to\_bin@{move\_to\_bin}}
 \index{move\_to\_bin@{move\_to\_bin}!Perception@{Perception}}
@@ -79,24 +122,32 @@ true If robot reaches the bin.
 
 false If robot doesn\textquotesingle{}t reach the bin. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_perception_aa20bb611efaed97197e4743f9e58f088}\label{class_perception_aa20bb611efaed97197e4743f9e58f088}} 
-\index{Perception@{Perception}!select\_bin@{select\_bin}}
-\index{select\_bin@{select\_bin}!Perception@{Perception}}
-\doxysubsubsection{\texorpdfstring{select\_bin()}{select\_bin()}}
-{\footnotesize\ttfamily void Perception\+::select\+\_\+bin (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::msg\+::\+Pose}]{pose }\end{DoxyParamCaption})}
+
+
+Definition at line 162 of file Perception.\+cpp.
+
+\mbox{\Hypertarget{class_perception_a6b156a18bd59f24edce269a06eed7287}\label{class_perception_a6b156a18bd59f24edce269a06eed7287}} 
+\index{Perception@{Perception}!odom\_callback\_search@{odom\_callback\_search}}
+\index{odom\_callback\_search@{odom\_callback\_search}!Perception@{Perception}}
+\doxysubsubsection{\texorpdfstring{odom\_callback\_search()}{odom\_callback\_search()}}
+{\footnotesize\ttfamily void Perception\+::odom\+\_\+callback\+\_\+search (\begin{DoxyParamCaption}\item[{const O\+D\+O\+M\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})}
 
 
 
-Member function to select a bin and orient the bot to make the bin appear in the center of the image frame. 
+Call back function to subscribe the odometry topic. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em pose} & Pose of the robot. \\
+{\em msg} & \\
 \hline
 \end{DoxyParams}
 
 
+Definition at line 113 of file Perception.\+cpp.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_perception_8hpp}{Perception.\+hpp}}\item 
-/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/src/\mbox{\hyperlink{_perception_8cpp}{Perception.\+cpp}}\end{DoxyCompactItemize}
+/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/include/mario\+\_\+com/\mbox{\hyperlink{_perception_8hpp}{Perception.\+hpp}}\item 
+/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/src/\mbox{\hyperlink{_perception_8cpp}{Perception.\+cpp}}\end{DoxyCompactItemize}

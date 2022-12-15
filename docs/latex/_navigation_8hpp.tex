@@ -1,21 +1,29 @@
-\hypertarget{_navigation_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/include/mario\+\_\+com/\+Navigation.hpp File Reference}
-\label{_navigation_8hpp}\index{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Navigation.hpp@{/media/okritvik/NSSD/ENPM808X-\/Final-\/Project/mario\_com/include/mario\_com/Navigation.hpp}}
+\hypertarget{_navigation_8hpp}{}\doxysection{/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/include/mario\+\_\+com/\+Navigation.hpp File Reference}
+\label{_navigation_8hpp}\index{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Navigation.hpp@{/media/okritvik/NSSD/foxy\_ws/src/MARIO-\/COM/mario\_com/include/mario\_com/Navigation.hpp}}
 
 
 \mbox{\hyperlink{class_navigation}{Navigation}} class interface.  
 
 
-{\ttfamily \#include $<$rclcpp$>$}\newline
+{\ttfamily \#include \char`\"{}rclcpp/rclcpp.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/pose.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}./\+Perception.\+hpp\char`\"{}}\newline
-Include dependency graph for Navigation.\+hpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/msg/pose\+\_\+stamped.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/msg/odometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for Navigation.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_navigation_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,6 +35,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{class_navigation}{Navigation}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_navigation}{Navigation}} class to generate the search path of the robot and move it. The \mbox{\hyperlink{class_perception}{Perception}} class is a friend class of this. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_navigation_8hpp_afdf646e5a2be9604721bf5316deff36d}{P\+O\+SE}} = geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped
+\item 
+using \mbox{\hyperlink{_navigation_8hpp_a8b2f8cdf31799f7eea86076f177d254b}{P\+U\+B\+L\+I\+S\+H\+ER}} = rclcpp\+::\+Publisher$<$ geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped $>$\+::Shared\+Ptr
+\item 
+using \mbox{\hyperlink{_navigation_8hpp_a59fbe15a44ccf259bfb94512a32d2a84}{T\+I\+M\+ER}} = rclcpp\+::\+Timer\+Base\+::\+Shared\+Ptr
+\item 
+using \mbox{\hyperlink{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}} = nav\+\_\+msgs\+::msg\+::\+Odometry
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -48,3 +67,46 @@ Kumara Ritvik Oruganti (\href{mailto:okritvik@umd.edu}{\texttt{ okritvik@umd.\+e
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2022 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}\label{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}} 
+\index{Navigation.hpp@{Navigation.hpp}!ODOM@{ODOM}}
+\index{ODOM@{ODOM}!Navigation.hpp@{Navigation.hpp}}
+\doxysubsubsection{\texorpdfstring{ODOM}{ODOM}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}} =  nav\+\_\+msgs\+::msg\+::\+Odometry}
+
+
+
+Definition at line 27 of file Navigation.\+hpp.
+
+\mbox{\Hypertarget{_navigation_8hpp_afdf646e5a2be9604721bf5316deff36d}\label{_navigation_8hpp_afdf646e5a2be9604721bf5316deff36d}} 
+\index{Navigation.hpp@{Navigation.hpp}!POSE@{POSE}}
+\index{POSE@{POSE}!Navigation.hpp@{Navigation.hpp}}
+\doxysubsubsection{\texorpdfstring{POSE}{POSE}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_navigation_8hpp_afdf646e5a2be9604721bf5316deff36d}{P\+O\+SE}} =  geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped}
+
+
+
+Definition at line 24 of file Navigation.\+hpp.
+
+\mbox{\Hypertarget{_navigation_8hpp_a8b2f8cdf31799f7eea86076f177d254b}\label{_navigation_8hpp_a8b2f8cdf31799f7eea86076f177d254b}} 
+\index{Navigation.hpp@{Navigation.hpp}!PUBLISHER@{PUBLISHER}}
+\index{PUBLISHER@{PUBLISHER}!Navigation.hpp@{Navigation.hpp}}
+\doxysubsubsection{\texorpdfstring{PUBLISHER}{PUBLISHER}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_navigation_8hpp_a8b2f8cdf31799f7eea86076f177d254b}{P\+U\+B\+L\+I\+S\+H\+ER}} =  rclcpp\+::\+Publisher$<$geometry\+\_\+msgs\+::msg\+::\+Pose\+Stamped$>$\+::Shared\+Ptr}
+
+
+
+Definition at line 25 of file Navigation.\+hpp.
+
+\mbox{\Hypertarget{_navigation_8hpp_a59fbe15a44ccf259bfb94512a32d2a84}\label{_navigation_8hpp_a59fbe15a44ccf259bfb94512a32d2a84}} 
+\index{Navigation.hpp@{Navigation.hpp}!TIMER@{TIMER}}
+\index{TIMER@{TIMER}!Navigation.hpp@{Navigation.hpp}}
+\doxysubsubsection{\texorpdfstring{TIMER}{TIMER}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_navigation_8hpp_a59fbe15a44ccf259bfb94512a32d2a84}{T\+I\+M\+ER}} =  rclcpp\+::\+Timer\+Base\+::\+Shared\+Ptr}
+
+
+
+Definition at line 26 of file Navigation.\+hpp.
+

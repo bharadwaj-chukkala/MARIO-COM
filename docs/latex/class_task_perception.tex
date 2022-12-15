@@ -18,21 +18,231 @@ Collaboration diagram for Task\+Perception\+:\nopagebreak
 \includegraphics[width=170pt]{class_task_perception__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Protected Attributes}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_task_perception_a76d401b61419803834374847343ae627}\label{class_task_perception_a76d401b61419803834374847343ae627}} 
-rclcpp\+::\+Node\+::\+Shared\+Ptr {\bfseries node\+\_\+}
+void \mbox{\hyperlink{class_task_perception_a1bd06077e1632290ca2ff36780e763c7}{odom\+\_\+callback\+\_\+search}} (const O\+D\+O\+M\+::\+Shared\+Ptr msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+rclcpp\+::\+Node\+::\+Shared\+Ptr \mbox{\hyperlink{class_task_perception_a76d401b61419803834374847343ae627}{node\+\_\+}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_task_perception_afeb00795114f60c4c4810f1d5d2d1da4}{m\+\_\+img\+\_\+feed}}
+\item 
+sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan \mbox{\hyperlink{class_task_perception_a39bad280c4be95be3ca9f1d4e84e09bb}{m\+\_\+lidar\+\_\+feed}}
+\item 
+rclcpp\+::\+Node\+Options \mbox{\hyperlink{class_task_perception_a2a5447b173aa816389b8f501cee3c210}{options}}
+\item 
+image\+\_\+transport\+::\+Subscriber \mbox{\hyperlink{class_task_perception_a17e4f2158b624f68dd8a66566b42ebaf}{sub}}
+\item 
+rclcpp\+::\+Node\+::\+Shared\+Ptr \mbox{\hyperlink{class_task_perception_a4f11b13e013eefa6666b0643da923f80}{img\+\_\+node}}
+\item 
+rclcpp\+::\+Publisher$<$ \mbox{\hyperlink{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}{T\+W\+I\+ST}} $>$\+::Shared\+Ptr \mbox{\hyperlink{class_task_perception_a404e6b350fa806eeb012e69ac9ebc711}{m\+\_\+pub\+\_\+vel}}
+\item 
+rclcpp\+::\+Node\+::\+Shared\+Ptr \mbox{\hyperlink{class_task_perception_ae0c679e9d76810e251bc99578153ac54}{percep\+\_\+odom\+\_\+node}}
+\item 
+rclcpp\+::\+Subscription$<$ \mbox{\hyperlink{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}} $>$\+::Shared\+Ptr \mbox{\hyperlink{class_task_perception_a475c857e0c015ab065b45ee08d357a32}{odom\+\_\+sub}}
+\item 
+bool \mbox{\hyperlink{class_task_perception_accbaf25aa628e54d259e903f3a39378a}{r\+\_\+rotate\+\_\+flag}}
+\item 
+bool \mbox{\hyperlink{class_task_perception_a1bfdf0c1c2dd6934413940463de449bc}{l\+\_\+rotate\+\_\+flag}}
+\item 
+bool \mbox{\hyperlink{class_task_perception_ae908ca39fdaafb4ced7328742218dfa2}{move\+\_\+forward}}
+\item 
+bool \mbox{\hyperlink{class_task_perception_ac8d9df3f3ff6b188ece883e7c21c121f}{stop\+\_\+flag}}
+\item 
+bool \mbox{\hyperlink{class_task_perception_a58b071a1659a41b9adbe60b5dd5596f7}{next\+\_\+location}}
+\item 
+double \mbox{\hyperlink{class_task_perception_af5d0736de9ef3ff6af2b8da1347f5094}{present\+\_\+yaw}}
+\item 
+double \mbox{\hyperlink{class_task_perception_a7d5be33a11f058152e4fda3972237edc}{initial\+\_\+yaw}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 32 of file perception\+\_\+test.\+cpp.
+Definition at line 33 of file perception\+\_\+test.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_perception_a1bd06077e1632290ca2ff36780e763c7}\label{class_task_perception_a1bd06077e1632290ca2ff36780e763c7}} 
+\index{TaskPerception@{TaskPerception}!odom\_callback\_search@{odom\_callback\_search}}
+\index{odom\_callback\_search@{odom\_callback\_search}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{odom\_callback\_search()}{odom\_callback\_search()}}
+{\footnotesize\ttfamily void Task\+Perception\+::odom\+\_\+callback\+\_\+search (\begin{DoxyParamCaption}\item[{const O\+D\+O\+M\+::\+Shared\+Ptr}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file perception\+\_\+test.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_task_perception_a4f11b13e013eefa6666b0643da923f80}\label{class_task_perception_a4f11b13e013eefa6666b0643da923f80}} 
+\index{TaskPerception@{TaskPerception}!img\_node@{img\_node}}
+\index{img\_node@{img\_node}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{img\_node}{img\_node}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+::\+Shared\+Ptr Task\+Perception\+::img\+\_\+node}
+
+
+
+Definition at line 40 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a7d5be33a11f058152e4fda3972237edc}\label{class_task_perception_a7d5be33a11f058152e4fda3972237edc}} 
+\index{TaskPerception@{TaskPerception}!initial\_yaw@{initial\_yaw}}
+\index{initial\_yaw@{initial\_yaw}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{initial\_yaw}{initial\_yaw}}
+{\footnotesize\ttfamily double Task\+Perception\+::initial\+\_\+yaw}
+
+
+
+Definition at line 50 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a1bfdf0c1c2dd6934413940463de449bc}\label{class_task_perception_a1bfdf0c1c2dd6934413940463de449bc}} 
+\index{TaskPerception@{TaskPerception}!l\_rotate\_flag@{l\_rotate\_flag}}
+\index{l\_rotate\_flag@{l\_rotate\_flag}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{l\_rotate\_flag}{l\_rotate\_flag}}
+{\footnotesize\ttfamily bool Task\+Perception\+::l\+\_\+rotate\+\_\+flag}
+
+
+
+Definition at line 45 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_afeb00795114f60c4c4810f1d5d2d1da4}\label{class_task_perception_afeb00795114f60c4c4810f1d5d2d1da4}} 
+\index{TaskPerception@{TaskPerception}!m\_img\_feed@{m\_img\_feed}}
+\index{m\_img\_feed@{m\_img\_feed}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{m\_img\_feed}{m\_img\_feed}}
+{\footnotesize\ttfamily cv\+::\+Mat Task\+Perception\+::m\+\_\+img\+\_\+feed}
+
+
+
+Definition at line 36 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a39bad280c4be95be3ca9f1d4e84e09bb}\label{class_task_perception_a39bad280c4be95be3ca9f1d4e84e09bb}} 
+\index{TaskPerception@{TaskPerception}!m\_lidar\_feed@{m\_lidar\_feed}}
+\index{m\_lidar\_feed@{m\_lidar\_feed}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{m\_lidar\_feed}{m\_lidar\_feed}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::msg\+::\+Laser\+Scan Task\+Perception\+::m\+\_\+lidar\+\_\+feed}
+
+
+
+Definition at line 37 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a404e6b350fa806eeb012e69ac9ebc711}\label{class_task_perception_a404e6b350fa806eeb012e69ac9ebc711}} 
+\index{TaskPerception@{TaskPerception}!m\_pub\_vel@{m\_pub\_vel}}
+\index{m\_pub\_vel@{m\_pub\_vel}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{m\_pub\_vel}{m\_pub\_vel}}
+{\footnotesize\ttfamily rclcpp\+::\+Publisher$<$\mbox{\hyperlink{_perception_8hpp_ae1ddf8c7e712e519f42b1ace6a942c03}{T\+W\+I\+ST}}$>$\+::Shared\+Ptr Task\+Perception\+::m\+\_\+pub\+\_\+vel}
+
+
+
+Definition at line 41 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_ae908ca39fdaafb4ced7328742218dfa2}\label{class_task_perception_ae908ca39fdaafb4ced7328742218dfa2}} 
+\index{TaskPerception@{TaskPerception}!move\_forward@{move\_forward}}
+\index{move\_forward@{move\_forward}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{move\_forward}{move\_forward}}
+{\footnotesize\ttfamily bool Task\+Perception\+::move\+\_\+forward}
+
+
+
+Definition at line 46 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a58b071a1659a41b9adbe60b5dd5596f7}\label{class_task_perception_a58b071a1659a41b9adbe60b5dd5596f7}} 
+\index{TaskPerception@{TaskPerception}!next\_location@{next\_location}}
+\index{next\_location@{next\_location}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{next\_location}{next\_location}}
+{\footnotesize\ttfamily bool Task\+Perception\+::next\+\_\+location}
+
+
+
+Definition at line 48 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a76d401b61419803834374847343ae627}\label{class_task_perception_a76d401b61419803834374847343ae627}} 
+\index{TaskPerception@{TaskPerception}!node\_@{node\_}}
+\index{node\_@{node\_}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{node\_}{node\_}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+::\+Shared\+Ptr Task\+Perception\+::node\+\_\+}
+
+
+
+Definition at line 35 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a475c857e0c015ab065b45ee08d357a32}\label{class_task_perception_a475c857e0c015ab065b45ee08d357a32}} 
+\index{TaskPerception@{TaskPerception}!odom\_sub@{odom\_sub}}
+\index{odom\_sub@{odom\_sub}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{odom\_sub}{odom\_sub}}
+{\footnotesize\ttfamily rclcpp\+::\+Subscription$<$\mbox{\hyperlink{_navigation_8hpp_a0d14f9fa0f53f31f888a9fd88db78a51}{O\+D\+OM}}$>$\+::Shared\+Ptr Task\+Perception\+::odom\+\_\+sub}
+
+
+
+Definition at line 43 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a2a5447b173aa816389b8f501cee3c210}\label{class_task_perception_a2a5447b173aa816389b8f501cee3c210}} 
+\index{TaskPerception@{TaskPerception}!options@{options}}
+\index{options@{options}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+Options Task\+Perception\+::options}
+
+
+
+Definition at line 38 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_ae0c679e9d76810e251bc99578153ac54}\label{class_task_perception_ae0c679e9d76810e251bc99578153ac54}} 
+\index{TaskPerception@{TaskPerception}!percep\_odom\_node@{percep\_odom\_node}}
+\index{percep\_odom\_node@{percep\_odom\_node}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{percep\_odom\_node}{percep\_odom\_node}}
+{\footnotesize\ttfamily rclcpp\+::\+Node\+::\+Shared\+Ptr Task\+Perception\+::percep\+\_\+odom\+\_\+node}
+
+
+
+Definition at line 42 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_af5d0736de9ef3ff6af2b8da1347f5094}\label{class_task_perception_af5d0736de9ef3ff6af2b8da1347f5094}} 
+\index{TaskPerception@{TaskPerception}!present\_yaw@{present\_yaw}}
+\index{present\_yaw@{present\_yaw}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{present\_yaw}{present\_yaw}}
+{\footnotesize\ttfamily double Task\+Perception\+::present\+\_\+yaw}
+
+
+
+Definition at line 49 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_accbaf25aa628e54d259e903f3a39378a}\label{class_task_perception_accbaf25aa628e54d259e903f3a39378a}} 
+\index{TaskPerception@{TaskPerception}!r\_rotate\_flag@{r\_rotate\_flag}}
+\index{r\_rotate\_flag@{r\_rotate\_flag}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{r\_rotate\_flag}{r\_rotate\_flag}}
+{\footnotesize\ttfamily bool Task\+Perception\+::r\+\_\+rotate\+\_\+flag}
+
+
+
+Definition at line 44 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_ac8d9df3f3ff6b188ece883e7c21c121f}\label{class_task_perception_ac8d9df3f3ff6b188ece883e7c21c121f}} 
+\index{TaskPerception@{TaskPerception}!stop\_flag@{stop\_flag}}
+\index{stop\_flag@{stop\_flag}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{stop\_flag}{stop\_flag}}
+{\footnotesize\ttfamily bool Task\+Perception\+::stop\+\_\+flag}
+
+
+
+Definition at line 47 of file perception\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{class_task_perception_a17e4f2158b624f68dd8a66566b42ebaf}\label{class_task_perception_a17e4f2158b624f68dd8a66566b42ebaf}} 
+\index{TaskPerception@{TaskPerception}!sub@{sub}}
+\index{sub@{sub}!TaskPerception@{TaskPerception}}
+\doxysubsubsection{\texorpdfstring{sub}{sub}}
+{\footnotesize\ttfamily image\+\_\+transport\+::\+Subscriber Task\+Perception\+::sub}
+
+
+
+Definition at line 39 of file perception\+\_\+test.\+cpp.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/media/okritvik/\+N\+S\+S\+D/\+E\+N\+P\+M808\+X-\/\+Final-\/\+Project/mario\+\_\+com/test/perception\+\_\+test.\+cpp\end{DoxyCompactItemize}
+/media/okritvik/\+N\+S\+S\+D/foxy\+\_\+ws/src/\+M\+A\+R\+I\+O-\/\+C\+O\+M/mario\+\_\+com/test/\mbox{\hyperlink{perception__test_8cpp}{perception\+\_\+test.\+cpp}}\end{DoxyCompactItemize}

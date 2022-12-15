@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['detect_5fbin_1',['detect_bin',['../class_perception.html#a915ef7af41f2881f500e8fae833e8443',1,'Perception']]]
+  ['bins_1',['bins',['../namespacebins.html',1,'']]],
+  ['bins_2elaunch_2epy_2',['bins.launch.py',['../bins_8launch_8py.html',1,'']]]
 ];

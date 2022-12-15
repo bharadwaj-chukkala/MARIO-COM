@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['taskmanipulation_25',['TaskManipulation',['../class_task_manipulation.html',1,'']]],
-  ['tasknavigation_26',['TaskNavigation',['../class_task_navigation.html',1,'']]],
-  ['taskperception_27',['TaskPerception',['../class_task_perception.html',1,'']]]
+  ['l_5frotate_5fflag_33',['l_rotate_flag',['../class_task_perception.html#a1bfdf0c1c2dd6934413940463de449bc',1,'TaskPerception']]]
 ];
