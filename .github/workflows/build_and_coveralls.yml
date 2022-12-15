@@ -64,14 +64,14 @@ jobs:
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
       #     path-to-lcov: ${{github.workspace}}/build/coverage.info.cleaned
       
-      - name: OpenCV
-        run: |
-          git clone https://github.com/opencv/opencv.git
-          git -C opencv checkout 4.x
-          mkdir -p build && cd build
-          cmake ../opencv
-          make -j4
-          sudo make install
+      # - name: OpenCV
+      #   run: |
+      #     git clone https://github.com/opencv/opencv.git
+      #     git -C opencv checkout 4.x
+      #     mkdir -p build && cd build
+      #     cmake ../opencv
+      #     make -j4
+      #     sudo make install
       - name: CV Bridge
         run: |
           sudo apt-get install ros-foxy-cv-bridge
