@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://github.com/bharadwaj-chukkala/MARIO-COM/actions/workflows/build_and_coveralls.yml/badge.svg)](https://github.com/bharadwaj-chukkala/MARIO-COM/actions/workflows/build_and_coveralls.yml)
-[![Coverage Status](https://coveralls.io/repos/github/bharadwaj-chukkala/MARIO-COM/badge.png?branch=main)](https://coveralls.io/github/bharadwaj-chukkala/MARIO-COM?branch=main)
+[![codecov](https://codecov.io/github/bharadwaj-chukkala/MARIO-COM/branch/master/graph/badge.svg?token=Q1YK1091YL)](https://codecov.io/github/bharadwaj-chukkala/MARIO-COM)
 # Acme Robotics: Mobile Autonomous Robot for Indoor and Outdoor Collection Of Medical Waste (MARIO-COM)
 
 <p align="center">
