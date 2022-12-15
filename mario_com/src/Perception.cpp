@@ -32,10 +32,8 @@ Perception::Perception() : Node("perception") {
 void Perception::img_callback(const
             sensor_msgs::msg::Image::ConstSharedPtr& msg) {
     try {
-        // RCLCPP_INFO(this->get_logger(), "In img call back");
         // cv::imshow("view", cv_bridge::toCvShare(msg, msg->encoding)->image);
         cv::Mat image = cv_bridge::toCvShare(msg, msg->encoding)->image;
-        // RCLCPP_INFO(this->get_logger(), "%d", image.dims);
         int low_H = 20, low_S = 100, low_V = 100;
         int high_H = 30, high_S = 255, high_V = 255;
         cv::Mat hsv, thr, bin;
@@ -44,11 +42,6 @@ void Perception::img_callback(const
         cv::inRange(hsv, cv::Scalar(low_H, low_S, low_V),
             cv::Scalar(high_H, high_S, high_V), thr);
         threshold(thr, bin, 100, 255, cv::THRESH_BINARY);
-        // RCLCPP_INFO(this->get_logger(), "%d", contours.size());
-        // cv::Moments mom;
-        // cv::moments(bin, true);
-        // cv::Point p(mom.m10/mom.m00, mom.m01/mom.m00);
-
         std::vector<std::vector<cv::Point> > contours;
         cv::Mat contourOutput = thr.clone();
         cv::findContours(contourOutput, contours, CV_RETR_LIST,
@@ -68,7 +61,6 @@ void Perception::img_callback(const
             rect = cv::boundingRect(contours.at(0));
             int cent_x = static_cast<int>((rect.x+rect.width)/2);
             int area = static_cast<int>(rect.area());
-            // RCLCPP_INFO(this->get_logger(), "Area %d", area);
             if (cent_x < 180) {
                 l_rotate_flag = true;
                 r_rotate_flag = false;
@@ -88,7 +80,6 @@ void Perception::img_callback(const
             }
         } else {
             if (present_yaw - initial_yaw > 1.57) {
-                // RCLCPP_INFO(this->get_logger(), "In YAW Check");
                 next_location = true;
                 l_rotate_flag = false;
                 r_rotate_flag = false;
@@ -101,12 +92,8 @@ void Perception::img_callback(const
                 stop_flag = false;
             }
         }
-        // RCLCPP_INFO(this->get_logger(), "%d %d %d %d",
-        //     static_cast<int>((rect.x+rect.width)/2),
-        //         static_cast<int>((rect.y+rect.height)/2),
-        //         contourImage.size().width, contourImage.size().height);
-        cv::imshow("view", contourImage);
-        cv::waitKey(10);
+        // cv::imshow("view", contourImage);
+        // cv::waitKey(10);
     } catch (cv_bridge::Exception & e) {
         RCLCPP_ERROR(this->get_logger(),
             "Could not convert from '%s' to 'bgr8'.", msg->encoding.c_str());
@@ -123,7 +110,6 @@ void Perception::odom_callback_search(const ODOM::SharedPtr msg) {
     double r, p, y;
     m.getRPY(r, p, y);
     present_yaw = y;
-    // RCLCPP_INFO(this->get_logger(), "Odom Call back search %f", y);
 }
 
 bool Perception::detect_bin() {
@@ -136,8 +122,8 @@ bool Perception::detect_bin() {
     stop_flag = false;
     next_location = false;
 
-    cv::namedWindow("view");
-    cv::startWindowThread();
+    // cv::namedWindow("view");
+    // cv::startWindowThread();
 
     image_transport::ImageTransport it(img_node);
     sub = it.subscribe("pi_camera/image_raw", 1,
@@ -162,7 +148,6 @@ bool Perception::detect_bin() {
 
 
 bool Perception::move_to_bin() {
-    // RCLCPP_INFO(this->get_logger(), "In Move to Bin");
     auto vel = TWIST();
     if (r_rotate_flag) {
         vel.angular.z = -0.1;

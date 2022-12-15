@@ -58,13 +58,6 @@ class Perception : public rclcpp::Node {
     bool detect_bin();
 
     /**
-     * @brief Member function to select a bin and orient the bot to make the bin appear in the center of the image frame.
-     * 
-     * @param pose Pose of the robot.
-     */
-    void select_bin(geometry_msgs::msg::Pose pose);
-
-    /**
      * @brief Member function to move the robot towards the bin using camera and LiDAR data.
      * 
      * @return true If robot reaches the bin.
@@ -72,7 +65,18 @@ class Perception : public rclcpp::Node {
      */
     bool move_to_bin();
 
+    /**
+     * @brief Call back function to read the image from the robot
+     * 
+     * @param msg Image message.
+     */
     void img_callback(const sensor_msgs::msg::Image::ConstSharedPtr& msg);
+
+    /**
+     * @brief Call back function to subscribe the odometry topic.
+     * 
+     * @param msg 
+     */
     void odom_callback_search(const ODOM::SharedPtr msg);
 
  private:
