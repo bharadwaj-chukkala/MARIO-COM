@@ -57,12 +57,12 @@ jobs:
           sudo apt install ros-foxy-desktop python3-argcomplete
           sudo apt install ros-dev-tools
 
-      # Upload coverage result to Coverage.io 
-      - name: Upload result to Coveralls.io
-        uses: coverallsapp/github-action@1.1.3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ${{github.workspace}}/build/coverage.info.cleaned
+      # # Upload coverage result to Coverage.io 
+      # - name: Upload result to Coveralls.io
+      #   uses: coverallsapp/github-action@1.1.3
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     path-to-lcov: ${{github.workspace}}/build/coverage.info.cleaned
       
       - name: OpenCV
         run: |
