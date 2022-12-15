@@ -36,10 +36,27 @@ Assumptions:
 Risks and Mitigation:<br>
 The possible risk includes the trade-off between the processing rate of the images captured by the robot to detect the obstacles while moving from the initial pose to the goal pose. Since the environment is unknown to the robot and the search algorithm implements a grid-based search, there is a possibility that the robot may not find the hazardous trash or reach the goal pose generated from the grid search accurately due to dynamic obstacles. Mitigations include the restriction on target object size and its position in the randomized world space. The initial assumption is that the robot should reach the target location and simulate its pickup and reach the disposal zone.
 
-Presentation: <br>
-[Here](https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true) is link to final presentation.
+## Presentation: <br>
+<p align="center">
+<a href="https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true" target="_blank">
+ <img src="https://user-images.githubusercontent.com/40534801/195415735-dee9ec96-d2e3-4597-8bba-edd1b39871cc.png" alt="Watch the Slides" width="350" height="200" border="10" />
+</a>
+</p>
 
-[Here](https://youtu.be/U7UHgr7ei_M) is the simulation of MARIO-COM!
+<p align = "center">
+Link: https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true
+</p>
+
+<p align="center">
+<a href="https://youtu.be/U7UHgr7ei_M" target="_blank">
+ <img src="https://user-images.githubusercontent.com/40534801/195415735-dee9ec96-d2e3-4597-8bba-edd1b39871cc.png" alt="Watch the Simulation" width="350" height="200" border="10" />
+</a>
+</p>
+<p align = "center">
+Link: https://youtu.be/U7UHgr7ei_M
+Live Demo
+</p>
+
 ## Personnel:
 
 * **Bharadwaj Chukkala**<br>
