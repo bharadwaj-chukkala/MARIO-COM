@@ -41,18 +41,23 @@ The possible risk includes the trade-off between the processing rate of the imag
 * **Bharadwaj Chukkala**<br>
 UID: 118341705<br>
 Bharadwaj Chukkala is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Machine Learning, Perception and Path Planning.<br>
-Contact: bchukkal@umd.edu<br>
-LinkedIn: https://www.linkedin.com/in/bharadwaj-chukkala/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](bchukkal@umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharadwaj-chukkala/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharadwaj-chukkala)
 * **Adarsh Malapaka**<br>
 UID: 118119625<br>
 Adarsh Malapaka is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Control Systems, Robot Kinematics, Path Planning, and ADAS.<br>
-Contact: amalapak@terpmail.umd.edu<br>
-LinkedIn: https://www.linkedin.com/in/adarsh-malapaka/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](amalapak@terpmail.umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/adarsh-malapaka/))
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/adarshmalapaka)
 * **Kumara Ritvik Oruganti**<br>
 UID: 117368963<br>
 Kumara Ritvik Oruganti is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include developing sustainable, efficient and intelligent robots and embedded systems for real-world problems.<br>
-Contact: okritvik@terpmail.umd.edu<br>
-Website: https://www.okritvik.com/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](okritvik@terpmail.umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/okritvik/))
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/okritvik)
+[![Website](https://img.shields.io/badge/website-okritvik-brightgreen)](https://www.okritvik.com/)
+
 
 ## Agile-Iterative Process (AIP) Resources
 
