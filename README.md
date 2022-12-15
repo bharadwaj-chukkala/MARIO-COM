@@ -36,6 +36,10 @@ Assumptions:
 Risks and Mitigation:<br>
 The possible risk includes the trade-off between the processing rate of the images captured by the robot to detect the obstacles while moving from the initial pose to the goal pose. Since the environment is unknown to the robot and the search algorithm implements a grid-based search, there is a possibility that the robot may not find the hazardous trash or reach the goal pose generated from the grid search accurately due to dynamic obstacles. Mitigations include the restriction on target object size and its position in the randomized world space. The initial assumption is that the robot should reach the target location and simulate its pickup and reach the disposal zone.
 
+Presentation: <br>
+[Here](https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true) is link to final presentation.
+
+[Here](https://youtu.be/U7UHgr7ei_M) is the simulation of MARIO-COM!
 ## Personnel:
 
 * **Bharadwaj Chukkala**<br>
@@ -87,14 +91,11 @@ https://docs.google.com/document/d/1JswTIkvGNDT8kqs0M8pbFIWWatNoKk5qQq9jqdAfdCM/
 2. [OpenCV](https://www.opencv-srf.com/p/introduction.html): OpenCV is used to detect the medical waste bins using classical image processing algorithms and can be installed from this [link.](https://www.geeksforgeeks.org/how-to-install-opencv-in-c-on-linux/)
 3. [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/): The Turtlebot3 ROS2 simulation packages are used to simulate the medical waste disposal robot. Upon installing and configuring the ROS2 workspace, the steps to install these packages are mentioned in the above link. 
 4. [OpenMANIPULATOR-X](https://emanual.robotis.com/docs/en/platform/turtlebot3/manipulation/#turtlebot3-with-openmanipulator): The ROBOTIS OpenMANIPULATOR-X gripper mounted on the TurtleBot3 robot is used to pick and place the disposal bins. The steps to install and visualize the robot with this gripper are given in the link above.
-5. [NumCpp](https://dpilger26.github.io/NumCpp/doxygen/html/index.html): NumCpp shall be used to make use of NumPy functionalities in the definition of matrices and their associated operations in C++. This can be installed from the above link.
-6. [Gazebo](https://classic.gazebosim.org/tutorials?tut=install_ubuntu): Gazebo latest version was installed for deploying simulation environments and running the models in the project package.
-7. [Navigation2 ROS](https://navigation.ros.org/build_instructions/index.html): The Navigation stack was installed to control the turtlebot3 model to traverse between spawn zone to collection zones and disposal zone.
-8. cv_bridge: The cv bridge tool can be installed on ypur system using this command```sudo apt-get install ros-(ROS version name)-cv-bridge```.
-
+5. [Gazebo](https://classic.gazebosim.org/tutorials?tut=install_ubuntu): Gazebo latest version was installed for deploying simulation environments and running the models in the project package.
+6. [Navigation2 ROS](https://navigation.ros.org/build_instructions/index.html): The Navigation stack was installed to control the turtlebot3 model to traverse between spawn zone to collection zones and disposal zone.
+7. cv_bridge: The cv bridge tool can be installed on ypur system using this command ```sudo apt-get install ros-(ROS version name)-cv-bridge```
 
 ### Environment Setup
-
 Clone the following repo in any directory and place the ```mario_com``` folder in your ROS2 workspace 
 ```
 git clone https://github.com/bharadwaj-chukkala/MARIO-COM.git
@@ -103,19 +104,38 @@ git clone https://github.com/bharadwaj-chukkala/MARIO-COM.git
 ### Build
 In the ROS2 Foxy workspace, run the following:
 ```
-rm -rf build/mario_com/
-source /opt/ros/humble/setup.bash
+source /opt/ros/foxy/setup.bash
 colcon build --symlink-install
 colcon build --packages-select mario_com
 ```
-Note: Make sure that the TurtleBot3 and OpenMANIPULATOR-X should be there in the ROS2 Foxy workspace created earlier
+Note: Make sure that the TurtleBot3_manipulation, moveit2_tutorials, moveit_visual_tools, rviz_visual_tools, and turtlebot3_simulations are there in the ROS2 Foxy workspace created earlier
+
+### Run the simulation
+In the terminal after building the package, run the below commands to set the gazebo model path and TurtleBot3 model.
+```
+colcon build --symlink-install --packages-select mario_com
+export GAZEBO_MODEL_PATH=`ros2 pkg prefix mario_com`/share/mario_com/models/
+. /usr/share/gazebo/setup.bash
+export TURTLEBOT3_MODEL=waffle_pi
+. install/setup.bash
+
+```
+Then, in one terminal run:
+```
+ros2 launch mario_com hospital.launch.py
+```
+Wait for the Gazebo and RViz to spawn and show the models. If not shown, quit both the windows and run the above commands to set the model paths. 
+In another terminal, run:
+```
+ros2 run mario_com my_main
+```
 
 ### Build for Test Coverage
-Change to the project's `/build` directory using the `cd build` command.
+Make sure that you are in the ROS2 workspace.
 ```
 sudo apt-get install lcov
 rm -rf build/mario_com/
-source /opt/ros/humble/setup.bash
+source /opt/ros/foxy/setup.bash
 colcon build --cmake-args -DCOVERAGE=1 --packages-select mario_com
 cat log/latest_build/mario_com/stdout_stderr.log
 find build/mario_com/ | grep -E 'gcno' # catch error -- exepct to see .gcno files
@@ -123,7 +143,7 @@ find build/mario_com/ | grep -E 'gcno' # catch error -- exepct to see .gcno file
 
 ### Run Unit Tests and Check for code errors
 ```
-source /opt/ros/humble/setup.bash
+source install/setup.bash
 colcon test --packages-select mario_com
 cat log/latest_test/mario_com/stdout_stderr.log
 find build/mario_com/ | grep -E 'gcda' # catch error -- expect to see .gcda files
@@ -187,6 +207,7 @@ The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 9. SDF file reading using C++ and parsing to Gazebo's /spawn_entity action doesn't exist. Work arounds can be using the ROS Parameter Server or C++ System Command.
 10. Cartographer map generation doesn't work for big size maps that has a lot of open space.
 11. The model or TurtleBot3 might not spawn in the Gazebo World. Please check the previously mentioned commands that needs to be run (Try out diffent combinations!). 
+12. If ```. install/setup.bash``` doesn't work, use ```source install/setup.bash```
 
 ## File Tree
     ├── docs
