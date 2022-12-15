@@ -82,6 +82,10 @@ jobs:
           rosdep update
           rosdep install --from-paths mario_com/src -y --ignore-src
       
+      # Install Gazebo ROS and other dependencies
+      - name: CMake Dependencies for the package
+        run: |
+          sudo apt install ros-foxy-gazebo-ros-pkgs
       # Build for test coverage
       - name: Configure CMake flags and build exectables
         run: |
