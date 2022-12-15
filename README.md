@@ -189,42 +189,74 @@ The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 11. The model or TurtleBot3 might not spawn in the Gazebo World. Please check the previously mentioned commands that needs to be run (Try out diffent combinations!). 
 
 ## File Tree
-    ├── docs
+
+<pre>├── docs
     │   ├── html
     │   └── latex
     ├── LICENSE
     ├── mario_com
-    │   ├── CMakeLists.txt
-    │   ├── include
-    │   │   └── mario_com
-    │   │       ├── Manipulation.hpp
-    │   │       ├── Navigation.hpp
-    │   │       ├── Perception.hpp
-    │   │       └── RobotSim.hpp
-    │   ├── package.xml
-    │   ├── src
-    │   │   ├── main.cpp
-    │   │   ├── Manipulation.cpp
-    │   │   ├── Navigation.cpp
-    │   │   ├── Perception.cpp
-    │   │   └── RobotSim.cpp
-    │   └── test
-    │       ├── main.cpp
-    │       ├── manipulation_test.cpp
-    │       ├── navigation_test.cpp
-    │       └── perception_test.cpp
+    │   ├── CMakeLists.txt
+    │   ├── include
+    │   │   └── mario_com
+    │   │       ├── Manipulation.hpp
+    │   │       ├── Navigation.hpp
+    │   │       ├── Perception.hpp
+    │   │       └── RobotSim.hpp
+    │   ├── launch
+    │   │   ├── bins.launch.py
+    │   │   └── hospital.launch.py
+    │   ├── maps
+    │   │   ├── hospitalmap.pgm
+    │   │   └── hospitalmap.yaml
+    │   ├── models
+    │   │   ├── ambulance
+    │   │   ├── AnesthesiaMachine
+    │   │   ├── aws_robomaker_residential_Trash_01
+    │   │   ├── BedsideTable
+    │   │   ├── bin_cylinder
+    │   │   ├── CGMClassic
+    │   │   ├── ElderLadyPatient
+    │   │   ├── InstrumentCart1
+    │   │   ├── MalePatientBed
+    │   │   ├── simple_hospital
+    │   │   ├── small_hospital
+    │   │   ├── StorageRackCovered
+    │   │   └── XRayMachine
+    │   ├── package.xml
+    │   ├── scripts
+    │   │   ├── coverage_cleaned.info
+    │   │   ├── coverage.info
+    │   │   └── generate_coverage_report.bash
+    │   ├── src
+    │   │   ├── main.cpp
+    │   │   ├── Manipulation.cpp
+    │   │   ├── Navigation.cpp
+    │   │   ├── Perception.cpp
+    │   │   └── RobotSim.cpp
+    │   ├── test
+    │   │   ├── main.cpp
+    │   │   ├── manipulation_test.cpp
+    │   │   ├── navigation_test.cpp
+    │   │   └── perception_test.cpp
+    │   ├── uncrustify_google_cpp_allman.cfg
+    │   └── worlds
+    │       ├── simple_hospital.world
+    │       └── small_hospital.world
     ├── proposal
-    │   └── ENPM808X___FinalProject___Proposal.pdf
+    │   └── ENPM808X___FinalProject___Proposal.pdf
     ├── quadchart
-    │   └── quad_chart_v1.png
+    │   └── quad_chart_v1.png
     ├── README.md
     ├── results
-    │   ├── cppcheck.txt
-    │   └── cpplint.txt
+    │   ├── cppcheck.txt
+    │   └── cpplint.txt
     └── UML
-        └── initial
-            ├── activity_diagram_v1.pdf
-            └── class_diagram_v1.pdf
+        ├── initial
+        │   ├── activity_diagram_v1.pdf
+        │   └── class_diagram_v1.pdf
+        └── revised
+            └── class_diagram_v2.pdf
+</pre>
 
 ## License
 
