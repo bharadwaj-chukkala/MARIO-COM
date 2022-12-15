@@ -177,9 +177,16 @@ The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
 ## Known Issues/Bugs
 1. Installation of ROS2 Foxy, OpenCV, TurtleBot3 packages might run into errors and the user is expected to resolve them by using the open-source ROS and GitHub answers.
-2. CMakeLists might produce errors as there are only stubs implemented as of Phase 1.
-3. The Colcon Build might run into some warnings due to rcl interface linkage which is updated in ROS2 new versions.
-4. The GitHub CI yml installation for ROS is yet to be figured out.
+2. CMakeLists might produce errors for dependencies. It is required by the user to install them in the system before running the colcon build.
+3. The Colcon Build might run into some warnings due to rcl interface linkage which is updated in ROS2 new versions. The OpenCV installation might override the ROS2 Foxy cv_bridge core headers. Ignore the warnings.
+4. The GitHub CI yml installation for ROS2 is yet to be figured out. 
+5. Since the code developed is purely based on the Gazebo, RViz and OpenCV simulation, the unit tests will have the code written in the project to test their functionality instead of calling the actual functions. Those test cases will run given that the user is running the simulation environment in their system.
+6. The OpenManipulator-X with TurtleBot3 is yet to update their page for ROS2 MoveIt functionality.
+7. The assumption is that the bins spawned in the environment will be deleted and respawned at the disposal location which is considered to be the expected behavior of the robot.
+8. Minimal support for errors and continuous integration is available from the community for specific questions in ROS2.
+9. SDF file reading using C++ and parsing to Gazebo's /spawn_entity action doesn't exist. Work arounds can be using the ROS Parameter Server or C++ System Command.
+10. Cartographer map generation doesn't work for big size maps that has a lot of open space.
+11. The model or TurtleBot3 might not spawn in the Gazebo World. Please check the previously mentioned commands that needs to be run (Try out diffent combinations!). 
 
 ## File Tree
     ├── docs
