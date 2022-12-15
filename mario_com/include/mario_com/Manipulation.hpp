@@ -45,18 +45,6 @@ class Manipulation : public rclcpp::Node {
     Manipulation();
 
     /**
-     * @brief Member function to open the gripper
-     * 
-     */
-    void gripper_open();
-
-    /**
-     * @brief Member function to close the gripper
-     * 
-     */
-    void gripper_close();
-
-    /**
      * @brief Member function to pick the bin.
      * 
      * @return true If bin is successfully picked

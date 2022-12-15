@@ -31,20 +31,9 @@ Manipulation::Manipulation() : Node("manipulation") {
                     make_shared("bin_node");
 }
 
-void Manipulation::gripper_open() {
-    // Code Stub
-}
-
-void Manipulation::gripper_close() {
-    // Code Stub
-}
-
-
-
 bool Manipulation::pick_bin() {
     while (!pick_client->wait_for_service(1s)) {
         if (!rclcpp::ok()) {
-          // Used one of the RCLCPP LOG Level
           RCLCPP_ERROR(this->get_logger(),
               "Interruped while waiting for the server.");
 
@@ -56,8 +45,6 @@ bool Manipulation::pick_bin() {
     auto request = std::make_shared<REQUEST_DELETE>();
     request->name = "trash_bin1";
 
-    // auto call_back_ptr = std::bind(&Manipulation::response_callback,
-    //                       this, _1);
     auto result = pick_client->async_send_request(request);
     auto ret = rclcpp::spin_until_future_complete(manip_node,
                                             result, 10s);
