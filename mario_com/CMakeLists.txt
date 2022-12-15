@@ -60,11 +60,15 @@ if(BUILD_TESTING)
     test/manipulation_test.cpp
     test/navigation_test.cpp
     test/perception_test.cpp
+    src/Manipulation.cpp
+    src/Navigation.cpp
+    src/Perception.cpp
+    src/RobotSim.cpp
   )
   # Add gtests
   ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
-  ament_target_dependencies(test_${PROJECT_NAME} rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs OpenCV)
- 
+  ament_target_dependencies(test_${PROJECT_NAME} rclcpp rclcpp_action std_msgs geometry_msgs sensor_msgs image_transport cv_bridge OpenCV nav_msgs gazebo_msgs)
+  target_include_directories(test_${PROJECT_NAME} PUBLIC ../include/mario_com)
   # rosidl_target_interfaces(server_test ${PROJECT_NAME} "rosidl_typesupport_cpp")
   
   install(TARGETS
