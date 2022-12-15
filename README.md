@@ -190,7 +190,8 @@ The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
 ## File Tree
 
-<pre>├── docs
+<pre>
+    ├── docs
     │   ├── html
     │   └── latex
     ├── LICENSE
