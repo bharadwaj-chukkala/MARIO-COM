@@ -45,18 +45,23 @@ Presentation: <br>
 * **Bharadwaj Chukkala**<br>
 UID: 118341705<br>
 Bharadwaj Chukkala is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Machine Learning, Perception and Path Planning.<br>
-Contact: bchukkal@umd.edu<br>
-LinkedIn: https://www.linkedin.com/in/bharadwaj-chukkala/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](bchukkal@umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharadwaj-chukkala/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharadwaj-chukkala)
 * **Adarsh Malapaka**<br>
 UID: 118119625<br>
 Adarsh Malapaka is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include Control Systems, Robot Kinematics, Path Planning, and ADAS.<br>
-Contact: amalapak@terpmail.umd.edu<br>
-LinkedIn: https://www.linkedin.com/in/adarsh-malapaka/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](amalapak@terpmail.umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/adarsh-malapaka/))
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/adarshmalapaka)
 * **Kumara Ritvik Oruganti**<br>
 UID: 117368963<br>
 Kumara Ritvik Oruganti is currently a Master's student in Robotics at the University of Maryland, College Park, MD (Batch of 2023). His interests include developing sustainable, efficient and intelligent robots and embedded systems for real-world problems.<br>
-Contact: okritvik@terpmail.umd.edu<br>
-Website: https://www.okritvik.com/
+[![Contact](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](okritvik@terpmail.umd.edu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/bharadwaj-chukkala/](https://www.linkedin.com/in/okritvik/))
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/okritvik)
+[![Website](https://img.shields.io/badge/website-okritvik-brightgreen)](https://www.okritvik.com/)
+
 
 ## Agile-Iterative Process (AIP) Resources
 
@@ -210,42 +215,75 @@ The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 12. If ```. install/setup.bash``` doesn't work, use ```source install/setup.bash```
 
 ## File Tree
+
+<pre>
     ├── docs
     │   ├── html
     │   └── latex
     ├── LICENSE
     ├── mario_com
-    │   ├── CMakeLists.txt
-    │   ├── include
-    │   │   └── mario_com
-    │   │       ├── Manipulation.hpp
-    │   │       ├── Navigation.hpp
-    │   │       ├── Perception.hpp
-    │   │       └── RobotSim.hpp
-    │   ├── package.xml
-    │   ├── src
-    │   │   ├── main.cpp
-    │   │   ├── Manipulation.cpp
-    │   │   ├── Navigation.cpp
-    │   │   ├── Perception.cpp
-    │   │   └── RobotSim.cpp
-    │   └── test
-    │       ├── main.cpp
-    │       ├── manipulation_test.cpp
-    │       ├── navigation_test.cpp
-    │       └── perception_test.cpp
+    │   ├── CMakeLists.txt
+    │   ├── include
+    │   │   └── mario_com
+    │   │       ├── Manipulation.hpp
+    │   │       ├── Navigation.hpp
+    │   │       ├── Perception.hpp
+    │   │       └── RobotSim.hpp
+    │   ├── launch
+    │   │   ├── bins.launch.py
+    │   │   └── hospital.launch.py
+    │   ├── maps
+    │   │   ├── hospitalmap.pgm
+    │   │   └── hospitalmap.yaml
+    │   ├── models
+    │   │   ├── ambulance
+    │   │   ├── AnesthesiaMachine
+    │   │   ├── aws_robomaker_residential_Trash_01
+    │   │   ├── BedsideTable
+    │   │   ├── bin_cylinder
+    │   │   ├── CGMClassic
+    │   │   ├── ElderLadyPatient
+    │   │   ├── InstrumentCart1
+    │   │   ├── MalePatientBed
+    │   │   ├── simple_hospital
+    │   │   ├── small_hospital
+    │   │   ├── StorageRackCovered
+    │   │   └── XRayMachine
+    │   ├── package.xml
+    │   ├── scripts
+    │   │   ├── coverage_cleaned.info
+    │   │   ├── coverage.info
+    │   │   └── generate_coverage_report.bash
+    │   ├── src
+    │   │   ├── main.cpp
+    │   │   ├── Manipulation.cpp
+    │   │   ├── Navigation.cpp
+    │   │   ├── Perception.cpp
+    │   │   └── RobotSim.cpp
+    │   ├── test
+    │   │   ├── main.cpp
+    │   │   ├── manipulation_test.cpp
+    │   │   ├── navigation_test.cpp
+    │   │   └── perception_test.cpp
+    │   ├── uncrustify_google_cpp_allman.cfg
+    │   └── worlds
+    │       ├── simple_hospital.world
+    │       └── small_hospital.world
     ├── proposal
-    │   └── ENPM808X___FinalProject___Proposal.pdf
+    │   └── ENPM808X___FinalProject___Proposal.pdf
     ├── quadchart
-    │   └── quad_chart_v1.png
+    │   └── quad_chart_v1.png
     ├── README.md
     ├── results
-    │   ├── cppcheck.txt
-    │   └── cpplint.txt
+    │   ├── cppcheck.txt
+    │   └── cpplint.txt
     └── UML
-        └── initial
-            ├── activity_diagram_v1.pdf
-            └── class_diagram_v1.pdf
+        ├── initial
+        │   ├── activity_diagram_v1.pdf
+        │   └── class_diagram_v1.pdf
+        └── revised
+            └── class_diagram_v2.pdf
+</pre>
 
 ## License
 
