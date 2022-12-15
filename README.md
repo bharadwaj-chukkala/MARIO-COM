@@ -171,7 +171,7 @@ The results of running ```cppcheck``` can be found in ```/results/cppcheck.txt``
 ### cpplint
 Change to the root directory of the project, and run:
 ```
-cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order ./mario_com/src/*.cpp ./mario_com/include/mario_com/*.hpp ./mario_com/test/*.cpp &> ./results/cpplint.txt
+cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order mario_com/src/*.cpp mario_com/include/mario_com/*.hpp mario_com/test/*.cpp &> ./results/cpplint.txt
 ```
 The results of running ```cpplint``` can be found in ```/results/cpplint.txt```.
 
