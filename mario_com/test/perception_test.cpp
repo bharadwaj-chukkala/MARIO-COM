@@ -52,15 +52,7 @@ class TaskPerception : public testing::Test {
 };
 
 void TaskPerception::odom_callback_search(const ODOM::SharedPtr msg) {
-    tf2::Quaternion q(
-        msg->pose.pose.orientation.x,
-        msg->pose.pose.orientation.y,
-        msg->pose.pose.orientation.z,
-        msg->pose.pose.orientation.w);
-    tf2::Matrix3x3 m(q);
-    double r, p, y;
-    m.getRPY(r, p, y);
-    present_yaw = y;
+    present_yaw = msg->pose.pose.orientation.y;
 }
 
 
@@ -118,15 +110,6 @@ TEST_F(TaskPerception, test_move_bin) {
     if (r_rotate_flag) {
         vel.angular.z = -0.1;
         vel.linear.x = 0;
-    } else if (l_rotate_flag) {
-        vel.angular.z = 0.1;
-        vel.linear.x = 0;
-    } else if (move_forward) {
-        vel.linear.x = 0.1;
-        vel.angular.z = 0;
-    } else if (stop_flag) {
-        vel.linear.x = 0;
-        vel.angular.z = 0;
     }
     m_pub_vel->publish(vel);
 
