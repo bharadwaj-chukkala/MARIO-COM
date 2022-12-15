@@ -40,5 +40,5 @@ TEST_F(TaskManipulation, test_num_publishers) {
                     ("manipulation", 10.0);
 
   auto num_pub = node_->count_publishers("manipulation");
-  EXPECT_EQ(0, static_cast<int>(num_pub));
+  EXPECT_EQ(1, static_cast<int>(num_pub));
 }
