@@ -13,17 +13,12 @@
 
 #include "../include/mario_com/RobotSim.hpp"
 #include <rclcpp/utilities.hpp>
-// # include "rclcpp/rclcpp.hpp"
 int main(int argc, char * argv[]) {
-    // Code stub
     rclcpp::init(argc, argv);
     RobotSim rs;
-    // rclcpp::sleep_for(5s);
     RCLCPP_INFO(rclcpp::get_logger("log"), "Starting Trash Collection");
     while (!rs.m_nav.search_bins()) {
-        // RCLCPP_INFO(rclcpp::get_logger("log"), "Inside while");
         if (rs.m_perc.detect_bin()) {
-            // RCLCPP_INFO(rclcpp::get_logger("log"), "Inside det bin main");
             break;
         }
     }
