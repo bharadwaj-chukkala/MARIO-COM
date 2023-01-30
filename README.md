@@ -39,7 +39,7 @@ The possible risk includes the trade-off between the processing rate of the imag
 ## Presentation: <br>
 <p align="center">
 <a href="https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true" target="_blank">
- <img src="https://user-images.githubusercontent.com/40534801/195415735-dee9ec96-d2e3-4597-8bba-edd1b39871cc.png" alt="Watch the Slides" width="350" height="200" border="10" />
+ <img src="https://user-images.githubusercontent.com/40534801/215581901-f0ca5d43-b571-4d74-8b85-9620ccbd9142.png" alt="Watch the Slides" width="350" height="200" border="10" />
 </a>
 </p>
 
@@ -47,14 +47,15 @@ The possible risk includes the trade-off between the processing rate of the imag
 Link: https://docs.google.com/presentation/d/1J1CfQFy6Lo6DFFJ7bEgBhKVnEB1VLPUp/edit?usp=sharing&ouid=101721687108021835919&rtpof=true&sd=true
 </p>
 
+
+## Demo: 
 <p align="center">
 <a href="https://youtu.be/U7UHgr7ei_M" target="_blank">
- <img src="https://user-images.githubusercontent.com/40534801/195415735-dee9ec96-d2e3-4597-8bba-edd1b39871cc.png" alt="Watch the Simulation" width="350" height="200" border="10" />
+ <img src="https://user-images.githubusercontent.com/40534801/215581561-e66e154e-622e-44a2-87d6-55ed90809d01.png" alt="Watch the Simulation" width="450" height="300" border="10" />
 </a>
 </p>
 <p align = "center">
 Link: https://youtu.be/U7UHgr7ei_M
-Live Demo
 </p>
 
 ## Personnel:
